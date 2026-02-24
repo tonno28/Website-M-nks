@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rechtsanwältin Ria Mönks – Strafverteidigung Kassel | Ehemalige Staatsanwältin</title>
-  <meta name="description" content="Strafverteidigung und Opfervertretung in Kassel. Als ehemalige Staatsanwältin verteidige ich Sie in allen Strafrechtsgebieten – diskret, entschlossen, bundesweit. Jetzt Kontakt aufnehmen." />
+  <meta name="description"
+    content="Strafverteidigung und Opfervertretung in Kassel. Als ehemalige Staatsanwältin verteidige ich Sie in allen Strafrechtsgebieten – diskret, entschlossen, bundesweit. Jetzt Kontakt aufnehmen." />
   <link rel="canonical" href="https://www.kanzlei-moenks.de/" />
   <meta property="og:title" content="Rechtsanwältin Ria Mönks – Strafverteidigung Kassel" />
-  <meta property="og:description" content="Strafverteidigung und Opfervertretung in Kassel. Als ehemalige Staatsanwältin kenne ich beide Seiten der Justiz." />
+  <meta property="og:description"
+    content="Strafverteidigung und Opfervertretung in Kassel. Als ehemalige Staatsanwältin kenne ich beide Seiten der Justiz." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.kanzlei-moenks.de/" />
   <meta name="robots" content="index, follow" />
@@ -20,10 +23,10 @@
     "description": "Strafverteidigung und Opfervertretung in Kassel",
     "url": "https://www.kanzlei-moenks.de",
     "telephone": "+491637117439",
-    "email": "info@kanzlei-moenks.de",
+    "email": "kanzlei@ra-moenks.de",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Frankfurter Straße 83",
+      "streetAddress": "Frankfurter Straße 86",
       "addressLocality": "Kassel",
       "postalCode": "34121",
       "addressCountry": "DE"
@@ -50,31 +53,33 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
 
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            cream:    '#F7F4EE',
-            parchment:'#EDE9DF',
+            cream: '#F7F4EE',
+            parchment: '#EDE9DF',
             charcoal: '#1A1815',
-            ink:      '#2E2B27',
-            gold:     '#B8965A',
+            ink: '#2E2B27',
+            gold: '#B8965A',
             'gold-light': '#D4B07A',
-            'gold-dark':  '#9A7A44',
-            stone:    '#7A756E',
+            'gold-dark': '#9A7A44',
+            stone: '#7A756E',
             'stone-light': '#B0AAA2',
           },
           fontFamily: {
             display: ['Playfair Display', 'Georgia', 'serif'],
-            body:    ['Inter', 'system-ui', 'sans-serif'],
+            body: ['Inter', 'system-ui', 'sans-serif'],
           },
           letterSpacing: {
             tighter: '-0.03em',
-            wider:   '0.12em',
-            widest:  '0.22em',
+            wider: '0.12em',
+            widest: '0.22em',
           },
         }
       }
@@ -100,8 +105,9 @@
       opacity: 0;
       transform: translateY(28px);
       transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-                  transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+        transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
     }
+
     .reveal.visible {
       opacity: 1;
       transform: translateY(0);
@@ -120,6 +126,7 @@
       position: relative;
       letter-spacing: 0.15em;
     }
+
     .nav-link::after {
       content: '';
       position: absolute;
@@ -130,21 +137,43 @@
       background: #B8965A;
       transition: width 0.35s cubic-bezier(0.22, 1, 0.36, 1);
     }
+
     .nav-link:hover::after,
     .nav-link:focus-visible::after {
       width: 100%;
     }
 
     /* Nav dark mode (on dark hero) */
-    #navbar.on-dark .nav-link { color: rgba(176,170,162,0.85); }
-    #navbar.on-dark .nav-link:hover { color: #F7F4EE; }
-    #navbar.on-dark .notfall-btn { color: rgba(176,170,162,0.85); border-color: rgba(184,150,90,0.3); }
-    #navbar.on-dark .notfall-btn:hover { color: #D4B07A; border-color: #B8965A; }
-    #navbar.on-dark #menu-btn span { background: #B0AAA2; }
-    #navbar.on-dark .mobile-menu-bg { display: none; }
+    #navbar.on-dark .nav-link {
+      color: rgba(176, 170, 162, 0.85);
+    }
+
+    #navbar.on-dark .nav-link:hover {
+      color: #F7F4EE;
+    }
+
+    #navbar.on-dark .notfall-btn {
+      color: rgba(176, 170, 162, 0.85);
+      border-color: rgba(184, 150, 90, 0.3);
+    }
+
+    #navbar.on-dark .notfall-btn:hover {
+      color: #D4B07A;
+      border-color: #B8965A;
+    }
+
+    #navbar.on-dark #menu-btn span {
+      background: #B0AAA2;
+    }
+
+    #navbar.on-dark .mobile-menu-bg {
+      display: none;
+    }
 
     /* Smooth scroll */
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     /* Selection color */
     ::selection {
@@ -155,12 +184,13 @@
     /* Card hover lift */
     .card-hover {
       transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
-                  box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+        box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
     }
+
     .card-hover:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 40px -8px rgba(26,24,21,0.14),
-                  0 4px 16px -4px rgba(26,24,21,0.08);
+      box-shadow: 0 12px 40px -8px rgba(26, 24, 21, 0.14),
+        0 4px 16px -4px rgba(26, 24, 21, 0.08);
     }
 
     /* CTA button */
@@ -169,6 +199,7 @@
       overflow: hidden;
       transition: color 0.35s ease, box-shadow 0.35s ease;
     }
+
     .btn-primary::before {
       content: '';
       position: absolute;
@@ -179,93 +210,133 @@
       transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
       z-index: 0;
     }
+
     .btn-primary:hover::before,
     .btn-primary:focus-visible::before {
       transform: scaleX(1);
       transform-origin: left;
     }
-    .btn-primary > span { position: relative; z-index: 1; }
-    .btn-primary > svg { position: relative; z-index: 1; }
+
+    .btn-primary>span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn-primary>svg {
+      position: relative;
+      z-index: 1;
+    }
+
     .btn-primary:focus-visible {
       outline: 2px solid #B8965A;
       outline-offset: 3px;
     }
-    .btn-primary:active { transform: scale(0.98); }
+
+    .btn-primary:active {
+      transform: scale(0.98);
+    }
 
     /* Secondary button (light bg context) */
     .btn-secondary {
       transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     }
-    .btn-secondary:hover, .btn-secondary:focus-visible {
+
+    .btn-secondary:hover,
+    .btn-secondary:focus-visible {
       background: #1A1815;
       color: #F7F4EE;
     }
+
     .btn-secondary:focus-visible {
       outline: 2px solid #1A1815;
       outline-offset: 3px;
     }
-    .btn-secondary:active { transform: scale(0.98); }
+
+    .btn-secondary:active {
+      transform: scale(0.98);
+    }
 
     /* Secondary button (dark bg context) */
     .btn-light {
       transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-      border-color: rgba(247,244,238,0.25);
+      border-color: rgba(247, 244, 238, 0.25);
       color: #F7F4EE;
     }
-    .btn-light:hover, .btn-light:focus-visible {
-      background: rgba(247,244,238,0.12);
-      border-color: rgba(247,244,238,0.5);
-      color: #F7F4EE;
-    }
+
+    .btn-light:hover,
     .btn-light:focus-visible {
-      outline: 2px solid rgba(247,244,238,0.5);
+      background: rgba(247, 244, 238, 0.12);
+      border-color: rgba(247, 244, 238, 0.5);
+      color: #F7F4EE;
+    }
+
+    .btn-light:focus-visible {
+      outline: 2px solid rgba(247, 244, 238, 0.5);
       outline-offset: 3px;
     }
-    .btn-light:active { transform: scale(0.98); }
+
+    .btn-light:active {
+      transform: scale(0.98);
+    }
 
     /* Hero decorative ring */
     .hero-ring {
       position: absolute;
       border-radius: 50%;
-      border: 1px solid rgba(184,150,90,0.12);
+      border: 1px solid rgba(184, 150, 90, 0.12);
       animation: pulse-ring 8s ease-in-out infinite;
     }
+
     @keyframes pulse-ring {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50%       { transform: scale(1.04); opacity: 0.5; }
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(1.04);
+        opacity: 0.5;
+      }
     }
 
     /* Input focus */
     .form-input {
       transition: border-color 0.3s ease, box-shadow 0.3s ease;
     }
+
     .form-input:focus {
       border-color: #B8965A;
-      box-shadow: 0 0 0 3px rgba(184,150,90,0.12);
+      box-shadow: 0 0 0 3px rgba(184, 150, 90, 0.12);
       outline: none;
     }
 
     /* Practice area icon circle */
     .icon-circle {
-      transition: background 0.3s ease, transform 0.3s cubic-bezier(0.22,1,0.36,1);
+      transition: background 0.3s ease, transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
     }
+
     .card-hover:hover .icon-circle {
       background: #B8965A;
       transform: scale(1.08);
     }
+
     .card-hover:hover .icon-circle svg {
       stroke: #F7F4EE;
     }
 
     /* Mobile nav */
     #mobile-menu {
-      transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.22,1,0.36,1);
+      transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
     }
+
     #mobile-menu.hidden {
       opacity: 0;
       pointer-events: none;
       transform: translateY(-8px);
     }
+
     #mobile-menu.open {
       opacity: 1;
       pointer-events: auto;
@@ -275,54 +346,86 @@
     /* Rechtsgebiete tiles */
     .rg-tile {
       transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
-      box-shadow: 0 2px 12px -4px rgba(26,24,21,0.06);
+      box-shadow: 0 2px 12px -4px rgba(26, 24, 21, 0.06);
     }
+
     .rg-tile:hover {
-      border-color: rgba(184,150,90,0.45) !important;
-      box-shadow: 0 6px 24px -6px rgba(184,150,90,0.18), 0 2px 8px -2px rgba(26,24,21,0.06) !important;
+      border-color: rgba(184, 150, 90, 0.45) !important;
+      box-shadow: 0 6px 24px -6px rgba(184, 150, 90, 0.18), 0 2px 8px -2px rgba(26, 24, 21, 0.06) !important;
     }
-    .rg-tile:active { transform: scale(0.99); }
-    .rg-tile:hover .rg-icon { background: rgba(184,150,90,0.14) !important; }
-    .rg-tile:hover .rg-svg { stroke: #B8965A; }
-    .rg-tile:hover .rg-arrow { opacity: 1 !important; }
+
+    .rg-tile:active {
+      transform: scale(0.99);
+    }
+
+    .rg-tile:hover .rg-icon {
+      background: rgba(184, 150, 90, 0.14) !important;
+    }
+
+    .rg-tile:hover .rg-svg {
+      stroke: #B8965A;
+    }
+
+    .rg-tile:hover .rg-arrow {
+      opacity: 1 !important;
+    }
+
+    /* Emergency CTA pulse glow */
+    @keyframes pulse-glow {
+
+      0%,
+      100% {
+        box-shadow: 0 0 30px rgba(220, 38, 38, 0.3), 0 0 60px rgba(220, 38, 38, 0.1);
+      }
+
+      50% {
+        box-shadow: 0 0 40px rgba(220, 38, 38, 0.45), 0 0 80px rgba(220, 38, 38, 0.2);
+      }
+    }
   </style>
 </head>
 
 <body class="grain bg-cream font-body text-charcoal antialiased">
 
   <!-- ═══════════════════ NAVIGATION ═══════════════════ -->
-  <header id="navbar" class="on-dark fixed top-0 inset-x-0 z-50 transition-all duration-300" style="background:rgba(26,24,21,0.15); backdrop-filter:blur(8px);">
+  <header id="navbar" class="on-dark fixed top-0 inset-x-0 z-50 transition-all duration-300"
+    style="background:rgba(26,24,21,0.15); backdrop-filter:blur(8px);">
     <div class="max-w-6xl mx-auto px-6 lg:px-8">
       <nav class="flex items-center justify-between h-18 py-4">
 
         <!-- Logo -->
         <a href="#top" class="flex items-center gap-3 group focus-visible:outline-none">
-          <img id="nav-logo-img"
-               src="Brand Assets/Ria_Mönks_Logo_transparent_HQ.png"
-               alt="Ria Mönks Logo"
-               class="h-12 w-auto transition-opacity duration-300 group-hover:opacity-80"
-               style="filter: brightness(0) invert(1);" />
+          <img id="nav-logo-img" src="Brand Assets/Ria_Mönks_Logo_transparent_HQ.png" alt="Ria Mönks Logo"
+            class="h-12 w-auto transition-opacity duration-300 group-hover:opacity-80"
+            style="filter: brightness(0) invert(1);" />
         </a>
 
         <!-- Desktop links -->
         <ul class="hidden md:flex items-center gap-7 text-xs font-body font-medium text-stone uppercase">
-          <li><a href="#top"           class="nav-link hover:text-charcoal focus-visible:outline-none transition-colors duration-200">Home</a></li>
-          <li><a href="#ueber-mich"   class="nav-link hover:text-charcoal focus-visible:outline-none transition-colors duration-200">Über mich</a></li>
-          <li><a href="#rechtsgebiete" class="nav-link hover:text-charcoal focus-visible:outline-none transition-colors duration-200">Rechtsgebiete</a></li>
-          <li><a href="#kontakt"       class="nav-link hover:text-charcoal focus-visible:outline-none transition-colors duration-200">Kontakt</a></li>
+          <li><a href="#top"
+              class="nav-link hover:text-charcoal focus-visible:outline-none transition-colors duration-200">Home</a>
+          </li>
+          <li><a href="#rechtsgebiete"
+              class="nav-link hover:text-charcoal focus-visible:outline-none transition-colors duration-200">Rechtsgebiete</a>
+          </li>
+          <li><a href="#kontakt"
+              class="nav-link hover:text-charcoal focus-visible:outline-none transition-colors duration-200">Kontakt</a>
+          </li>
           <li>
             <a href="tel:+491637117439"
-               class="notfall-btn flex items-center gap-1.5 text-xs font-medium tracking-wider text-stone border border-charcoal/20 px-4 py-2 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
-               style="letter-spacing:0.08em;">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.13 12 19.79 19.79 0 011.06 3.18 2 2 0 013.05 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+              class="notfall-btn flex items-center gap-1.5 text-xs font-medium tracking-wider text-stone border border-charcoal/20 px-4 py-2 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+              style="letter-spacing:0.08em;">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.13 12 19.79 19.79 0 011.06 3.18 2 2 0 013.05 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
               </svg>
               <span class="uppercase">Notfallnummer</span>
             </a>
           </li>
           <li>
             <a href="#kontakt"
-               class="btn-primary bg-gold text-cream text-xs font-medium uppercase tracking-widest px-5 py-2.5 inline-block focus-visible:outline-none">
+              class="btn-primary bg-gold text-cream text-xs font-medium uppercase tracking-widest px-5 py-2.5 inline-block focus-visible:outline-none">
               <span>Online Erstberatung</span>
             </a>
           </li>
@@ -330,7 +433,7 @@
 
         <!-- Hamburger -->
         <button id="menu-btn" aria-label="Menü öffnen"
-                class="md:hidden w-8 h-8 flex flex-col justify-center gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded">
+          class="md:hidden w-8 h-8 flex flex-col justify-center gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded">
           <span class="block h-px bg-charcoal w-6 ml-1 transition-all duration-300" id="h1"></span>
           <span class="block h-px bg-charcoal w-4 ml-1 transition-all duration-300" id="h2"></span>
           <span class="block h-px bg-charcoal w-5 ml-1 transition-all duration-300" id="h3"></span>
@@ -340,19 +443,23 @@
 
     <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-cream border-t border-parchment px-6 py-6 flex flex-col gap-4">
-      <a href="#top"            class="text-sm font-medium text-stone uppercase tracking-wider py-2 border-b border-parchment hover:text-charcoal transition-colors">Home</a>
-      <a href="#ueber-mich"     class="text-sm font-medium text-stone uppercase tracking-wider py-2 border-b border-parchment hover:text-charcoal transition-colors">Über mich</a>
-      <a href="#rechtsgebiete"  class="text-sm font-medium text-stone uppercase tracking-wider py-2 border-b border-parchment hover:text-charcoal transition-colors">Rechtsgebiete</a>
-      <a href="#kontakt"        class="text-sm font-medium text-stone uppercase tracking-wider py-2 border-b border-parchment hover:text-charcoal transition-colors">Kontakt</a>
+      <a href="#top"
+        class="text-sm font-medium text-stone uppercase tracking-wider py-2 border-b border-parchment hover:text-charcoal transition-colors">Home</a>
+      <a href="#rechtsgebiete"
+        class="text-sm font-medium text-stone uppercase tracking-wider py-2 border-b border-parchment hover:text-charcoal transition-colors">Rechtsgebiete</a>
+      <a href="#kontakt"
+        class="text-sm font-medium text-stone uppercase tracking-wider py-2 border-b border-parchment hover:text-charcoal transition-colors">Kontakt</a>
       <a href="tel:+491637117439"
-         class="flex items-center gap-2 text-sm font-medium text-stone uppercase tracking-wider py-2 border-b border-parchment hover:text-gold transition-colors">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.13 12 19.79 19.79 0 011.06 3.18 2 2 0 013.05 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+        class="flex items-center gap-2 text-sm font-medium text-stone uppercase tracking-wider py-2 border-b border-parchment hover:text-gold transition-colors">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.13 12 19.79 19.79 0 011.06 3.18 2 2 0 013.05 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
         </svg>
         Notfallnummer: 0163 · 711 7439
       </a>
       <a href="#kontakt"
-         class="btn-primary bg-gold text-cream text-sm font-medium uppercase tracking-widest px-5 py-3 text-center mt-2 focus-visible:outline-none">
+        class="btn-primary bg-gold text-cream text-sm font-medium uppercase tracking-widest px-5 py-3 text-center mt-2 focus-visible:outline-none">
         <span>Online Erstberatung</span>
       </a>
     </div>
@@ -360,113 +467,130 @@
 
 
   <!-- ═══════════════════ BANNER / HERO ═══════════════════ -->
-  <section id="top" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-charcoal pt-20 pb-16">
+  <section id="top"
+    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-charcoal pt-20 pb-16">
 
     <!-- Atmospheric background gradients -->
     <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
       <div class="absolute top-0 right-0 w-[900px] h-[900px] rounded-full"
-           style="background: radial-gradient(circle at 75% 5%, rgba(184,150,90,0.13) 0%, transparent 58%);"></div>
+        style="background: radial-gradient(circle at 75% 5%, rgba(184,150,90,0.13) 0%, transparent 58%);"></div>
       <div class="absolute bottom-0 left-0 w-[700px] h-[700px] rounded-full"
-           style="background: radial-gradient(circle at 15% 90%, rgba(184,150,90,0.08) 0%, transparent 55%);"></div>
+        style="background: radial-gradient(circle at 15% 90%, rgba(184,150,90,0.08) 0%, transparent 55%);"></div>
       <div class="absolute inset-0"
-           style="background: radial-gradient(ellipse at 50% 45%, rgba(30,27,23,0) 25%, rgba(26,24,21,0.75) 100%);"></div>
+        style="background: radial-gradient(ellipse at 50% 45%, rgba(30,27,23,0) 25%, rgba(26,24,21,0.75) 100%);"></div>
       <!-- Decorative rings -->
-      <div class="hero-ring absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] h-[480px]" style="animation-delay:0s;"></div>
-      <div class="hero-ring absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px]" style="animation-delay:2.5s;"></div>
+      <div class="hero-ring absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] h-[480px]"
+        style="animation-delay:0s;"></div>
+      <div class="hero-ring absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px]"
+        style="animation-delay:2.5s;"></div>
     </div>
 
     <!-- Scales of Justice – faint decorative background element -->
     <div class="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true"
-         style="opacity: 0.045;">
+      style="opacity: 0.045;">
       <svg width="600" height="600" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg">
         <!-- Pillar -->
-        <line x1="60" y1="12" x2="60" y2="112" stroke="#B8965A" stroke-width="1.8"/>
+        <line x1="60" y1="12" x2="60" y2="112" stroke="#B8965A" stroke-width="1.8" />
         <!-- Crossbar -->
-        <line x1="18" y1="38" x2="102" y2="38" stroke="#B8965A" stroke-width="1.8"/>
+        <line x1="18" y1="38" x2="102" y2="38" stroke="#B8965A" stroke-width="1.8" />
         <!-- Left chain -->
-        <line x1="18" y1="38" x2="8"  y2="66" stroke="#B8965A" stroke-width="1.2"/>
+        <line x1="18" y1="38" x2="8" y2="66" stroke="#B8965A" stroke-width="1.2" />
         <!-- Right chain -->
-        <line x1="102" y1="38" x2="112" y2="66" stroke="#B8965A" stroke-width="1.2"/>
+        <line x1="102" y1="38" x2="112" y2="66" stroke="#B8965A" stroke-width="1.2" />
         <!-- Left pan -->
-        <path d="M-4 66 Q8 72 20 66" stroke="#B8965A" stroke-width="1.4" fill="none"/>
+        <path d="M-4 66 Q8 72 20 66" stroke="#B8965A" stroke-width="1.4" fill="none" />
         <!-- Right pan -->
-        <path d="M100 66 Q112 72 124 66" stroke="#B8965A" stroke-width="1.4" fill="none"/>
+        <path d="M100 66 Q112 72 124 66" stroke="#B8965A" stroke-width="1.4" fill="none" />
         <!-- Base -->
-        <line x1="44" y1="112" x2="76" y2="112" stroke="#B8965A" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="44" y1="112" x2="76" y2="112" stroke="#B8965A" stroke-width="2.5" stroke-linecap="round" />
         <!-- Top ornament -->
-        <circle cx="60" cy="12" r="3.5" fill="#B8965A"/>
+        <circle cx="60" cy="12" r="3.5" fill="#B8965A" />
       </svg>
     </div>
 
     <!-- Thin gold top line -->
-    <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gold to-transparent opacity-60"></div>
+    <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gold to-transparent opacity-60">
+    </div>
 
     <div class="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
 
       <!-- Eyebrow -->
       <p class="reveal font-body text-xs font-medium uppercase tracking-widest mb-8"
-         style="transition-delay:0.05s; color: rgba(176,170,162,0.75); letter-spacing: 0.22em;">
+        style="transition-delay:0.05s; color: rgba(176,170,162,0.75); letter-spacing: 0.22em;">
         Rechtsanwältin · Strafrecht · Kassel
       </p>
 
       <!-- Ornament divider -->
       <div class="reveal flex items-center justify-center gap-4 mb-10" style="transition-delay:0.1s;">
-        <div class="h-px flex-1 max-w-[72px]" style="background:linear-gradient(90deg,transparent,rgba(184,150,90,0.45));"></div>
-        <svg width="13" height="13" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.6;">
-          <path d="M7 0L8.5 5.5H14L9.5 9L11 14L7 10.5L3 14L4.5 9L0 5.5H5.5L7 0Z" fill="#B8965A"/>
+        <div class="h-px flex-1 max-w-[72px]"
+          style="background:linear-gradient(90deg,transparent,rgba(184,150,90,0.45));"></div>
+        <svg width="13" height="13" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+          style="opacity:0.6;">
+          <path d="M7 0L8.5 5.5H14L9.5 9L11 14L7 10.5L3 14L4.5 9L0 5.5H5.5L7 0Z" fill="#B8965A" />
         </svg>
-        <div class="h-px flex-1 max-w-[72px]" style="background:linear-gradient(90deg,rgba(184,150,90,0.45),transparent);"></div>
+        <div class="h-px flex-1 max-w-[72px]"
+          style="background:linear-gradient(90deg,rgba(184,150,90,0.45),transparent);"></div>
       </div>
 
       <!-- Main Headline -->
-      <h1 class="reveal font-display text-4xl md:text-6xl lg:text-[4.5rem] text-cream leading-tight tracking-tighter mb-4"
-          style="transition-delay:0.15s; font-weight:400; line-height:1.1;">
-        Ehemalige Staatsanwältin –<br/>
+      <h1
+        class="reveal font-display text-4xl md:text-6xl lg:text-[4.5rem] text-cream leading-tight tracking-tighter mb-4"
+        style="transition-delay:0.15s; font-weight:400; line-height:1.1;">
+        Ehemalige Staatsanwältin –<br />
         <em class="not-italic text-gold" style="font-style:italic;">jetzt Ihre Rechtsanwältin</em>
       </h1>
 
       <!-- Gold rule under headline -->
       <div class="reveal flex justify-center mt-8 mb-8" style="transition-delay:0.2s;">
-        <div class="h-px w-20" style="background: linear-gradient(90deg, transparent, rgba(184,150,90,0.6), transparent);"></div>
+        <div class="h-px w-20"
+          style="background: linear-gradient(90deg, transparent, rgba(184,150,90,0.6), transparent);"></div>
       </div>
 
       <!-- Subtext -->
-      <p class="reveal font-body text-base md:text-lg mb-8 max-w-2xl mx-auto"
-         style="transition-delay:0.22s; color: rgba(176,170,162,0.85); line-height: 1.7;">
-        Strafverteidigung und Opfervertretung in Kassel – erfahren, diskret, bundesweit.<br class="hidden md:block"/>
-        Ich kenne beide Seiten der Justiz.
+      <p class="reveal font-body text-lg md:text-xl mb-10 max-w-2xl mx-auto font-medium"
+        style="transition-delay:0.22s; color: rgba(184,150,90,0.9); line-height: 1.6; letter-spacing: 0.04em;">
+        Vertraulich · Entschlossen · Kompetent
       </p>
 
-      <!-- Trust badges -->
-      <div class="reveal flex flex-wrap justify-center gap-3 mb-10" style="transition-delay:0.27s;">
-        <span class="flex items-center gap-2 font-body text-xs uppercase tracking-widest px-4 py-2 border"
-              style="color: rgba(184,150,90,0.85); border-color: rgba(184,150,90,0.2); letter-spacing: 0.14em;">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.7;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          Ehemalige Staatsanwältin
+      <!-- USP checkmarks -->
+      <div class="reveal flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-6 mb-10"
+        style="transition-delay:0.27s;">
+        <span class="flex items-center gap-2.5 font-body text-sm px-4 py-2" style="color: rgba(247,244,238,0.85);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B8965A" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+          Strafverteidigung und Opfervertretung in allen Gebieten des Strafrechts
         </span>
-        <span class="flex items-center gap-2 font-body text-xs uppercase tracking-widest px-4 py-2 border"
-              style="color: rgba(184,150,90,0.85); border-color: rgba(184,150,90,0.2); letter-spacing: 0.14em;">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.7;"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
-          Bundesweit tätig
+        <span class="flex items-center gap-2.5 font-body text-sm px-4 py-2" style="color: rgba(247,244,238,0.85);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B8965A" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+          Auch bundesweit und digital
         </span>
-        <span class="flex items-center gap-2 font-body text-xs uppercase tracking-widest px-4 py-2 border"
-              style="color: rgba(184,150,90,0.85); border-color: rgba(184,150,90,0.2); letter-spacing: 0.14em;">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.7;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-          Diskrete Beratung
+        <span class="flex items-center gap-2.5 font-body text-sm px-4 py-2" style="color: rgba(247,244,238,0.85);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B8965A" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+          Schnelle Hilfe bei Vorladung, Durchsuchung, Anklage, Strafbefehl, Festnahme &amp; U-Haft
         </span>
       </div>
 
       <!-- CTAs -->
       <div class="reveal flex flex-col sm:flex-row gap-4 justify-center" style="transition-delay:0.32s;">
         <a href="tel:+4956176620421"
-           class="btn-primary bg-gold text-cream font-body font-medium text-sm uppercase tracking-widest px-8 py-4 inline-flex items-center justify-center gap-2.5 focus-visible:outline-none">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.13 12 19.79 19.79 0 011.06 3.18 2 2 0 013.05 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          class="btn-primary bg-gold text-cream font-body font-medium text-sm uppercase tracking-widest px-8 py-4 inline-flex items-center justify-center gap-2.5 focus-visible:outline-none">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.13 12 19.79 19.79 0 011.06 3.18 2 2 0 013.05 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
           </svg>
           <span>Jetzt anrufen</span>
         </a>
         <a href="#kontakt"
-           class="btn-light font-body font-medium text-sm uppercase tracking-widest px-8 py-4 border inline-block focus-visible:outline-none">
+          class="btn-light font-body font-medium text-sm uppercase tracking-widest px-8 py-4 border inline-block focus-visible:outline-none">
           Online Erstberatung
         </a>
       </div>
@@ -477,158 +601,165 @@
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2" style="opacity:0.3;">
       <span class="font-body text-xs uppercase tracking-widest" style="color:#B0AAA2;">Mehr erfahren</span>
       <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg"
-           class="animate-bounce" style="animation-duration:2s;">
-        <path d="M8 0v16M1 10l7 8 7-8" stroke="#B0AAA2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        class="animate-bounce" style="animation-duration:2s;">
+        <path d="M8 0v16M1 10l7 8 7-8" stroke="#B0AAA2" stroke-width="1.2" stroke-linecap="round"
+          stroke-linejoin="round" />
       </svg>
     </div>
   </section>
 
 
   <!-- ═══════════════════ KURZVORSTELLUNG ═══════════════════ -->
-  <section id="ueber-mich" class="bg-charcoal relative overflow-hidden">
+  <section id="ueber-mich" class="bg-charcoal relative overflow-hidden py-24">
     <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent"></div>
     <div class="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent"></div>
 
-    <div class="grid lg:grid-cols-2" style="min-height: 560px;">
+    <!-- Subtle radial glow behind portrait -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] pointer-events-none"
+      style="background: radial-gradient(circle, rgba(184,150,90,0.06) 0%, transparent 70%);"></div>
 
-      <!-- Portrait – left -->
-      <div class="relative overflow-hidden" style="min-height: 420px;">
-        <img src="Brand Assets/Potrait Ria.jpeg"
-             alt="Rechtsanwältin Ria Mönks – Strafverteidigerin Kassel"
-             class="absolute inset-0 w-full h-full object-cover"
-             style="object-position: center 15%; filter: contrast(1.03) brightness(0.97);" />
-        <!-- Right-edge gradient so portrait bleeds into text column -->
-        <div class="absolute inset-0 pointer-events-none hidden lg:block"
-             style="background: linear-gradient(to right, transparent 55%, rgba(26,24,21,0.9) 100%);"></div>
-        <!-- Bottom fade for mobile -->
-        <div class="absolute inset-0 pointer-events-none lg:hidden"
-             style="background: linear-gradient(to bottom, transparent 60%, rgba(26,24,21,0.95) 100%);"></div>
-      </div>
+    <div class="relative max-w-5xl mx-auto px-6 lg:px-8">
 
-      <!-- Text – right -->
-      <div class="flex items-center py-20 px-8 lg:px-16 xl:px-20">
-        <div class="max-w-lg w-full">
+      <div class="grid lg:grid-cols-[340px_1fr] gap-12 lg:gap-16 items-center">
 
-          <p class="reveal font-body text-xs font-medium uppercase tracking-widest text-gold mb-4"
-             style="letter-spacing: 0.22em;">Über mich</p>
-          <span class="reveal gold-rule mb-6"
-                style="background: linear-gradient(90deg, transparent, #B8965A, transparent);"></span>
+        <!-- Portrait – elegant framed card -->
+        <div class="reveal flex justify-center lg:justify-start" style="transition-delay:0.05s;">
+          <div class="relative group">
+            <!-- Gold accent corner lines -->
+            <div class="absolute -top-3 -left-3 w-16 h-16 border-t-2 border-l-2 border-gold/40 pointer-events-none">
+            </div>
+            <div class="absolute -bottom-3 -right-3 w-16 h-16 border-b-2 border-r-2 border-gold/40 pointer-events-none">
+            </div>
 
-          <h2 class="reveal font-display text-3xl md:text-4xl lg:text-[2.6rem] text-cream tracking-tighter leading-tight mb-6"
-              style="transition-delay:0.1s; font-weight:400; line-height: 1.15;">
-            Ich kenne die Staatsanwaltschaft<br/>von innen.
-          </h2>
+            <!-- Image container -->
+            <div class="relative overflow-hidden" style="width: 300px; height: 400px;">
+              <img src="Brand Assets/Potrait Ria.jpeg" alt="Rechtsanwältin Ria Mönks – Strafverteidigerin Kassel"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                style="object-position: center 20%; filter: contrast(1.03) brightness(0.97);" />
 
-          <div class="reveal space-y-4 font-body text-stone leading-[1.8] text-sm mb-8"
-               style="transition-delay:0.15s;">
-            <p>
-              Vor meiner anwaltlichen Tätigkeit habe ich mehrjährige Erfahrung im Strafrecht gesammelt – mit konsequenter Spezialisierung auf Kriminalwissenschaften und Medizinstrafrecht.
-            </p>
-            <p>
-              Seit Oktober 2023 war ich als Staatsanwältin in Kassel tätig. Kapitaldelikte zählten ebenso zu meinen Zuständigkeiten wie das allgemeine Strafrecht. Dieses Wissen nutze ich heute für Ihre Verteidigung.
-            </p>
+              <!-- Soft bottom fade -->
+              <div class="absolute inset-x-0 bottom-0 h-24 pointer-events-none"
+                style="background: linear-gradient(to top, rgba(26,24,21,0.6) 0%, transparent 100%);"></div>
+
+              <!-- Kurzbiografie hover overlay -->
+              <div
+                class="absolute inset-0 flex items-end p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                style="background: linear-gradient(to top, rgba(26,24,21,0.92) 0%, rgba(26,24,21,0.7) 50%, transparent 100%);">
+                <div>
+                  <p class="font-body text-xs font-medium uppercase tracking-widest text-gold mb-2"
+                    style="letter-spacing:0.18em;">Kurzbiografie</p>
+                  <p class="font-body text-[0.7rem] text-cream/90 leading-[1.7]">
+                    Vor meiner anwaltlichen Tätigkeit habe ich bereits mehrjährige Erfahrung im Strafrecht gesammelt –
+                    mit Spezialisierung auf Kriminalwissenschaften und Medizinstrafrecht. Nach dem Studium setzte ich
+                    diese im Rechtsreferendariat bei der Staatsanwaltschaft fort. Zuletzt war ich als Staatsanwältin
+                    bei der Staatsanwaltschaft Kassel tätig.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Name plate below image -->
+            <div class="mt-4 text-center">
+              <p class="font-display text-cream text-base tracking-tight" style="font-weight:500;">Ria Mönks</p>
+              <p class="font-body text-xs text-stone/70 uppercase tracking-widest mt-1" style="letter-spacing:0.15em;">
+                Rechtsanwältin</p>
+            </div>
           </div>
-
-          <!-- Gold quote -->
-          <div class="reveal border-l-2 border-gold pl-5 mb-8" style="transition-delay:0.2s;">
-            <p class="font-display italic text-cream text-sm leading-relaxed" style="font-weight:400;">
-              „Wer beide Seiten der Justiz kennt,<br/>kann die beste Verteidigung bieten."
-            </p>
-            <p class="font-body text-xs text-stone mt-2 uppercase tracking-wider">— Ria Mönks</p>
-          </div>
-
-          <!-- Arrow link -->
-          <div class="reveal" style="transition-delay:0.25s;">
-            <a href="#kontakt"
-               class="inline-flex items-center gap-2 font-body text-xs text-gold uppercase tracking-widest focus-visible:outline-none focus-visible:underline"
-               style="letter-spacing: 0.15em; transition: gap 0.3s cubic-bezier(0.22,1,0.36,1);"
-               onmouseenter="this.style.gap='12px'" onmouseleave="this.style.gap='8px'">
-              Jetzt Kontakt aufnehmen
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </a>
-          </div>
-
         </div>
+
+        <!-- Text – right -->
+        <div class="reveal" style="transition-delay:0.1s;">
+          <div class="space-y-5 font-body text-stone leading-[1.85] text-sm">
+            <p>
+              Als Rechtsanwältin bin ich vorwiegend im Strafrecht tätig – und das mit voller Überzeugung. Mein Fokus
+              liegt insbesondere auf der Strafverteidigung von Beschuldigten sowie der Vertretung der Opfer von
+              Straftaten. Als ehemalige Staatsanwältin kenne ich die internen Abläufe und Strategien der
+              Ermittlungsbehörden aus erster Hand und weiß in jedem Verfahrensstadium – vom Ermittlungsverfahren über
+              die Hauptverhandlung bis hin zu Haftsachen und Rechtsmitteln – worauf es ankommt.
+            </p>
+            <p class="font-display italic text-cream/90 text-lg" style="font-weight:400;">
+              Wer beide Seiten der Justiz kennt, kann die beste Verteidigung bieten.
+            </p>
+            <p>
+              Ich begleite Sie vom ersten Kontakt mit den Ermittlungsbehörden bis zum Abschluss des Verfahrens – und bei
+              Bedarf auch darüber hinaus in der Strafvollstreckung. Ich vertrete Ihre Interessen mit Nachdruck und sorge
+              dafür, dass Ihre Rechte gewahrt bleiben.
+            </p>
+          </div>
+        </div>
+
       </div>
 
     </div>
   </section>
 
 
-  <!-- ═══════════════════ PITCH / INTRO ═══════════════════ -->
-  <section id="intro" class="py-28 bg-cream relative overflow-hidden">
+  <!-- ═══════════════════ WARUM MICH WÄHLEN + NOTRUF CTA ═══════════════════ -->
+  <section id="warum" class="relative overflow-hidden">
 
-    <div class="absolute inset-0 pointer-events-none"
-         style="background: radial-gradient(ellipse at 10% 50%, rgba(184,150,90,0.06) 0%, transparent 60%);"></div>
+    <!-- Background image -->
+    <div class="absolute inset-0">
+      <img src="Brand Assets/notruf-hintergrund.png" alt="" class="w-full h-full object-cover"
+        style="filter: brightness(0.3) contrast(1.1);" />
+      <div class="absolute inset-0"
+        style="background: linear-gradient(135deg, rgba(26,24,21,0.85) 0%, rgba(26,24,21,0.6) 50%, rgba(26,24,21,0.85) 100%);">
+      </div>
+    </div>
 
-    <div class="relative max-w-5xl mx-auto px-6 lg:px-8">
+    <div class="relative py-28 max-w-5xl mx-auto px-6 lg:px-8">
 
       <!-- Section header -->
-      <div class="text-center mb-16">
-        <p class="reveal font-body text-xs font-medium uppercase tracking-widest text-gold mb-4">Strafrecht · Kassel</p>
-        <span class="reveal gold-rule mx-auto mb-6"></span>
-        <h2 class="reveal font-display text-3xl md:text-5xl text-charcoal tracking-tighter leading-tight"
-            style="transition-delay:0.1s; font-weight:400;">
-          Strafverteidigung und<br/>Opfervertretung
+      <div class="text-center mb-14">
+        <p class="reveal font-body text-xs font-medium uppercase tracking-widest text-gold mb-4">Warum Sie sich für mich
+          entscheiden</p>
+        <span class="reveal gold-rule mx-auto mb-6"
+          style="background: linear-gradient(90deg, transparent, #B8965A, transparent);"></span>
+        <h2 class="reveal font-display text-3xl md:text-5xl text-cream tracking-tighter leading-tight"
+          style="transition-delay:0.1s; font-weight:400;">
+          Festnahme oder Durchsuchung?
         </h2>
-        <p class="reveal font-body text-stone uppercase tracking-widest text-xs mt-4"
-           style="transition-delay:0.15s; letter-spacing:0.18em;">
-          In allen Gebieten des Strafrechts · Auch bundesweit und digital
+        <p class="reveal font-body text-stone text-base max-w-2xl mx-auto mt-5 leading-[1.75]"
+          style="transition-delay:0.15s;">
+          Wenn Freiheit plötzlich entzogen wird oder Ihre Räume durchsucht werden, ist schnelles, strukturiertes Handeln
+          entscheidend. Zögern Sie nicht. In Notfällen bin ich 24/7 erreichbar.
         </p>
       </div>
 
-      <!-- Three highlights -->
-      <div class="reveal grid md:grid-cols-3 gap-6 mb-10" style="transition-delay:0.18s;">
-
-        <div class="text-center p-7 border border-charcoal/6 bg-parchment"
-             style="box-shadow: 0 2px 12px -4px rgba(26,24,21,0.05);">
-          <div class="w-11 h-11 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-5">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8965A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <polyline points="12 6 12 12 16 14"/>
-            </svg>
-          </div>
-          <h3 class="font-display text-base text-charcoal mb-2 tracking-tight" style="font-weight:500;">Schnelle Hilfe</h3>
-          <p class="font-body text-xs text-stone leading-[1.75]">Bei Vorladung, Durchsuchung, Anklage, Strafbefehl, Festnahme und Untersuchungshaft.</p>
-        </div>
-
-        <div class="text-center p-7 border border-charcoal/6 bg-parchment"
-             style="box-shadow: 0 2px 12px -4px rgba(26,24,21,0.05);">
-          <div class="w-11 h-11 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-5">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8965A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <line x1="2" y1="12" x2="22" y2="12"/>
-              <path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/>
-            </svg>
-          </div>
-          <h3 class="font-display text-base text-charcoal mb-2 tracking-tight" style="font-weight:500;">Bundesweit & digital</h3>
-          <p class="font-body text-xs text-stone leading-[1.75]">Kanzleisitz in Kassel – ausgewählte Verfahren werden in ganz Deutschland angenommen, auch digital.</p>
-        </div>
-
-        <div class="text-center p-7 border border-charcoal/6 bg-parchment"
-             style="box-shadow: 0 2px 12px -4px rgba(26,24,21,0.05);">
-          <div class="w-11 h-11 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-5">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8965A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
-          </div>
-          <h3 class="font-display text-base text-charcoal mb-2 tracking-tight" style="font-weight:500;">Beide Seiten der Justiz</h3>
-          <p class="font-body text-xs text-stone leading-[1.75]">Als ehemalige Staatsanwältin kenne ich die Strategien der Ermittlungsbehörden aus erster Hand.</p>
-        </div>
-
+      <!-- Notruf CTA -->
+      <div class="reveal flex flex-col items-center gap-6 mb-16" style="transition-delay:0.2s;">
+        <a href="tel:+491637117439"
+          class="btn-primary bg-red-700 hover:bg-red-800 text-cream font-body font-semibold text-sm uppercase tracking-widest px-10 py-5 inline-flex items-center justify-center gap-3 focus-visible:outline-none"
+          style="box-shadow: 0 0 30px rgba(220,38,38,0.3), 0 0 60px rgba(220,38,38,0.1); animation: pulse-glow 3s ease-in-out infinite;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.13 12 19.79 19.79 0 011.06 3.18 2 2 0 013.05 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+          </svg>
+          <span>24/7 Notruf: 0163 · 711 7439</span>
+        </a>
+        <p class="font-body text-xs text-stone/70 text-center max-w-md leading-[1.7]" style="font-style:italic;">
+          Der Notruf ist ausschließlich für akute Notfälle reserviert, die keinen Aufschub dulden – aktuelle Festnahmen
+          und/oder Durchsuchungen.
+        </p>
       </div>
 
-      <!-- CTA -->
-      <div class="reveal text-center mt-12" style="transition-delay:0.3s;">
-        <a href="tel:+4956176620421"
-           class="btn-primary bg-gold text-cream font-body font-medium text-xs uppercase tracking-widest px-8 py-4 inline-flex items-center justify-center gap-2.5 focus-visible:outline-none">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.13 12 19.79 19.79 0 011.06 3.18 2 2 0 013.05 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-          </svg>
-          <span>Jetzt anrufen</span>
-        </a>
+      <!-- USP badges -->
+      <div class="reveal flex flex-wrap justify-center gap-3 mb-14" style="transition-delay:0.25s;">
+        <span
+          class="flex items-center gap-2 font-body text-xs uppercase tracking-widest px-4 py-2.5 border border-gold/20"
+          style="color: rgba(184,150,90,0.9); letter-spacing: 0.12em; background: rgba(255,255,255,0.04);">
+          Strafverteidigung &amp; Opfervertretung
+        </span>
+        <span
+          class="flex items-center gap-2 font-body text-xs uppercase tracking-widest px-4 py-2.5 border border-gold/20"
+          style="color: rgba(184,150,90,0.9); letter-spacing: 0.12em; background: rgba(255,255,255,0.04);">
+          Bundesweit &amp; digital
+        </span>
+        <span
+          class="flex items-center gap-2 font-body text-xs uppercase tracking-widest px-4 py-2.5 border border-gold/20"
+          style="color: rgba(184,150,90,0.9); letter-spacing: 0.12em; background: rgba(255,255,255,0.04);">
+          Schnelle Hilfe bei Vorladung &amp; Festnahme
+        </span>
       </div>
 
     </div>
@@ -644,11 +775,11 @@
         <p class="reveal font-body text-xs font-medium uppercase tracking-widest text-gold mb-4">Meine Schwerpunkte</p>
         <span class="reveal gold-rule mx-auto mb-6"></span>
         <h2 class="reveal font-display text-3xl md:text-5xl text-charcoal tracking-tighter leading-tight"
-            style="transition-delay:0.1s; font-weight:500;">
+          style="transition-delay:0.1s; font-weight:500;">
           Rechtsgebiete
         </h2>
         <p class="reveal font-body text-stone text-base max-w-lg mx-auto mt-4 leading-[1.75]"
-           style="transition-delay:0.15s;">
+          style="transition-delay:0.15s;">
           Klicken Sie auf ein Rechtsgebiet für weitere Informationen.
         </p>
       </div>
@@ -656,87 +787,147 @@
       <!-- 6-tile grid -->
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
-        <button class="rg-tile reveal text-left p-7 border border-charcoal/8 bg-white/60 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
-                style="transition-delay:0.04s;" data-modal="allg" aria-haspopup="dialog">
+        <button
+          class="rg-tile reveal text-left p-7 border border-charcoal/8 bg-white/60 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+          style="transition-delay:0.04s;" data-modal="allg" aria-haspopup="dialog">
           <div class="rg-icon w-11 h-11 rounded-full bg-charcoal/5 flex items-center justify-center mb-5">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7A756E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="rg-svg">
-              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7A756E" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" class="rg-svg">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+              <polyline points="10 9 9 9 8 9" />
             </svg>
           </div>
-          <h3 class="font-display text-base text-charcoal mb-2 tracking-tight" style="font-weight:500;">Allgemeines Strafrecht</h3>
+          <h3 class="font-display text-base text-charcoal mb-2 tracking-tight" style="font-weight:500;">Allgemeines
+            Strafrecht</h3>
           <p class="font-body text-xs text-stone leading-relaxed mb-4">Diebstahl, Betrug, Körperverletzung u.v.m.</p>
-          <span class="rg-arrow inline-flex items-center gap-1 font-body text-xs text-gold uppercase" style="letter-spacing:0.1em; opacity:0;">
-            Mehr erfahren <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <span class="rg-arrow inline-flex items-center gap-1 font-body text-xs text-gold uppercase"
+            style="letter-spacing:0.1em; opacity:0;">
+            Mehr erfahren <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
           </span>
         </button>
 
-        <button class="rg-tile reveal text-left p-7 border border-charcoal/8 bg-white/60 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
-                style="transition-delay:0.08s;" data-modal="btm" aria-haspopup="dialog">
+        <button
+          class="rg-tile reveal text-left p-7 border border-charcoal/8 bg-white/60 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+          style="transition-delay:0.08s;" data-modal="btm" aria-haspopup="dialog">
           <div class="rg-icon w-11 h-11 rounded-full bg-charcoal/5 flex items-center justify-center mb-5">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7A756E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="rg-svg">
-              <path d="M10.5 2l-6 6 11 11 6-6-11-11z"/><path d="M6.5 17.5l-4 4"/>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7A756E" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" class="rg-svg">
+              <path d="M10.5 2l-6 6 11 11 6-6-11-11z" />
+              <path d="M6.5 17.5l-4 4" />
             </svg>
           </div>
-          <h3 class="font-display text-base text-charcoal mb-2 tracking-tight" style="font-weight:500;">Betäubungsmittelstrafrecht</h3>
+          <h3 class="font-display text-base text-charcoal mb-2 tracking-tight" style="font-weight:500;">
+            Betäubungsmittelstrafrecht</h3>
           <p class="font-body text-xs text-stone leading-relaxed mb-4">BtMG, KCanG, alle Verstöße</p>
-          <span class="rg-arrow inline-flex items-center gap-1 font-body text-xs text-gold uppercase" style="letter-spacing:0.1em; opacity:0;">
-            Mehr erfahren <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <span class="rg-arrow inline-flex items-center gap-1 font-body text-xs text-gold uppercase"
+            style="letter-spacing:0.1em; opacity:0;">
+            Mehr erfahren <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
           </span>
         </button>
 
-        <button class="rg-tile reveal text-left p-7 border border-charcoal/8 bg-white/60 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
-                style="transition-delay:0.12s;" data-modal="verkehr" aria-haspopup="dialog">
+        <button
+          class="rg-tile reveal text-left p-7 border border-charcoal/8 bg-white/60 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+          style="transition-delay:0.12s;" data-modal="verkehr" aria-haspopup="dialog">
           <div class="rg-icon w-11 h-11 rounded-full bg-charcoal/5 flex items-center justify-center mb-5">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7A756E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="rg-svg">
-              <rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7A756E" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" class="rg-svg">
+              <rect x="1" y="3" width="15" height="13" rx="2" />
+              <path d="M16 8h4l3 3v5h-7V8z" />
+              <circle cx="5.5" cy="18.5" r="2.5" />
+              <circle cx="18.5" cy="18.5" r="2.5" />
             </svg>
           </div>
-          <h3 class="font-display text-base text-charcoal mb-2 tracking-tight" style="font-weight:500;">Verkehrsstrafrecht</h3>
+          <h3 class="font-display text-base text-charcoal mb-2 tracking-tight" style="font-weight:500;">
+            Verkehrsstrafrecht</h3>
           <p class="font-body text-xs text-stone leading-relaxed mb-4">Führerschein, Unfälle, Trunkenheit</p>
-          <span class="rg-arrow inline-flex items-center gap-1 font-body text-xs text-gold uppercase" style="letter-spacing:0.1em; opacity:0;">
-            Mehr erfahren <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <span class="rg-arrow inline-flex items-center gap-1 font-body text-xs text-gold uppercase"
+            style="letter-spacing:0.1em; opacity:0;">
+            Mehr erfahren <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
           </span>
         </button>
 
-        <button class="rg-tile reveal text-left p-7 border border-charcoal/8 bg-white/60 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
-                style="transition-delay:0.16s;" data-modal="sexual" aria-haspopup="dialog">
+        <button
+          class="rg-tile reveal text-left p-7 border border-charcoal/8 bg-white/60 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+          style="transition-delay:0.16s;" data-modal="sexual" aria-haspopup="dialog">
           <div class="rg-icon w-11 h-11 rounded-full bg-charcoal/5 flex items-center justify-center mb-5">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7A756E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="rg-svg">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7A756E" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" class="rg-svg">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
             </svg>
           </div>
-          <h3 class="font-display text-base text-charcoal mb-2 tracking-tight" style="font-weight:500;">Sexualstrafrecht</h3>
+          <h3 class="font-display text-base text-charcoal mb-2 tracking-tight" style="font-weight:500;">Sexualstrafrecht
+          </h3>
           <p class="font-body text-xs text-stone leading-relaxed mb-4">Diskret, vertraulich, erfahren</p>
-          <span class="rg-arrow inline-flex items-center gap-1 font-body text-xs text-gold uppercase" style="letter-spacing:0.1em; opacity:0;">
-            Mehr erfahren <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <span class="rg-arrow inline-flex items-center gap-1 font-body text-xs text-gold uppercase"
+            style="letter-spacing:0.1em; opacity:0;">
+            Mehr erfahren <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
           </span>
         </button>
 
-        <button class="rg-tile reveal text-left p-7 border border-charcoal/8 bg-white/60 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
-                style="transition-delay:0.20s;" data-modal="jugend" aria-haspopup="dialog">
+        <button
+          class="rg-tile reveal text-left p-7 border border-charcoal/8 bg-white/60 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+          style="transition-delay:0.20s;" data-modal="jugend" aria-haspopup="dialog">
           <div class="rg-icon w-11 h-11 rounded-full bg-charcoal/5 flex items-center justify-center mb-5">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7A756E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="rg-svg">
-              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7A756E" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" class="rg-svg">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 00-3-3.87" />
+              <path d="M16 3.13a4 4 0 010 7.75" />
             </svg>
           </div>
-          <h3 class="font-display text-base text-charcoal mb-2 tracking-tight" style="font-weight:500;">Jugendstrafrecht</h3>
+          <h3 class="font-display text-base text-charcoal mb-2 tracking-tight" style="font-weight:500;">Jugendstrafrecht
+          </h3>
           <p class="font-body text-xs text-stone leading-relaxed mb-4">JGG, 14–20 Jahre, erzieherisch</p>
-          <span class="rg-arrow inline-flex items-center gap-1 font-body text-xs text-gold uppercase" style="letter-spacing:0.1em; opacity:0;">
-            Mehr erfahren <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <span class="rg-arrow inline-flex items-center gap-1 font-body text-xs text-gold uppercase"
+            style="letter-spacing:0.1em; opacity:0;">
+            Mehr erfahren <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
           </span>
         </button>
 
-        <button class="rg-tile reveal text-left p-7 border border-charcoal/8 bg-white/60 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
-                style="transition-delay:0.24s;" data-modal="opfer" aria-haspopup="dialog">
+        <button
+          class="rg-tile reveal text-left p-7 border border-charcoal/8 bg-white/60 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+          style="transition-delay:0.24s;" data-modal="opfer" aria-haspopup="dialog">
           <div class="rg-icon w-11 h-11 rounded-full bg-charcoal/5 flex items-center justify-center mb-5">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7A756E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="rg-svg">
-              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7A756E" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" class="rg-svg">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
             </svg>
           </div>
-          <h3 class="font-display text-base text-charcoal mb-2 tracking-tight" style="font-weight:500;">Opfervertretung</h3>
+          <h3 class="font-display text-base text-charcoal mb-2 tracking-tight" style="font-weight:500;">Opfervertretung
+          </h3>
           <p class="font-body text-xs text-stone leading-relaxed mb-4">Ihre Rechte als Betroffene wahren</p>
-          <span class="rg-arrow inline-flex items-center gap-1 font-body text-xs text-gold uppercase" style="letter-spacing:0.1em; opacity:0;">
-            Mehr erfahren <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <span class="rg-arrow inline-flex items-center gap-1 font-body text-xs text-gold uppercase"
+            style="letter-spacing:0.1em; opacity:0;">
+            Mehr erfahren <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
           </span>
         </button>
 
@@ -745,40 +936,44 @@
   </section>
 
   <!-- Modal overlay -->
-  <div id="rg-overlay"
-       style="position:fixed; inset:0; z-index:200; display:flex; align-items:center; justify-content:center; padding:1rem;
+  <div id="rg-overlay" style="position:fixed; inset:0; z-index:200; display:flex; align-items:center; justify-content:center; padding:1rem;
               background:rgba(0,0,0,0.6); opacity:0; pointer-events:none;
-              transition: opacity 0.25s ease;"
-       role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <div id="rg-modal"
-         style="background:#fff; max-width:640px; width:100%; max-height:90vh; overflow-y:auto;
+              transition: opacity 0.25s ease;" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div id="rg-modal" style="background:#fff; max-width:640px; width:100%; max-height:90vh; overflow-y:auto;
                 transform:scale(0.95); opacity:0;
                 transition: transform 0.25s cubic-bezier(0.22,1,0.36,1), opacity 0.25s ease;
                 box-shadow: 0 24px 80px -12px rgba(0,0,0,0.3);">
       <!-- Modal header -->
-      <div style="display:flex; align-items:center; justify-content:space-between; padding:1.5rem 2rem; border-bottom:1px solid rgba(26,24,21,0.08);">
-        <p style="font-family:'Inter',sans-serif; font-size:0.65rem; color:#B8965A; text-transform:uppercase; letter-spacing:0.15em; font-weight:500;">Rechtsgebiet</p>
+      <div
+        style="display:flex; align-items:center; justify-content:space-between; padding:1.5rem 2rem; border-bottom:1px solid rgba(26,24,21,0.08);">
+        <p
+          style="font-family:'Inter',sans-serif; font-size:0.65rem; color:#B8965A; text-transform:uppercase; letter-spacing:0.15em; font-weight:500;">
+          Rechtsgebiet</p>
         <button id="modal-close" aria-label="Schließen"
-                style="width:2rem; height:2rem; display:flex; align-items:center; justify-content:center; color:#7A756E; background:none; border:none; cursor:pointer; border-radius:2px; transition:color 0.2s;"
-                onfocus="this.style.outline='2px solid #B8965A'; this.style.outlineOffset='2px'"
-                onblur="this.style.outline='none'"
-                onmouseenter="this.style.color='#1A1815'" onmouseleave="this.style.color='#7A756E'">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          style="width:2rem; height:2rem; display:flex; align-items:center; justify-content:center; color:#7A756E; background:none; border:none; cursor:pointer; border-radius:2px; transition:color 0.2s;"
+          onfocus="this.style.outline='2px solid #B8965A'; this.style.outlineOffset='2px'"
+          onblur="this.style.outline='none'" onmouseenter="this.style.color='#1A1815'"
+          onmouseleave="this.style.color='#7A756E'">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
           </svg>
         </button>
       </div>
       <!-- Modal body -->
       <div style="padding:1.75rem 2rem 1rem;">
-        <h3 id="modal-title" style="font-family:'Playfair Display',Georgia,serif; font-size:1.5rem; color:#1A1815; letter-spacing:-0.02em; margin-bottom:1rem; font-weight:500;"></h3>
-        <p id="modal-text" style="font-family:'Inter',sans-serif; font-size:0.875rem; color:#7A756E; line-height:1.85;"></p>
+        <h3 id="modal-title"
+          style="font-family:'Playfair Display',Georgia,serif; font-size:1.5rem; color:#1A1815; letter-spacing:-0.02em; margin-bottom:1rem; font-weight:500;">
+        </h3>
+        <p id="modal-text" style="font-family:'Inter',sans-serif; font-size:0.875rem; color:#7A756E; line-height:1.85;">
+        </p>
       </div>
       <!-- Modal CTA -->
       <div style="padding:1rem 2rem 2rem;">
-        <a href="#kontakt" id="modal-cta"
-           onclick="closeRgModal()"
-           class="btn-primary bg-gold text-cream font-body font-medium text-xs uppercase tracking-widest px-7 py-3.5 inline-block focus-visible:outline-none"
-           style="letter-spacing:0.12em;">
+        <a href="#kontakt" id="modal-cta" onclick="closeRgModal()"
+          class="btn-primary bg-gold text-cream font-body font-medium text-xs uppercase tracking-widest px-7 py-3.5 inline-block focus-visible:outline-none"
+          style="letter-spacing:0.12em;">
           <span>Jetzt Beratung anfragen</span>
         </a>
       </div>
@@ -786,95 +981,6 @@
   </div>
 
 
-  <!-- ═══════════════════ WARUM FRÜHZEITIG ═══════════════════ -->
-  <section class="py-28 bg-charcoal relative overflow-hidden">
-
-    <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent"></div>
-    <div class="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent"></div>
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] pointer-events-none"
-         style="background: radial-gradient(circle, rgba(184,150,90,0.05) 0%, transparent 70%);"></div>
-
-    <div class="relative max-w-6xl mx-auto px-6 lg:px-8">
-
-      <div class="text-center mb-16">
-        <p class="reveal font-body text-xs font-medium uppercase tracking-widest text-gold mb-4">Warum jetzt handeln</p>
-        <span class="reveal gold-rule mx-auto mb-6" style="background: linear-gradient(90deg, transparent, #B8965A, transparent);"></span>
-        <h2 class="reveal font-display text-3xl md:text-5xl text-cream tracking-tighter leading-tight"
-            style="transition-delay:0.1s; font-weight:400;">
-          Warum frühzeitige Strafverteidigung<br/>entscheidend ist
-        </h2>
-        <p class="reveal font-body text-stone text-base max-w-2xl mx-auto mt-5 leading-[1.75]"
-           style="transition-delay:0.15s;">
-          Die Weichen für eine erfolgreiche Verteidigung werden sehr früh gestellt. Frühzeitige anwaltliche Hilfe schöpft alle Optionen optimal aus.
-        </p>
-      </div>
-
-      <!-- 3-column USP grid -->
-      <div class="grid md:grid-cols-3 gap-6 mb-14">
-
-        <!-- USP 1 -->
-        <div class="reveal card-hover border p-8 relative overflow-hidden"
-             style="transition-delay:0.05s; border-color: rgba(184,150,90,0.18); background: rgba(255,255,255,0.03);">
-          <div class="absolute top-0 right-0 w-24 h-24 pointer-events-none"
-               style="background: radial-gradient(circle at 100% 0%, rgba(184,150,90,0.08) 0%, transparent 70%);"></div>
-          <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6"
-               style="background: rgba(184,150,90,0.12); border: 1px solid rgba(184,150,90,0.2);">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B8965A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <polyline points="12 6 12 12 16 14"/>
-            </svg>
-          </div>
-          <h3 class="font-display text-lg text-cream mb-3 leading-snug" style="font-weight:500;">Im Ermittlungsverfahren</h3>
-          <p class="font-body text-sm text-stone leading-[1.8]">
-            Einstellung vor Anklage möglich. In vielen Fällen kann eine öffentliche Hauptverhandlung verhindert werden – wenn rechtzeitig gehandelt wird.
-          </p>
-        </div>
-
-        <!-- USP 2 -->
-        <div class="reveal card-hover border p-8 relative overflow-hidden"
-             style="transition-delay:0.12s; border-color: rgba(184,150,90,0.18); background: rgba(255,255,255,0.03);">
-          <div class="absolute top-0 right-0 w-24 h-24 pointer-events-none"
-               style="background: radial-gradient(circle at 100% 0%, rgba(184,150,90,0.08) 0%, transparent 70%);"></div>
-          <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6"
-               style="background: rgba(184,150,90,0.12); border: 1px solid rgba(184,150,90,0.2);">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B8965A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-            </svg>
-          </div>
-          <h3 class="font-display text-lg text-cream mb-3 leading-snug" style="font-weight:500;">In der Hauptverhandlung</h3>
-          <p class="font-body text-sm text-stone leading-[1.8]">
-            Strategie statt Zufall. Eine sorgfältige Vorbereitung und klare Verteidigungsstrategie sind unerlässlich – nichts dem Zufall überlassen.
-          </p>
-        </div>
-
-        <!-- USP 3 -->
-        <div class="reveal card-hover border p-8 relative overflow-hidden"
-             style="transition-delay:0.19s; border-color: rgba(184,150,90,0.18); background: rgba(255,255,255,0.03);">
-          <div class="absolute top-0 right-0 w-24 h-24 pointer-events-none"
-               style="background: radial-gradient(circle at 100% 0%, rgba(184,150,90,0.08) 0%, transparent 70%);"></div>
-          <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6"
-               style="background: rgba(184,150,90,0.12); border: 1px solid rgba(184,150,90,0.2);">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B8965A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
-          </div>
-          <h3 class="font-display text-lg text-cream mb-3 leading-snug" style="font-weight:500;">Pflichtverteidigung</h3>
-          <p class="font-body text-sm text-stone leading-[1.8]">
-            Auch hier freie Anwaltswahl. Wenn das Gericht zur Benennung eines Pflichtverteidigers auffordert, bin ich bereit, die Verteidigung zu führen.
-          </p>
-        </div>
-
-      </div>
-
-      <!-- Bottom note -->
-      <div class="reveal text-center" style="transition-delay:0.26s;">
-        <p class="font-body text-sm text-stone/70 leading-relaxed max-w-xl mx-auto">
-          Ich begegne jedem Mandanten offen und ohne Vorurteile – diskret, entschlossen, bundesweit.
-        </p>
-      </div>
-
-    </div>
-  </section>
 
 
   <!-- ═══════════════════ VORGEHEN ═══════════════════ -->
@@ -885,7 +991,7 @@
     <div class="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent"></div>
     <!-- Radial glow -->
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] pointer-events-none"
-         style="background: radial-gradient(circle, rgba(184,150,90,0.06) 0%, transparent 70%);"></div>
+      style="background: radial-gradient(circle, rgba(184,150,90,0.06) 0%, transparent 70%);"></div>
 
     <div class="relative max-w-6xl mx-auto px-6 lg:px-8">
 
@@ -894,9 +1000,10 @@
         <p class="reveal font-body text-xs font-medium uppercase tracking-widest text-gold mb-4">
           Mein Vorgehen
         </p>
-        <span class="reveal gold-rule mx-auto mb-6" style="background: linear-gradient(90deg, transparent, #B8965A, transparent);"></span>
+        <span class="reveal gold-rule mx-auto mb-6"
+          style="background: linear-gradient(90deg, transparent, #B8965A, transparent);"></span>
         <h2 class="reveal font-display text-3xl md:text-5xl text-cream tracking-tighter leading-tight"
-            style="transition-delay:0.1s; font-weight:500;">
+          style="transition-delay:0.1s; font-weight:500;">
           Wie ich arbeite
         </h2>
       </div>
@@ -905,12 +1012,14 @@
       <div class="grid md:grid-cols-4 gap-0 relative">
         <!-- Connecting line -->
         <div class="hidden md:block absolute top-8 left-[12.5%] right-[12.5%] h-px bg-gold/30"
-             style="background: linear-gradient(90deg, transparent, rgba(184,150,90,0.35) 15%, rgba(184,150,90,0.35) 85%, transparent);"></div>
+          style="background: linear-gradient(90deg, transparent, rgba(184,150,90,0.35) 15%, rgba(184,150,90,0.35) 85%, transparent);">
+        </div>
 
         <!-- Step 1 -->
         <div class="reveal text-center px-6 mb-10 md:mb-0" style="transition-delay:0.05s;">
-          <div class="relative w-16 h-16 rounded-full border border-gold/30 flex items-center justify-center mx-auto mb-6 bg-charcoal z-10"
-               style="box-shadow: 0 0 0 6px rgba(184,150,90,0.06);">
+          <div
+            class="relative w-16 h-16 rounded-full border border-gold/30 flex items-center justify-center mx-auto mb-6 bg-charcoal z-10"
+            style="box-shadow: 0 0 0 6px rgba(184,150,90,0.06);">
             <span class="font-display text-gold text-lg" style="font-weight:500;">01</span>
           </div>
           <h3 class="font-display text-lg text-cream mb-3" style="font-weight:500;">Erstgespräch</h3>
@@ -921,20 +1030,23 @@
 
         <!-- Step 2 -->
         <div class="reveal text-center px-6 mb-10 md:mb-0" style="transition-delay:0.12s;">
-          <div class="relative w-16 h-16 rounded-full border border-gold/30 flex items-center justify-center mx-auto mb-6 bg-charcoal z-10"
-               style="box-shadow: 0 0 0 6px rgba(184,150,90,0.06);">
+          <div
+            class="relative w-16 h-16 rounded-full border border-gold/30 flex items-center justify-center mx-auto mb-6 bg-charcoal z-10"
+            style="box-shadow: 0 0 0 6px rgba(184,150,90,0.06);">
             <span class="font-display text-gold text-lg" style="font-weight:500;">02</span>
           </div>
           <h3 class="font-display text-lg text-cream mb-3" style="font-weight:500;">Analyse</h3>
           <p class="font-body text-xs text-stone leading-[1.8]">
-            Sorgfältige Prüfung der Aktenlage und der Beweisführung der Staatsanwaltschaft – transparent und verständlich erklärt.
+            Sorgfältige Prüfung der Aktenlage und der Beweisführung der Staatsanwaltschaft – transparent und
+            verständlich erklärt.
           </p>
         </div>
 
         <!-- Step 3 -->
         <div class="reveal text-center px-6 mb-10 md:mb-0" style="transition-delay:0.19s;">
-          <div class="relative w-16 h-16 rounded-full border border-gold/30 flex items-center justify-center mx-auto mb-6 bg-charcoal z-10"
-               style="box-shadow: 0 0 0 6px rgba(184,150,90,0.06);">
+          <div
+            class="relative w-16 h-16 rounded-full border border-gold/30 flex items-center justify-center mx-auto mb-6 bg-charcoal z-10"
+            style="box-shadow: 0 0 0 6px rgba(184,150,90,0.06);">
             <span class="font-display text-gold text-lg" style="font-weight:500;">03</span>
           </div>
           <h3 class="font-display text-lg text-cream mb-3" style="font-weight:500;">Strategie</h3>
@@ -945,13 +1057,15 @@
 
         <!-- Step 4 -->
         <div class="reveal text-center px-6" style="transition-delay:0.26s;">
-          <div class="relative w-16 h-16 rounded-full border border-gold/30 flex items-center justify-center mx-auto mb-6 bg-charcoal z-10"
-               style="box-shadow: 0 0 0 6px rgba(184,150,90,0.06);">
+          <div
+            class="relative w-16 h-16 rounded-full border border-gold/30 flex items-center justify-center mx-auto mb-6 bg-charcoal z-10"
+            style="box-shadow: 0 0 0 6px rgba(184,150,90,0.06);">
             <span class="font-display text-gold text-lg" style="font-weight:500;">04</span>
           </div>
           <h3 class="font-display text-lg text-cream mb-3" style="font-weight:500;">Durchsetzung</h3>
           <p class="font-body text-xs text-stone leading-[1.8]">
-            Engagierte Vertretung Ihrer Interessen bis zum bestmöglichen Ergebnis – Einstellung, Freispruch oder mildeste Sanktion.
+            Engagierte Vertretung Ihrer Interessen bis zum bestmöglichen Ergebnis – Einstellung, Freispruch oder
+            mildeste Sanktion.
           </p>
         </div>
       </div>
@@ -959,101 +1073,6 @@
     </div>
   </section>
 
-
-  <!-- ═══════════════════ MANDANTENSTIMMEN ═══════════════════ -->
-  <section class="py-28 bg-parchment relative overflow-hidden">
-
-    <div class="absolute inset-0 pointer-events-none"
-         style="background: radial-gradient(ellipse at 90% 50%, rgba(184,150,90,0.06) 0%, transparent 60%);"></div>
-
-    <div class="relative max-w-6xl mx-auto px-6 lg:px-8">
-
-      <div class="text-center mb-16">
-        <p class="reveal font-body text-xs font-medium uppercase tracking-widest text-gold mb-4">Google-Bewertungen</p>
-        <span class="reveal gold-rule mx-auto mb-6"></span>
-        <h2 class="reveal font-display text-3xl md:text-5xl text-charcoal tracking-tighter leading-tight"
-            style="transition-delay:0.1s; font-weight:400;">
-          Was Mandanten sagen
-        </h2>
-        <!-- Stars row -->
-        <div class="reveal flex items-center justify-center gap-1 mt-5" style="transition-delay:0.14s;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="#B8965A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="#B8965A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="#B8965A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="#B8965A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="#B8965A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <span class="font-body text-sm text-stone ml-2">5,0 · Google</span>
-        </div>
-      </div>
-
-      <!-- Testimonial cards -->
-      <div class="grid md:grid-cols-3 gap-6">
-
-        <!-- Review 1 -->
-        <div class="reveal card-hover bg-cream border border-charcoal/6 p-8 flex flex-col"
-             style="transition-delay:0.05s; box-shadow: 0 2px 16px -4px rgba(26,24,21,0.06);">
-          <!-- Stars -->
-          <div class="flex items-center gap-0.5 mb-5">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="#B8965A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="#B8965A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="#B8965A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="#B8965A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="#B8965A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          </div>
-          <!-- Quote mark -->
-          <div class="font-display text-5xl text-gold/20 leading-none mb-2" aria-hidden="true">"</div>
-          <p class="font-body text-sm text-stone leading-[1.85] flex-1 mb-6">
-            Frau Mönks hat mich in einer sehr belastenden Situation professionell und mit vollem Einsatz vertreten. Dank ihrer Expertise konnte das Verfahren eingestellt werden. Ich bin sehr dankbar für ihre diskrete und kompetente Unterstützung.
-          </p>
-          <div class="pt-5 border-t border-charcoal/8">
-            <p class="font-body text-xs font-medium text-charcoal uppercase tracking-wider">M. K.</p>
-            <p class="font-body text-xs text-stone mt-0.5">Mandant, Kassel</p>
-          </div>
-        </div>
-
-        <!-- Review 2 -->
-        <div class="reveal card-hover bg-cream border border-charcoal/6 p-8 flex flex-col"
-             style="transition-delay:0.12s; box-shadow: 0 2px 16px -4px rgba(26,24,21,0.06);">
-          <div class="flex items-center gap-0.5 mb-5">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="#B8965A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="#B8965A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="#B8965A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="#B8965A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="#B8965A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          </div>
-          <div class="font-display text-5xl text-gold/20 leading-none mb-2" aria-hidden="true">"</div>
-          <p class="font-body text-sm text-stone leading-[1.85] flex-1 mb-6">
-            Ich habe Frau Mönks als äußerst kompetente und engagierte Anwältin erlebt. Sie hat sich intensiv mit meinem Fall auseinandergesetzt, mir alles verständlich erklärt und mich stets auf dem Laufenden gehalten. Das Ergebnis hat meine Erwartungen übertroffen.
-          </p>
-          <div class="pt-5 border-t border-charcoal/8">
-            <p class="font-body text-xs font-medium text-charcoal uppercase tracking-wider">T. R.</p>
-            <p class="font-body text-xs text-stone mt-0.5">Mandant, Nordhessen</p>
-          </div>
-        </div>
-
-        <!-- Review 3 -->
-        <div class="reveal card-hover bg-cream border border-charcoal/6 p-8 flex flex-col"
-             style="transition-delay:0.19s; box-shadow: 0 2px 16px -4px rgba(26,24,21,0.06);">
-          <div class="flex items-center gap-0.5 mb-5">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="#B8965A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="#B8965A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="#B8965A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="#B8965A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="#B8965A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          </div>
-          <div class="font-display text-5xl text-gold/20 leading-none mb-2" aria-hidden="true">"</div>
-          <p class="font-body text-sm text-stone leading-[1.85] flex-1 mb-6">
-            In einer für meine Familie extrem schwierigen Zeit war Frau Mönks ein echter Rückhalt. Sie hat nicht nur juristisch überzeugt, sondern uns auch menschlich sehr gut betreut. Ihre Erfahrung als ehemalige Staatsanwältin war dabei ein klarer Vorteil.
-          </p>
-          <div class="pt-5 border-t border-charcoal/8">
-            <p class="font-body text-xs font-medium text-charcoal uppercase tracking-wider">S. B.</p>
-            <p class="font-body text-xs text-stone mt-0.5">Mandantin, Kassel</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
 
 
   <!-- ═══════════════════ KONTAKT ═══════════════════ -->
@@ -1061,7 +1080,7 @@
 
     <!-- Background accent -->
     <div class="absolute inset-0 pointer-events-none"
-         style="background: radial-gradient(ellipse at 80% 50%, rgba(184,150,90,0.06) 0%, transparent 60%);"></div>
+      style="background: radial-gradient(ellipse at 80% 50%, rgba(184,150,90,0.06) 0%, transparent 60%);"></div>
 
     <div class="relative max-w-6xl mx-auto px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
@@ -1073,11 +1092,10 @@
           </p>
           <span class="reveal gold-rule mb-6" style="transition-delay:0.05s;"></span>
           <h2 class="reveal font-display text-3xl md:text-5xl text-charcoal tracking-tighter leading-tight mb-6"
-              style="transition-delay:0.1s; font-weight:500;">
-            Lassen Sie uns<br/>sprechen.
+            style="transition-delay:0.1s; font-weight:500;">
+            Lassen Sie uns<br />sprechen.
           </h2>
-          <p class="reveal font-body text-stone text-base leading-[1.75] mb-10"
-             style="transition-delay:0.15s;">
+          <p class="reveal font-body text-stone text-base leading-[1.75] mb-10" style="transition-delay:0.15s;">
             Jede Situation ist anders – das Gespräch ist kostenlos und unverbindlich.
             Ich melde mich innerhalb von 24 Stunden.
           </p>
@@ -1086,56 +1104,71 @@
           <div class="reveal space-y-6" style="transition-delay:0.2s;">
 
             <a href="tel:+4956176620421"
-               class="flex items-center gap-4 group focus-visible:outline-none focus-visible:underline">
-              <div class="w-11 h-11 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0 transition-colors duration-300 group-hover:bg-gold/20">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8965A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.13 12 19.79 19.79 0 011.06 3.18 2 2 0 013.05 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+              class="flex items-center gap-4 group focus-visible:outline-none focus-visible:underline">
+              <div
+                class="w-11 h-11 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0 transition-colors duration-300 group-hover:bg-gold/20">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8965A" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.13 12 19.79 19.79 0 011.06 3.18 2 2 0 013.05 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
                 </svg>
               </div>
               <div>
                 <p class="font-body text-xs text-stone uppercase tracking-wider mb-0.5">Kanzlei</p>
-                <p class="font-body text-base font-medium text-charcoal group-hover:text-gold transition-colors duration-200">0561 · 766 20421</p>
+                <p
+                  class="font-body text-base font-medium text-charcoal group-hover:text-gold transition-colors duration-200">
+                  0561 · 766 20421</p>
               </div>
             </a>
 
             <a href="tel:+491637117439"
-               class="flex items-center gap-4 group focus-visible:outline-none focus-visible:underline">
-              <div class="w-11 h-11 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0 transition-colors duration-300 group-hover:bg-gold/20">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8965A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.13 12 19.79 19.79 0 011.06 3.18 2 2 0 013.05 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-                  <line x1="18" y1="6" x2="22" y2="2" stroke="#B8965A" stroke-width="1.5"/>
+              class="flex items-center gap-4 group focus-visible:outline-none focus-visible:underline">
+              <div
+                class="w-11 h-11 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0 transition-colors duration-300 group-hover:bg-gold/20">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8965A" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.13 12 19.79 19.79 0 011.06 3.18 2 2 0 013.05 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+                  <line x1="18" y1="6" x2="22" y2="2" stroke="#B8965A" stroke-width="1.5" />
                 </svg>
               </div>
               <div>
                 <p class="font-body text-xs text-stone uppercase tracking-wider mb-0.5">Notfallnummer</p>
-                <p class="font-body text-base font-medium text-charcoal group-hover:text-gold transition-colors duration-200">0163 · 711 7439</p>
+                <p
+                  class="font-body text-base font-medium text-charcoal group-hover:text-gold transition-colors duration-200">
+                  0163 · 711 7439</p>
               </div>
             </a>
 
-            <a href="mailto:info@kanzlei-moenks.de"
-               class="flex items-center gap-4 group focus-visible:outline-none focus-visible:underline">
-              <div class="w-11 h-11 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0 transition-colors duration-300 group-hover:bg-gold/20">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8965A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                  <polyline points="22,6 12,13 2,6"/>
+            <a href="mailto:kanzlei@ra-moenks.de"
+              class="flex items-center gap-4 group focus-visible:outline-none focus-visible:underline">
+              <div
+                class="w-11 h-11 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0 transition-colors duration-300 group-hover:bg-gold/20">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8965A" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
                 </svg>
               </div>
               <div>
                 <p class="font-body text-xs text-stone uppercase tracking-wider mb-0.5">E-Mail</p>
-                <p class="font-body text-base font-medium text-charcoal group-hover:text-gold transition-colors duration-200">info@kanzlei-moenks.de</p>
+                <p
+                  class="font-body text-base font-medium text-charcoal group-hover:text-gold transition-colors duration-200">
+                  kanzlei@ra-moenks.de</p>
               </div>
             </a>
 
             <div class="flex items-center gap-4">
               <div class="w-11 h-11 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8965A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                  <circle cx="12" cy="10" r="3"/>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8965A" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                  <circle cx="12" cy="10" r="3" />
                 </svg>
               </div>
               <div>
                 <p class="font-body text-xs text-stone uppercase tracking-wider mb-0.5">Adresse</p>
-                <p class="font-body text-base font-medium text-charcoal">Frankfurter Straße 83 · 34121 Kassel</p>
+                <p class="font-body text-base font-medium text-charcoal">Frankfurter Straße 86 · 34121 Kassel</p>
               </div>
             </div>
           </div>
@@ -1145,11 +1178,15 @@
             <p class="font-body text-xs font-medium uppercase tracking-widest text-stone mb-4">Sprechzeiten</p>
             <div class="space-y-2">
               <div class="flex justify-between font-body text-sm">
-                <span class="text-stone">Mo – Fr</span>
-                <span class="text-charcoal font-medium">09:00 – 17:00 Uhr</span>
+                <span class="text-stone">Mo – Do</span>
+                <span class="text-charcoal font-medium">08:00 – 12:00, 14:00 – 17:00 Uhr</span>
               </div>
               <div class="flex justify-between font-body text-sm">
-                <span class="text-stone">Termine außerhalb</span>
+                <span class="text-stone">Fr</span>
+                <span class="text-charcoal font-medium">08:00 – 12:00 Uhr</span>
+              </div>
+              <div class="flex justify-between font-body text-sm">
+                <span class="text-stone">Termine</span>
                 <span class="text-charcoal font-medium">nach Vereinbarung</span>
               </div>
             </div>
@@ -1159,16 +1196,11 @@
           <div class="reveal mt-10" style="transition-delay:0.3s;">
             <p class="font-body text-xs font-medium uppercase tracking-widest text-stone mb-3">Kanzleisitz</p>
             <div class="overflow-hidden border border-charcoal/8"
-                 style="box-shadow: 0 2px 12px -4px rgba(26,24,21,0.08);">
-              <iframe
-                src="https://maps.google.com/maps?q=Frankfurter+Stra%C3%9Fe+83%2C+34121+Kassel&output=embed&z=16"
-                width="100%"
-                height="220"
-                style="border:0; display:block; filter: grayscale(20%) contrast(1.02);"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                title="Kanzlei Ria Mönks – Frankfurter Straße 83, 34121 Kassel">
+              style="box-shadow: 0 2px 12px -4px rgba(26,24,21,0.08);">
+              <iframe src="https://maps.google.com/maps?q=Frankfurter+Stra%C3%9Fe+86%2C+34121+Kassel&output=embed&z=16"
+                width="100%" height="220" style="border:0; display:block; filter: grayscale(20%) contrast(1.02);"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                title="Kanzlei Ria Mönks – Frankfurter Straße 86, 34121 Kassel">
               </iframe>
             </div>
           </div>
@@ -1177,9 +1209,9 @@
         <!-- Right: Contact Form -->
         <div class="reveal" style="transition-delay:0.12s;">
           <form class="bg-parchment border border-charcoal/6 p-8 lg:p-10"
-                style="box-shadow: 0 4px 24px -8px rgba(26,24,21,0.08);"
-                onsubmit="handleSubmit(event)">
-            <h3 class="font-display text-2xl text-charcoal tracking-tight mb-8" style="font-weight:500;">Erstanfrage stellen</h3>
+            style="box-shadow: 0 4px 24px -8px rgba(26,24,21,0.08);" onsubmit="handleSubmit(event)">
+            <h3 class="font-display text-2xl text-charcoal tracking-tight mb-8" style="font-weight:500;">Erstanfrage
+              stellen</h3>
 
             <div class="space-y-5">
               <!-- Name -->
@@ -1187,12 +1219,12 @@
                 <div>
                   <label class="font-body text-xs text-stone uppercase tracking-wider mb-2 block">Vorname</label>
                   <input type="text" required placeholder="Maria"
-                         class="form-input w-full bg-cream border border-charcoal/15 px-4 py-3 font-body text-sm text-charcoal placeholder-stone/50 focus:bg-cream" />
+                    class="form-input w-full bg-cream border border-charcoal/15 px-4 py-3 font-body text-sm text-charcoal placeholder-stone/50 focus:bg-cream" />
                 </div>
                 <div>
                   <label class="font-body text-xs text-stone uppercase tracking-wider mb-2 block">Nachname</label>
                   <input type="text" required placeholder="Mustermann"
-                         class="form-input w-full bg-cream border border-charcoal/15 px-4 py-3 font-body text-sm text-charcoal placeholder-stone/50 focus:bg-cream" />
+                    class="form-input w-full bg-cream border border-charcoal/15 px-4 py-3 font-body text-sm text-charcoal placeholder-stone/50 focus:bg-cream" />
                 </div>
               </div>
 
@@ -1200,20 +1232,22 @@
               <div>
                 <label class="font-body text-xs text-stone uppercase tracking-wider mb-2 block">E-Mail-Adresse</label>
                 <input type="email" required placeholder="maria@beispiel.de"
-                       class="form-input w-full bg-cream border border-charcoal/15 px-4 py-3 font-body text-sm text-charcoal placeholder-stone/50" />
+                  class="form-input w-full bg-cream border border-charcoal/15 px-4 py-3 font-body text-sm text-charcoal placeholder-stone/50" />
               </div>
 
               <!-- Phone -->
               <div>
-                <label class="font-body text-xs text-stone uppercase tracking-wider mb-2 block">Telefonnummer <span class="text-stone/50 normal-case tracking-normal">(optional)</span></label>
+                <label class="font-body text-xs text-stone uppercase tracking-wider mb-2 block">Telefonnummer <span
+                    class="text-stone/50 normal-case tracking-normal">(optional)</span></label>
                 <input type="tel" placeholder="0561 …"
-                       class="form-input w-full bg-cream border border-charcoal/15 px-4 py-3 font-body text-sm text-charcoal placeholder-stone/50" />
+                  class="form-input w-full bg-cream border border-charcoal/15 px-4 py-3 font-body text-sm text-charcoal placeholder-stone/50" />
               </div>
 
               <!-- Rechtsgebiet -->
               <div>
                 <label class="font-body text-xs text-stone uppercase tracking-wider mb-2 block">Rechtsgebiet</label>
-                <select class="form-input w-full bg-cream border border-charcoal/15 px-4 py-3 font-body text-sm text-charcoal appearance-none">
+                <select
+                  class="form-input w-full bg-cream border border-charcoal/15 px-4 py-3 font-body text-sm text-charcoal appearance-none">
                   <option value="" disabled selected>Bitte wählen …</option>
                   <option>Allgemeines Strafrecht</option>
                   <option>Betäubungsmittelstrafrecht</option>
@@ -1228,21 +1262,23 @@
               <div>
                 <label class="font-body text-xs text-stone uppercase tracking-wider mb-2 block">Ihr Anliegen</label>
                 <textarea required rows="4" placeholder="Beschreiben Sie kurz Ihr rechtliches Anliegen …"
-                          class="form-input w-full bg-cream border border-charcoal/15 px-4 py-3 font-body text-sm text-charcoal placeholder-stone/50 resize-none"></textarea>
+                  class="form-input w-full bg-cream border border-charcoal/15 px-4 py-3 font-body text-sm text-charcoal placeholder-stone/50 resize-none"></textarea>
               </div>
 
               <!-- Privacy -->
               <div class="flex items-start gap-3">
                 <input type="checkbox" required id="privacy"
-                       class="mt-1 w-4 h-4 accent-gold cursor-pointer flex-shrink-0" />
+                  class="mt-1 w-4 h-4 accent-gold cursor-pointer flex-shrink-0" />
                 <label for="privacy" class="font-body text-xs text-stone leading-[1.7] cursor-pointer">
-                  Ich habe die <a href="#" class="text-gold hover:underline focus-visible:underline">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.
+                  Ich habe die <a href="#"
+                    class="text-gold hover:underline focus-visible:underline">Datenschutzerklärung</a> gelesen und
+                  stimme der Verarbeitung meiner Daten zu.
                 </label>
               </div>
 
               <!-- Submit -->
               <button type="submit"
-                      class="btn-primary w-full bg-gold text-cream font-body font-medium text-xs uppercase tracking-widest py-4 mt-2 focus-visible:outline-none">
+                class="btn-primary w-full bg-gold text-cream font-body font-medium text-xs uppercase tracking-widest py-4 mt-2 focus-visible:outline-none">
                 <span>Anfrage absenden</span>
               </button>
             </div>
@@ -1250,7 +1286,8 @@
 
           <!-- Success message (hidden by default) -->
           <div id="success-msg" class="hidden mt-4 bg-green-50 border border-green-200 px-6 py-4">
-            <p class="font-body text-sm text-green-800">Vielen Dank! Ihre Anfrage wurde gesendet. Ich melde mich innerhalb von 24 Stunden.</p>
+            <p class="font-body text-sm text-green-800">Vielen Dank! Ihre Anfrage wurde gesendet. Ich melde mich
+              innerhalb von 24 Stunden.</p>
           </div>
         </div>
 
@@ -1268,9 +1305,8 @@
 
         <!-- Brand -->
         <div>
-          <img src="Brand Assets/Ria_Mönks_Logo_transparent_HQ.png"
-               alt="Ria Mönks"
-               class="h-16 w-auto mb-4 opacity-90 brightness-0 invert" />
+          <img src="Brand Assets/Ria_Mönks_Logo_transparent_HQ.png" alt="Ria Mönks"
+            class="h-16 w-auto mb-4 opacity-90 brightness-0 invert" />
           <p class="font-body text-xs text-stone leading-[1.75] max-w-[240px]">
             Strafverteidigung und Opfervertretung – mit Erfahrung, Expertise und vollem Engagement für Ihr Recht.
           </p>
@@ -1280,10 +1316,18 @@
         <div>
           <p class="font-body text-xs font-medium uppercase tracking-widest text-stone mb-5">Navigation</p>
           <ul class="space-y-3">
-            <li><a href="#top"           class="font-body text-sm text-stone hover:text-cream transition-colors duration-200 focus-visible:outline-none focus-visible:underline">Home</a></li>
-            <li><a href="#rechtsgebiete" class="font-body text-sm text-stone hover:text-cream transition-colors duration-200 focus-visible:outline-none focus-visible:underline">Rechtsgebiete</a></li>
-            <li><a href="#ueber-mich"    class="font-body text-sm text-stone hover:text-cream transition-colors duration-200 focus-visible:outline-none focus-visible:underline">Über mich</a></li>
-            <li><a href="#kontakt"       class="font-body text-sm text-stone hover:text-cream transition-colors duration-200 focus-visible:outline-none focus-visible:underline">Kontakt</a></li>
+            <li><a href="#top"
+                class="font-body text-sm text-stone hover:text-cream transition-colors duration-200 focus-visible:outline-none focus-visible:underline">Home</a>
+            </li>
+            <li><a href="#rechtsgebiete"
+                class="font-body text-sm text-stone hover:text-cream transition-colors duration-200 focus-visible:outline-none focus-visible:underline">Rechtsgebiete</a>
+            </li>
+            <li><a href="#ueber-mich"
+                class="font-body text-sm text-stone hover:text-cream transition-colors duration-200 focus-visible:outline-none focus-visible:underline">Über
+                mich</a></li>
+            <li><a href="#kontakt"
+                class="font-body text-sm text-stone hover:text-cream transition-colors duration-200 focus-visible:outline-none focus-visible:underline">Kontakt</a>
+            </li>
           </ul>
         </div>
 
@@ -1291,11 +1335,17 @@
         <div>
           <p class="font-body text-xs font-medium uppercase tracking-widest text-stone mb-5">Kanzlei</p>
           <ul class="space-y-3">
-            <li class="font-body text-sm text-stone">Frankfurter Straße 83</li>
+            <li class="font-body text-sm text-stone">Frankfurter Straße 86</li>
             <li class="font-body text-sm text-stone">34121 Kassel</li>
-            <li><a href="tel:+4956176620421"  class="font-body text-sm text-stone hover:text-cream transition-colors duration-200 focus-visible:outline-none focus-visible:underline">0561 · 766 20421</a></li>
-            <li><a href="tel:+491637117439"   class="font-body text-sm text-stone hover:text-cream transition-colors duration-200 focus-visible:outline-none focus-visible:underline">0163 · 711 7439 (Notfall)</a></li>
-            <li><a href="mailto:info@kanzlei-moenks.de" class="font-body text-sm text-stone hover:text-cream transition-colors duration-200 focus-visible:outline-none focus-visible:underline">info@kanzlei-moenks.de</a></li>
+            <li><a href="tel:+4956176620421"
+                class="font-body text-sm text-stone hover:text-cream transition-colors duration-200 focus-visible:outline-none focus-visible:underline">0561
+                · 766 20421</a></li>
+            <li><a href="tel:+491637117439"
+                class="font-body text-sm text-stone hover:text-cream transition-colors duration-200 focus-visible:outline-none focus-visible:underline">0163
+                · 711 7439 (Notfall)</a></li>
+            <li><a href="mailto:kanzlei@ra-moenks.de"
+                class="font-body text-sm text-stone hover:text-cream transition-colors duration-200 focus-visible:outline-none focus-visible:underline">kanzlei@ra-moenks.de</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -1304,8 +1354,10 @@
       <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
         <p class="font-body text-xs text-stone/60">© 2026 Ria Mönks Rechtsanwältin. Alle Rechte vorbehalten.</p>
         <div class="flex gap-6">
-          <a href="#" class="font-body text-xs text-stone/60 hover:text-stone transition-colors duration-200 focus-visible:outline-none focus-visible:underline">Impressum</a>
-          <a href="#" class="font-body text-xs text-stone/60 hover:text-stone transition-colors duration-200 focus-visible:outline-none focus-visible:underline">Datenschutz</a>
+          <a href="#"
+            class="font-body text-xs text-stone/60 hover:text-stone transition-colors duration-200 focus-visible:outline-none focus-visible:underline">Impressum</a>
+          <a href="#"
+            class="font-body text-xs text-stone/60 hover:text-stone transition-colors duration-200 focus-visible:outline-none focus-visible:underline">Datenschutz</a>
         </div>
       </div>
     </div>
@@ -1327,21 +1379,21 @@
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
     // --- Sticky nav: dark hero → cream on scroll ---
-    const navbar  = document.getElementById('navbar');
+    const navbar = document.getElementById('navbar');
     const navLogo = document.getElementById('nav-logo-img');
 
     function updateNav() {
       if (window.scrollY > 80) {
         navbar.classList.remove('on-dark');
-        navbar.style.background      = 'rgba(247,244,238,0.96)';
-        navbar.style.backdropFilter  = 'blur(12px)';
-        navbar.style.borderBottom    = '1px solid rgba(26,24,21,0.06)';
+        navbar.style.background = 'rgba(247,244,238,0.96)';
+        navbar.style.backdropFilter = 'blur(12px)';
+        navbar.style.borderBottom = '1px solid rgba(26,24,21,0.06)';
         if (navLogo) navLogo.style.filter = 'none';
       } else {
         navbar.classList.add('on-dark');
-        navbar.style.background      = 'rgba(26,24,21,0.15)';
-        navbar.style.backdropFilter  = 'blur(8px)';
-        navbar.style.borderBottom    = 'none';
+        navbar.style.background = 'rgba(26,24,21,0.15)';
+        navbar.style.backdropFilter = 'blur(8px)';
+        navbar.style.borderBottom = 'none';
         if (navLogo) navLogo.style.filter = 'brightness(0) invert(1)';
       }
     }
@@ -1350,13 +1402,13 @@
     updateNav(); // set initial state
 
     // --- Mobile menu ---
-    const menuBtn    = document.getElementById('menu-btn');
+    const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     let menuOpen = false;
     menuBtn.addEventListener('click', () => {
       menuOpen = !menuOpen;
       mobileMenu.classList.toggle('hidden', !menuOpen);
-      mobileMenu.classList.toggle('open',   menuOpen);
+      mobileMenu.classList.toggle('open', menuOpen);
     });
     mobileMenu.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
@@ -1377,55 +1429,55 @@
     const rgData = {
       allg: {
         title: 'Allgemeines Strafrecht',
-        text:  'Ich verteidige Sie bei allen Straftaten des allgemeinen Strafrechts – von Eigentums- und Vermögensdelikten über Körperverletzung bis hin zu Kapitaldelikten wie Totschlag und Mord. Bei schwerwiegenden Vorwürfen ist die unverzügliche Hinzuziehung einer Anwältin entscheidend. Als ehemalige Staatsanwältin kenne ich die Ermittlungsstrategien und weiß, worauf es in jedem Verfahrensstadium ankommt – vom Ermittlungsverfahren über die Hauptverhandlung bis hin zu Rechtsmitteln und Strafvollstreckung.'
+        text: 'Ich verteidige Sie bei allen Straftaten des allgemeinen Strafrechts – von Eigentums- und Vermögensdelikten über Körperverletzung bis hin zu Kapitaldelikten wie Totschlag und Mord. Bei schwerwiegenden Vorwürfen ist die unverzügliche Hinzuziehung einer Anwältin entscheidend. Als ehemalige Staatsanwältin kenne ich die Ermittlungsstrategien und weiß, worauf es in jedem Verfahrensstadium ankommt – vom Ermittlungsverfahren über die Hauptverhandlung bis hin zu Rechtsmitteln und Strafvollstreckung.'
       },
       btm: {
         title: 'Betäubungsmittelstrafrecht',
-        text:  'Ich verteidige bei allen Verstößen gegen das BtMG und das KCanG – ob Besitz, Handel, Einfuhr, Weitergabe oder bandenmäßiger Handel. Jedes Ermittlungsverfahren verläuft unterschiedlich und verlangt eine individuelle Strategie. Mit meiner Erfahrung aus der Staatsanwaltschaft kenne ich die Ermittlungsansätze und kann Ihre Verteidigung gezielt und wirkungsvoll ausrichten.'
+        text: 'Ich verteidige bei allen Verstößen gegen das BtMG und das KCanG – ob Besitz, Handel, Einfuhr, Weitergabe oder bandenmäßiger Handel. Jedes Ermittlungsverfahren verläuft unterschiedlich und verlangt eine individuelle Strategie. Mit meiner Erfahrung aus der Staatsanwaltschaft kenne ich die Ermittlungsansätze und kann Ihre Verteidigung gezielt und wirkungsvoll ausrichten.'
       },
       verkehr: {
         title: 'Verkehrsstrafrecht',
-        text:  'Ich verteidige umfassend bei Trunkenheitsfahrten, Unfallflucht und fahrlässiger Körperverletzung im Straßenverkehr. Neben der eigentlichen Strafe sind führerscheinrechtliche Konsequenzen oft besonders einschneidend. Durch eine überlegte Verteidigung lassen sich mildere Sanktionen erreichen. Ich setze mich gezielt für den Erhalt Ihrer Fahrerlaubnis ein und prüfe jeden Aspekt des Ermittlungsverfahrens kritisch.'
+        text: 'Ich verteidige umfassend bei Trunkenheitsfahrten, Unfallflucht und fahrlässiger Körperverletzung im Straßenverkehr. Neben der eigentlichen Strafe sind führerscheinrechtliche Konsequenzen oft besonders einschneidend. Durch eine überlegte Verteidigung lassen sich mildere Sanktionen erreichen. Ich setze mich gezielt für den Erhalt Ihrer Fahrerlaubnis ein und prüfe jeden Aspekt des Ermittlungsverfahrens kritisch.'
       },
       sexual: {
         title: 'Sexualstrafrecht',
-        text:  'Sexualstrafverfahren erfordern besondere Sensibilität und Expertise. Ich verteidige diskret und entschlossen – mit dem Fokus auf die kritische Prüfung der Beweislage und der Zeugenaussagen unter aussagepsychologischen Gesichtspunkten. Ein respektvoller Umgang mit allen Beteiligten ist für mich selbstverständlich. Die Schwere dieser Vorwürfe erfordert eine durchdachte und erfahrene Verteidigung.'
+        text: 'Sexualstrafverfahren erfordern besondere Sensibilität und Expertise. Ich verteidige diskret und entschlossen – mit dem Fokus auf die kritische Prüfung der Beweislage und der Zeugenaussagen unter aussagepsychologischen Gesichtspunkten. Ein respektvoller Umgang mit allen Beteiligten ist für mich selbstverständlich. Die Schwere dieser Vorwürfe erfordert eine durchdachte und erfahrene Verteidigung.'
       },
       jugend: {
         title: 'Jugendstrafrecht',
-        text:  'Jugendliche (14–17 Jahre) und Heranwachsende (18–20 Jahre) benötigen in Strafverfahren besonderen Schutz. Das Jugendgerichtsgesetz bietet viele Chancen für die Verteidigung – im Vordergrund stehen die erzieherische Einwirkung und die Wahrung der Zukunftsperspektive. Ich arbeite eng mit Jugendämtern und Bewährungshilfe zusammen, um das bestmögliche Ergebnis zu erzielen.'
+        text: 'Jugendliche (14–17 Jahre) und Heranwachsende (18–20 Jahre) benötigen in Strafverfahren besonderen Schutz. Das Jugendgerichtsgesetz bietet viele Chancen für die Verteidigung – im Vordergrund stehen die erzieherische Einwirkung und die Wahrung der Zukunftsperspektive. Ich arbeite eng mit Jugendämtern und Bewährungshilfe zusammen, um das bestmögliche Ergebnis zu erzielen.'
       },
       opfer: {
         title: 'Opfervertretung',
-        text:  'Opfer einer Straftat haben Rechte – und ich helfe Ihnen, diese durchzusetzen. Als Nebenklägervertreterin stehe ich Ihnen in Strafverfahren zur Seite und vertrete Ihre Interessen gegenüber Gericht und Staatsanwaltschaft. Ich begleite Sie einfühlsam durch ein oft belastendes Verfahren und setze mich für eine angemessene Würdigung Ihres Leids und gerechte Entschädigung ein.'
+        text: 'Opfer einer Straftat haben Rechte – und ich helfe Ihnen, diese durchzusetzen. Als Nebenklägervertreterin stehe ich Ihnen in Strafverfahren zur Seite und vertrete Ihre Interessen gegenüber Gericht und Staatsanwaltschaft. Ich begleite Sie einfühlsam durch ein oft belastendes Verfahren und setze mich für eine angemessene Würdigung Ihres Leids und gerechte Entschädigung ein.'
       }
     };
 
-    const rgOverlay  = document.getElementById('rg-overlay');
-    const rgModal    = document.getElementById('rg-modal');
-    const rgTitle    = document.getElementById('modal-title');
-    const rgText     = document.getElementById('modal-text');
-    const rgClose    = document.getElementById('modal-close');
-    let rgLastFocus  = null;
+    const rgOverlay = document.getElementById('rg-overlay');
+    const rgModal = document.getElementById('rg-modal');
+    const rgTitle = document.getElementById('modal-title');
+    const rgText = document.getElementById('modal-text');
+    const rgClose = document.getElementById('modal-close');
+    let rgLastFocus = null;
 
     function openRgModal(key) {
       const d = rgData[key];
       if (!d) return;
       rgTitle.textContent = d.title;
-      rgText.textContent  = d.text;
-      rgOverlay.style.opacity       = '1';
+      rgText.textContent = d.text;
+      rgOverlay.style.opacity = '1';
       rgOverlay.style.pointerEvents = 'auto';
-      rgModal.style.opacity         = '1';
-      rgModal.style.transform       = 'scale(1)';
-      document.body.style.overflow  = 'hidden';
+      rgModal.style.opacity = '1';
+      rgModal.style.transform = 'scale(1)';
+      document.body.style.overflow = 'hidden';
       setTimeout(() => rgClose.focus(), 60);
     }
 
     function closeRgModal() {
-      rgOverlay.style.opacity       = '0';
+      rgOverlay.style.opacity = '0';
       rgOverlay.style.pointerEvents = 'none';
-      rgModal.style.opacity         = '0';
-      rgModal.style.transform       = 'scale(0.95)';
+      rgModal.style.opacity = '0';
+      rgModal.style.transform = 'scale(0.95)';
       setTimeout(() => {
         document.body.style.overflow = '';
         if (rgLastFocus) rgLastFocus.focus();
@@ -1455,4 +1507,5 @@
     });
   </script>
 </body>
+
 </html>
