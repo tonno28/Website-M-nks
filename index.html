@@ -382,22 +382,48 @@
         box-shadow: 0 0 40px rgba(220, 38, 38, 0.45), 0 0 80px rgba(220, 38, 38, 0.2);
       }
     }
+
+    /* Notruf button – neutral by default, red on hover */
+    .notruf-cta {
+      background: transparent;
+      border: 1px solid rgba(247, 244, 238, 0.3);
+      color: #F7F4EE;
+      transition: background 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                  border-color 0.35s ease,
+                  box-shadow 0.35s ease;
+    }
+
+    .notruf-cta:hover,
+    .notruf-cta:focus-visible {
+      background: #b91c1c;
+      border-color: #b91c1c;
+      box-shadow: 0 0 30px rgba(220, 38, 38, 0.45), 0 0 60px rgba(220, 38, 38, 0.2);
+    }
+
+    .notruf-cta:active {
+      transform: scale(0.98);
+    }
+
+    .notruf-cta:focus-visible {
+      outline: 2px solid rgba(220, 38, 38, 0.6);
+      outline-offset: 3px;
+    }
   </style>
 </head>
 
 <body class="grain bg-cream font-body text-charcoal antialiased">
 
   <!-- ═══════════════════ NAVIGATION ═══════════════════ -->
-  <header id="navbar" class="on-dark fixed top-0 inset-x-0 z-50 transition-all duration-300"
-    style="background:rgba(26,24,21,0.15); backdrop-filter:blur(8px);">
+  <header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-300"
+    style="background:rgba(247,244,238,0.97); backdrop-filter:blur(12px); border-bottom:1px solid rgba(26,24,21,0.06);">
     <div class="max-w-6xl mx-auto px-6 lg:px-8">
       <nav class="flex items-center justify-between h-18 py-4">
 
         <!-- Logo -->
         <a href="#top" class="flex items-center gap-3 group focus-visible:outline-none">
           <img id="nav-logo-img" src="Brand Assets/Ria_Mönks_Logo_transparent_HQ.png" alt="Ria Mönks Logo"
-            class="h-12 w-auto transition-opacity duration-300 group-hover:opacity-80"
-            style="filter: brightness(0) invert(1);" />
+            class="h-14 w-auto transition-opacity duration-300 group-hover:opacity-80"
+            style="filter: none;" />
         </a>
 
         <!-- Desktop links -->
@@ -487,7 +513,7 @@
 
     <!-- Scales of Justice – faint decorative background element -->
     <div class="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true"
-      style="opacity: 0.045;">
+      style="opacity: 0.13;">
       <svg width="600" height="600" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg">
         <!-- Pillar -->
         <line x1="60" y1="12" x2="60" y2="112" stroke="#B8965A" stroke-width="1.8" />
@@ -534,21 +560,27 @@
 
       <!-- Main Headline -->
       <h1
-        class="reveal font-display text-4xl md:text-6xl lg:text-[4.5rem] text-cream leading-tight tracking-tighter mb-4"
-        style="transition-delay:0.15s; font-weight:400; line-height:1.1;">
-        Ehemalige Staatsanwältin –<br />
-        <em class="not-italic text-gold" style="font-style:italic;">jetzt Ihre Rechtsanwältin</em>
+        class="reveal font-display text-4xl md:text-6xl lg:text-[4.5rem] text-cream leading-tight tracking-tighter mb-2"
+        style="transition-delay:0.15s; font-weight:400; line-height:1.08;">
+        Rechtsanwältin<br />
+        <em class="not-italic text-gold" style="font-style:italic;">Ria Mönks</em>
       </h1>
 
+      <!-- Tagline – smaller, below name -->
+      <p class="reveal font-body text-base md:text-lg mb-8 max-w-xl mx-auto"
+        style="transition-delay:0.18s; color: rgba(247,244,238,0.65); line-height: 1.6; letter-spacing: 0.03em;">
+        Ehemalige Staatsanwältin, jetzt Ihre Rechtsanwältin
+      </p>
+
       <!-- Gold rule under headline -->
-      <div class="reveal flex justify-center mt-8 mb-8" style="transition-delay:0.2s;">
+      <div class="reveal flex justify-center mb-8" style="transition-delay:0.2s;">
         <div class="h-px w-20"
           style="background: linear-gradient(90deg, transparent, rgba(184,150,90,0.6), transparent);"></div>
       </div>
 
       <!-- Subtext -->
-      <p class="reveal font-body text-lg md:text-xl mb-10 max-w-2xl mx-auto font-medium"
-        style="transition-delay:0.22s; color: rgba(184,150,90,0.9); line-height: 1.6; letter-spacing: 0.04em;">
+      <p class="reveal font-body text-sm md:text-base mb-10 max-w-2xl mx-auto font-medium"
+        style="transition-delay:0.22s; color: rgba(184,150,90,0.9); line-height: 1.6; letter-spacing: 0.1em;">
         Vertraulich · Entschlossen · Kompetent
       </p>
 
@@ -610,13 +642,13 @@
 
 
   <!-- ═══════════════════ KURZVORSTELLUNG ═══════════════════ -->
-  <section id="ueber-mich" class="bg-charcoal relative overflow-hidden py-24">
-    <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent"></div>
-    <div class="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent"></div>
+  <section id="ueber-mich" class="relative overflow-hidden py-24" style="background: #EDE9DF;">
+    <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
+    <div class="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
 
     <!-- Subtle radial glow behind portrait -->
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] pointer-events-none"
-      style="background: radial-gradient(circle, rgba(184,150,90,0.06) 0%, transparent 70%);"></div>
+      style="background: radial-gradient(circle, rgba(184,150,90,0.08) 0%, transparent 70%);"></div>
 
     <div class="relative max-w-5xl mx-auto px-6 lg:px-8">
 
@@ -643,25 +675,29 @@
 
               <!-- Kurzbiografie hover overlay -->
               <div
-                class="absolute inset-0 flex items-end p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-                style="background: linear-gradient(to top, rgba(26,24,21,0.92) 0%, rgba(26,24,21,0.7) 50%, transparent 100%);">
-                <div>
-                  <p class="font-body text-xs font-medium uppercase tracking-widest text-gold mb-2"
-                    style="letter-spacing:0.18em;">Kurzbiografie</p>
-                  <p class="font-body text-[0.7rem] text-cream/90 leading-[1.7]">
-                    Vor meiner anwaltlichen Tätigkeit habe ich bereits mehrjährige Erfahrung im Strafrecht gesammelt –
-                    mit Spezialisierung auf Kriminalwissenschaften und Medizinstrafrecht. Nach dem Studium setzte ich
-                    diese im Rechtsreferendariat bei der Staatsanwaltschaft fort. Zuletzt war ich als Staatsanwältin
-                    bei der Staatsanwaltschaft Kassel tätig.
-                  </p>
-                </div>
+                class="absolute inset-0 flex flex-col p-5 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-500 overflow-y-auto"
+                style="background: rgba(26,24,21,0.88);">
+                <p class="font-body text-xs font-medium uppercase tracking-widest text-gold mb-3 flex-shrink-0"
+                  style="letter-spacing:0.18em;">Kurzbiografie</p>
+                <p class="font-body text-[0.68rem] text-cream/90 leading-[1.75]">
+                  Vor meiner anwaltlichen Tätigkeit habe ich bereits mehrjährige Erfahrung im Strafrecht gesammelt.
+                  Schon im Studium entschied ich mich für eine konsequente Spezialisierung auf dem Gebiet des
+                  Strafrechts mit dem Schwerpunkt Kriminalwissenschaften und Medizinstrafrecht. Nach dem ersten
+                  juristischen Staatsexamen setzte ich diese Spezialisierung im zweijährigen Rechtsreferendariat
+                  durch Stationen u.a. bei der Staatsanwaltschaft fort. Im Anschluss an das zweite Staatsexamen war
+                  ich seit Oktober 2023 zunächst als Rechtsassessorin, sodann als Staatsanwältin bei der
+                  Staatsanwaltschaft Kassel tätig, wo neben dem allgemeinen Strafrecht auch Kapitaldelikte zu meinen
+                  Zuständigkeiten zählten. Mit meiner daraus resultierenden Expertise und meiner praxisnahen
+                  Herangehensweise berate ich meine Mandanten und entwickle mit ihnen eine durchdachte Strategie für
+                  ihr individuelles Anliegen.
+                </p>
               </div>
             </div>
 
             <!-- Name plate below image -->
             <div class="mt-4 text-center">
-              <p class="font-display text-cream text-base tracking-tight" style="font-weight:500;">Ria Mönks</p>
-              <p class="font-body text-xs text-stone/70 uppercase tracking-widest mt-1" style="letter-spacing:0.15em;">
+              <p class="font-display text-charcoal text-base tracking-tight" style="font-weight:500;">Ria Mönks</p>
+              <p class="font-body text-xs text-stone uppercase tracking-widest mt-1" style="letter-spacing:0.15em;">
                 Rechtsanwältin</p>
             </div>
           </div>
@@ -677,7 +713,7 @@
               Ermittlungsbehörden aus erster Hand und weiß in jedem Verfahrensstadium – vom Ermittlungsverfahren über
               die Hauptverhandlung bis hin zu Haftsachen und Rechtsmitteln – worauf es ankommt.
             </p>
-            <p class="font-display italic text-cream/90 text-lg" style="font-weight:400;">
+            <p class="font-display italic text-charcoal/80 text-lg" style="font-weight:400;">
               Wer beide Seiten der Justiz kennt, kann die beste Verteidigung bieten.
             </p>
             <p>
@@ -709,17 +745,41 @@
     <div class="relative py-28 max-w-5xl mx-auto px-6 lg:px-8">
 
       <!-- Section header -->
-      <div class="text-center mb-14">
-        <p class="reveal font-body text-xs font-medium uppercase tracking-widest text-gold mb-4">Warum Sie sich für mich
-          entscheiden</p>
-        <span class="reveal gold-rule mx-auto mb-6"
+      <div class="text-center mb-10">
+        <p class="reveal font-body text-xs font-medium uppercase tracking-widest text-gold mb-4">Im Falle eines
+          Ermittlungsverfahrens</p>
+        <span class="reveal gold-rule mx-auto mb-8"
           style="background: linear-gradient(90deg, transparent, #B8965A, transparent);"></span>
+
+        <!-- "Die Weichen..." text – before main heading -->
+        <div class="reveal max-w-2xl mx-auto mb-10 text-left space-y-4" style="transition-delay:0.08s;">
+          <p class="font-body text-stone text-sm leading-[1.85]">
+            Die Weichen für eine erfolgreiche Verteidigung werden in Strafverfahren sehr früh gestellt. Daher ist es
+            elementar, möglichst frühzeitig anwaltliche Unterstützung in Anspruch zu nehmen. Nur so lassen sich alle
+            Optionen optimal ausschöpfen, um das Verfahren zu einem für Sie bestmöglichen Ende zu bringen. In vielen
+            Fällen kann bereits im Ermittlungsverfahren eine Einstellung erreicht – und damit eine Anklage und
+            öffentliche Hauptverhandlung verhindert werden.
+          </p>
+          <p class="font-body text-stone text-sm leading-[1.85]">
+            Sollte ein Gerichtsverfahren dennoch unvermeidbar sein, sind eine sorgfältige Vorbereitung und eine klare
+            Verteidigungsstrategie unerlässlich. Nichts sollte dem Zufall überlassen werden. Mit Erfahrung, juristischer
+            Expertise und dem Blick für das Wesentliche entwickle ich für jeden Fall eine individuelle und wirkungsvolle
+            Verteidigungsstrategie. Das Ziel ist stets das beste Ergebnis für den Mandanten, im Idealfall eine
+            Einstellung des Verfahrens oder ein Freispruch.
+          </p>
+          <p class="font-body text-stone text-sm leading-[1.85]">
+            Mir ist dabei bewusst, welche Belastung ein Strafverfahren für Betroffene und ihre Angehörigen bedeutet.
+            Deshalb lege ich größten Wert auf eine vertrauensvolle sowie diskrete Unterstützung bei allen
+            strafrechtlichen Vorwürfen und begegne jedem Mandanten offen und ohne Vorurteile.
+          </p>
+        </div>
+
         <h2 class="reveal font-display text-3xl md:text-5xl text-cream tracking-tighter leading-tight"
-          style="transition-delay:0.1s; font-weight:400;">
+          style="transition-delay:0.12s; font-weight:400;">
           Festnahme oder Durchsuchung?
         </h2>
         <p class="reveal font-body text-stone text-base max-w-2xl mx-auto mt-5 leading-[1.75]"
-          style="transition-delay:0.15s;">
+          style="transition-delay:0.17s;">
           Wenn Freiheit plötzlich entzogen wird oder Ihre Räume durchsucht werden, ist schnelles, strukturiertes Handeln
           entscheidend. Zögern Sie nicht. In Notfällen bin ich 24/7 erreichbar.
         </p>
@@ -728,8 +788,8 @@
       <!-- Notruf CTA -->
       <div class="reveal flex flex-col items-center gap-6 mb-16" style="transition-delay:0.2s;">
         <a href="tel:+491637117439"
-          class="btn-primary bg-red-700 hover:bg-red-800 text-cream font-body font-semibold text-sm uppercase tracking-widest px-10 py-5 inline-flex items-center justify-center gap-3 focus-visible:outline-none"
-          style="box-shadow: 0 0 30px rgba(220,38,38,0.3), 0 0 60px rgba(220,38,38,0.1); animation: pulse-glow 3s ease-in-out infinite;">
+          class="notruf-cta font-body font-semibold text-sm uppercase tracking-widest px-10 py-5 inline-flex items-center justify-center gap-3 focus-visible:outline-none"
+          style="letter-spacing:0.12em;">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round">
             <path
@@ -1383,19 +1443,11 @@
     const navLogo = document.getElementById('nav-logo-img');
 
     function updateNav() {
-      if (window.scrollY > 80) {
-        navbar.classList.remove('on-dark');
-        navbar.style.background = 'rgba(247,244,238,0.96)';
-        navbar.style.backdropFilter = 'blur(12px)';
-        navbar.style.borderBottom = '1px solid rgba(26,24,21,0.06)';
-        if (navLogo) navLogo.style.filter = 'none';
-      } else {
-        navbar.classList.add('on-dark');
-        navbar.style.background = 'rgba(26,24,21,0.15)';
-        navbar.style.backdropFilter = 'blur(8px)';
-        navbar.style.borderBottom = 'none';
-        if (navLogo) navLogo.style.filter = 'brightness(0) invert(1)';
-      }
+      navbar.classList.remove('on-dark');
+      navbar.style.background = 'rgba(247,244,238,0.97)';
+      navbar.style.backdropFilter = 'blur(12px)';
+      navbar.style.borderBottom = '1px solid rgba(26,24,21,0.06)';
+      if (navLogo) navLogo.style.filter = 'none';
     }
 
     window.addEventListener('scroll', updateNav, { passive: true });
