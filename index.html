@@ -668,9 +668,30 @@
               <img src="Brand Assets/Potrait Ria.jpeg" alt="Rechtsanwältin Ria Mönks – Strafverteidigerin Kassel"
                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 style="object-position: center 20%; filter: contrast(1.03) brightness(0.97);" />
+
               <!-- Soft bottom fade -->
               <div class="absolute inset-x-0 bottom-0 h-24 pointer-events-none"
-                style="background: linear-gradient(to top, rgba(26,24,21,0.5) 0%, transparent 100%);"></div>
+                style="background: linear-gradient(to top, rgba(26,24,21,0.6) 0%, transparent 100%);"></div>
+
+              <!-- Kurzbiografie hover overlay -->
+              <div
+                class="absolute inset-0 flex flex-col p-5 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-500 overflow-y-auto"
+                style="background: rgba(26,24,21,0.88);">
+                <p class="font-body text-xs font-medium uppercase tracking-widest text-gold mb-3 flex-shrink-0"
+                  style="letter-spacing:0.18em;">Kurzbiografie</p>
+                <p class="font-body text-[0.68rem] text-cream/90 leading-[1.75]">
+                  Vor meiner anwaltlichen Tätigkeit habe ich bereits mehrjährige Erfahrung im Strafrecht gesammelt.
+                  Schon im Studium entschied ich mich für eine konsequente Spezialisierung auf dem Gebiet des
+                  Strafrechts mit dem Schwerpunkt Kriminalwissenschaften und Medizinstrafrecht. Nach dem ersten
+                  juristischen Staatsexamen setzte ich diese Spezialisierung im zweijährigen Rechtsreferendariat
+                  durch Stationen u.a. bei der Staatsanwaltschaft fort. Im Anschluss an das zweite Staatsexamen war
+                  ich seit Oktober 2023 zunächst als Rechtsassessorin, sodann als Staatsanwältin bei der
+                  Staatsanwaltschaft Kassel tätig, wo neben dem allgemeinen Strafrecht auch Kapitaldelikte zu meinen
+                  Zuständigkeiten zählten. Mit meiner daraus resultierenden Expertise und meiner praxisnahen
+                  Herangehensweise berate ich meine Mandanten und entwickle mit ihnen eine durchdachte Strategie für
+                  ihr individuelles Anliegen.
+                </p>
+              </div>
             </div>
 
             <!-- Name plate below image -->
@@ -678,40 +699,6 @@
               <p class="font-display text-charcoal text-base tracking-tight" style="font-weight:500;">Ria Mönks</p>
               <p class="font-body text-xs text-stone uppercase tracking-widest mt-1" style="letter-spacing:0.15em;">
                 Rechtsanwältin</p>
-            </div>
-
-            <!-- Accordion: Zur Person / Kurzbiografie -->
-            <div class="mt-3" style="width: 300px;">
-              <button id="bio-toggle"
-                class="w-full flex items-center justify-between px-4 py-3 border border-charcoal/12 bg-white/50 font-body text-xs text-charcoal uppercase tracking-widest focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
-                style="letter-spacing:0.12em; transition: border-color 0.3s ease, background 0.3s ease;"
-                onmouseenter="this.style.borderColor='rgba(184,150,90,0.45)'; this.style.background='rgba(184,150,90,0.06)';"
-                onmouseleave="this.style.borderColor=''; this.style.background='';"
-                onclick="toggleBio()" aria-expanded="false" aria-controls="bio-body">
-                <span>Zur Person</span>
-                <svg id="bio-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#7A756E"
-                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  style="transition: transform 0.4s cubic-bezier(0.22,1,0.36,1); flex-shrink:0;">
-                  <polyline points="6 9 12 15 18 9" />
-                </svg>
-              </button>
-              <div id="bio-body"
-                style="max-height:0; overflow:hidden; transition: max-height 0.55s cubic-bezier(0.22,1,0.36,1);">
-                <div class="px-4 py-4 border border-t-0 border-charcoal/12 bg-white/30">
-                  <p class="font-body text-[0.72rem] text-stone leading-[1.8]">
-                    Vor meiner anwaltlichen Tätigkeit habe ich bereits mehrjährige Erfahrung im Strafrecht gesammelt.
-                    Schon im Studium entschied ich mich für eine konsequente Spezialisierung auf dem Gebiet des
-                    Strafrechts mit dem Schwerpunkt Kriminalwissenschaften und Medizinstrafrecht. Nach dem ersten
-                    juristischen Staatsexamen setzte ich diese Spezialisierung im zweijährigen Rechtsreferendariat
-                    durch Stationen u.a. bei der Staatsanwaltschaft fort. Im Anschluss an das zweite Staatsexamen war
-                    ich seit Oktober 2023 zunächst als Rechtsassessorin, sodann als Staatsanwältin bei der
-                    Staatsanwaltschaft Kassel tätig, wo neben dem allgemeinen Strafrecht auch Kapitaldelikte zu meinen
-                    Zuständigkeiten zählten. Mit meiner daraus resultierenden Expertise und meiner praxisnahen
-                    Herangehensweise berate ich meine Mandanten und entwickle mit ihnen eine durchdachte Strategie für
-                    ihr individuelles Anliegen.
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -1570,23 +1557,6 @@
       if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
       else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
     });
-
-    // --- Bio accordion ---
-    function toggleBio() {
-      const body = document.getElementById('bio-body');
-      const arrow = document.getElementById('bio-arrow');
-      const btn = document.getElementById('bio-toggle');
-      const isOpen = body.style.maxHeight && body.style.maxHeight !== '0px';
-      if (isOpen) {
-        body.style.maxHeight = '0';
-        arrow.style.transform = 'rotate(0deg)';
-        btn.setAttribute('aria-expanded', 'false');
-      } else {
-        body.style.maxHeight = body.scrollHeight + 'px';
-        arrow.style.transform = 'rotate(180deg)';
-        btn.setAttribute('aria-expanded', 'true');
-      }
-    }
   </script>
 </body>
 
