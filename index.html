@@ -641,71 +641,40 @@
   </section>
 
 
-  <!-- ═══════════════════ KURZVORSTELLUNG ═══════════════════ -->
+  <!-- ═══════════════════ ÜBER MICH ═══════════════════ -->
   <section id="ueber-mich" class="relative overflow-hidden py-24" style="background: #EDE9DF;">
     <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
     <div class="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
 
-    <!-- Subtle radial glow behind portrait -->
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] pointer-events-none"
-      style="background: radial-gradient(circle, rgba(184,150,90,0.08) 0%, transparent 70%);"></div>
+    <div class="relative max-w-6xl mx-auto px-6 lg:px-8">
 
-    <div class="relative max-w-5xl mx-auto px-6 lg:px-8">
+      <!-- ── OBERER TEIL: FOTO & TEXT ── -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start mb-20">
 
-      <div class="grid lg:grid-cols-[340px_1fr] gap-12 lg:gap-16 items-center">
-
-        <!-- Portrait – elegant framed card -->
-        <div class="reveal flex justify-center lg:justify-start" style="transition-delay:0.05s;">
-          <div class="relative group">
-            <!-- Gold accent corner lines -->
-            <div class="absolute -top-3 -left-3 w-16 h-16 border-t-2 border-l-2 border-gold/40 pointer-events-none">
-            </div>
-            <div class="absolute -bottom-3 -right-3 w-16 h-16 border-b-2 border-r-2 border-gold/40 pointer-events-none">
-            </div>
-
-            <!-- Image container -->
-            <div class="relative overflow-hidden" style="width: 300px; height: 400px;">
+        <!-- Linke Spalte: Foto -->
+        <div class="reveal lg:col-span-5 flex flex-col items-center lg:items-start" style="transition-delay:0.05s;">
+          <div class="relative inline-block w-full max-w-[320px]">
+            <!-- Gold corner accents -->
+            <div class="absolute -top-3 -left-3 w-14 h-14 border-t-2 border-l-2 border-gold/40 pointer-events-none"></div>
+            <div class="absolute -bottom-3 -right-3 w-14 h-14 border-b-2 border-r-2 border-gold/40 pointer-events-none"></div>
+            <div class="overflow-hidden group">
               <img src="Brand Assets/Potrait Ria.jpeg" alt="Rechtsanwältin Ria Mönks – Strafverteidigerin Kassel"
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                style="object-position: center 20%; filter: contrast(1.03) brightness(0.97);" />
-
-              <!-- Soft bottom fade -->
-              <div class="absolute inset-x-0 bottom-0 h-24 pointer-events-none"
-                style="background: linear-gradient(to top, rgba(26,24,21,0.6) 0%, transparent 100%);"></div>
-
-              <!-- Kurzbiografie hover overlay -->
-              <div
-                class="absolute inset-0 flex flex-col p-5 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-500 overflow-y-auto"
-                style="background: rgba(26,24,21,0.88);">
-                <p class="font-body text-xs font-medium uppercase tracking-widest text-gold mb-3 flex-shrink-0"
-                  style="letter-spacing:0.18em;">Kurzbiografie</p>
-                <p class="font-body text-[0.68rem] text-cream/90 leading-[1.75]">
-                  Vor meiner anwaltlichen Tätigkeit habe ich bereits mehrjährige Erfahrung im Strafrecht gesammelt.
-                  Schon im Studium entschied ich mich für eine konsequente Spezialisierung auf dem Gebiet des
-                  Strafrechts mit dem Schwerpunkt Kriminalwissenschaften und Medizinstrafrecht. Nach dem ersten
-                  juristischen Staatsexamen setzte ich diese Spezialisierung im zweijährigen Rechtsreferendariat
-                  durch Stationen u.a. bei der Staatsanwaltschaft fort. Im Anschluss an das zweite Staatsexamen war
-                  ich seit Oktober 2023 zunächst als Rechtsassessorin, sodann als Staatsanwältin bei der
-                  Staatsanwaltschaft Kassel tätig, wo neben dem allgemeinen Strafrecht auch Kapitaldelikte zu meinen
-                  Zuständigkeiten zählten. Mit meiner daraus resultierenden Expertise und meiner praxisnahen
-                  Herangehensweise berate ich meine Mandanten und entwickle mit ihnen eine durchdachte Strategie für
-                  ihr individuelles Anliegen.
-                </p>
-              </div>
+                class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                style="object-position: center 15%; filter: contrast(1.03) brightness(0.97); display:block;" />
             </div>
-
-            <!-- Name plate below image -->
-            <div class="mt-4 text-center">
-              <p class="font-display text-charcoal text-base tracking-tight" style="font-weight:500;">Ria Mönks</p>
-              <p class="font-body text-xs text-stone uppercase tracking-widest mt-1" style="letter-spacing:0.15em;">
-                Rechtsanwältin</p>
-            </div>
+          </div>
+          <div class="mt-6 text-center lg:text-left w-full max-w-[320px]">
+            <p class="font-display text-charcoal text-lg tracking-tight" style="font-weight:500;">Ria Mönks</p>
+            <p class="font-body text-xs text-stone uppercase tracking-widest mt-1" style="letter-spacing:0.15em;">Rechtsanwältin</p>
           </div>
         </div>
 
-        <!-- Text – right -->
-        <div class="reveal" style="transition-delay:0.1s;">
-          <div class="space-y-5 font-body text-stone leading-[1.85] text-sm">
+        <!-- Rechte Spalte: Text -->
+        <div class="reveal lg:col-span-7 pt-0 lg:pt-4" style="transition-delay:0.1s;">
+          <p class="font-body text-xs font-medium uppercase tracking-widest text-gold mb-4" style="letter-spacing:0.18em;">Über mich</p>
+          <span class="gold-rule mb-8" style="background: linear-gradient(90deg, transparent, #B8965A, transparent);"></span>
+
+          <div class="space-y-5 font-body text-stone leading-[1.85] text-sm mt-8">
             <p>
               Als Rechtsanwältin bin ich vorwiegend im Strafrecht tätig – und das mit voller Überzeugung. Mein Fokus
               liegt insbesondere auf der Strafverteidigung von Beschuldigten sowie der Vertretung der Opfer von
@@ -713,17 +682,93 @@
               Ermittlungsbehörden aus erster Hand und weiß in jedem Verfahrensstadium – vom Ermittlungsverfahren über
               die Hauptverhandlung bis hin zu Haftsachen und Rechtsmitteln – worauf es ankommt.
             </p>
-            <p class="font-display italic text-charcoal/80 text-lg" style="font-weight:400;">
-              Wer beide Seiten der Justiz kennt, kann die beste Verteidigung bieten.
-            </p>
+
+            <blockquote class="font-display italic text-charcoal/80 text-xl md:text-2xl leading-snug my-8 pl-5"
+              style="font-weight:400; border-left: 2px solid rgba(184,150,90,0.45);">
+              „Wer beide Seiten der Justiz kennt, kann die beste Verteidigung bieten."
+            </blockquote>
+
             <p>
-              Ich begleite Sie vom ersten Kontakt mit den Ermittlungsbehörden bis zum Abschluss des Verfahrens – und bei
-              Bedarf auch darüber hinaus in der Strafvollstreckung. Ich vertrete Ihre Interessen mit Nachdruck und sorge
-              dafür, dass Ihre Rechte gewahrt bleiben.
+              Ich begleite Sie vom ersten Kontakt mit den Ermittlungsbehörden bis zum Abschluss des Verfahrens – und
+              bei Bedarf auch darüber hinaus in der Strafvollstreckung. Ich vertrete Ihre Interessen mit Nachdruck
+              und sorge dafür, dass Ihre Rechte gewahrt bleiben.
             </p>
           </div>
         </div>
+      </div>
 
+      <!-- ── UNTERER TEIL: TIMELINE ── -->
+      <div class="reveal pt-14" style="border-top: 1px solid rgba(184,150,90,0.2); transition-delay:0.15s;">
+        <p class="font-body text-xs font-medium uppercase tracking-widest text-gold text-center mb-3" style="letter-spacing:0.18em;">Expertise &amp; Werdegang</p>
+        <span class="gold-rule mx-auto mb-12" style="background: linear-gradient(90deg, transparent, #B8965A, transparent);"></span>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-6">
+
+          <!-- Station 1: Studium -->
+          <div class="relative">
+            <div class="h-px w-full absolute top-[11px] left-1/2 hidden lg:block"
+              style="background: linear-gradient(90deg, rgba(184,150,90,0.35), rgba(184,150,90,0.15));"></div>
+            <div class="w-5 h-5 rounded-full relative z-10 mb-4 mx-auto lg:mx-0 flex-shrink-0"
+              style="background: #EDE9DF; border: 2px solid rgba(184,150,90,0.55);"></div>
+            <p class="font-body text-[10px] uppercase tracking-widest text-stone mb-2 text-center lg:text-left" style="letter-spacing:0.16em;">Studium</p>
+            <h4 class="font-display text-base text-charcoal mb-2 text-center lg:text-left" style="font-weight:500;">Jurastudium</h4>
+            <p class="font-body text-xs text-stone leading-[1.8] text-center lg:text-left">
+              Konsequente Spezialisierung auf Strafrecht mit Schwerpunkt Kriminalwissenschaften und Medizinstrafrecht.
+            </p>
+          </div>
+
+          <!-- Station 2: Referendariat -->
+          <div class="relative">
+            <div class="h-px w-full absolute top-[11px] left-1/2 hidden lg:block"
+              style="background: linear-gradient(90deg, rgba(184,150,90,0.35), rgba(184,150,90,0.15));"></div>
+            <div class="w-5 h-5 rounded-full relative z-10 mb-4 mx-auto lg:mx-0"
+              style="background: #EDE9DF; border: 2px solid rgba(184,150,90,0.55);"></div>
+            <p class="font-body text-[10px] uppercase tracking-widest text-stone mb-2 text-center lg:text-left" style="letter-spacing:0.16em;">Referendariat</p>
+            <h4 class="font-display text-base text-charcoal mb-2 text-center lg:text-left" style="font-weight:500;">Zweijähriges Referendariat</h4>
+            <p class="font-body text-xs text-stone leading-[1.8] text-center lg:text-left">
+              Fortsetzung der Spezialisierung durch Stationen unter anderem bei der Staatsanwaltschaft.
+            </p>
+          </div>
+
+          <!-- Station 3: Rechtsassessorin -->
+          <div class="relative">
+            <div class="h-px w-full absolute top-[11px] left-1/2 hidden lg:block"
+              style="background: linear-gradient(90deg, rgba(184,150,90,0.35), rgba(184,150,90,0.15));"></div>
+            <div class="w-5 h-5 rounded-full relative z-10 mb-4 mx-auto lg:mx-0"
+              style="background: #EDE9DF; border: 2px solid rgba(184,150,90,0.55);"></div>
+            <p class="font-body text-[10px] uppercase tracking-widest text-stone mb-2 text-center lg:text-left" style="letter-spacing:0.16em;">Zuvor</p>
+            <h4 class="font-display text-base text-charcoal mb-2 text-center lg:text-left" style="font-weight:500;">Rechtsassessorin</h4>
+            <p class="font-body text-xs text-stone leading-[1.8] text-center lg:text-left">
+              Eintritt in den Justizdienst nach dem zweiten juristischen Staatsexamen.
+            </p>
+          </div>
+
+          <!-- Station 4: Staatsanwältin -->
+          <div class="relative">
+            <div class="h-px w-full absolute top-[11px] left-1/2 hidden lg:block"
+              style="background: linear-gradient(90deg, rgba(184,150,90,0.35), rgba(184,150,90,0.15));"></div>
+            <div class="w-5 h-5 rounded-full relative z-10 mb-4 mx-auto lg:mx-0"
+              style="background: #EDE9DF; border: 2px solid rgba(184,150,90,0.55);"></div>
+            <p class="font-body text-[10px] uppercase tracking-widest text-stone mb-2 text-center lg:text-left" style="letter-spacing:0.16em;">Okt. 2023 – Feb. 2026</p>
+            <h4 class="font-display text-base text-charcoal mb-2 text-center lg:text-left" style="font-weight:500;">Staatsanwältin</h4>
+            <p class="font-body text-xs text-stone leading-[1.8] text-center lg:text-left">
+              Staatsanwaltschaft Kassel – neben allgemeinem Strafrecht auch Zuständigkeit für Kapitaldelikte.
+            </p>
+          </div>
+
+          <!-- Station 5: Eigene Kanzlei (aktuelle Station – goldener Punkt) -->
+          <div class="relative">
+            <div class="w-5 h-5 rounded-full relative z-10 mb-4 mx-auto lg:mx-0"
+              style="background: #B8965A; box-shadow: 0 0 0 5px rgba(184,150,90,0.18);"></div>
+            <p class="font-body text-[10px] uppercase tracking-widest mb-2 text-center lg:text-left font-medium"
+              style="letter-spacing:0.16em; color:#B8965A;">Seit März 2026</p>
+            <h4 class="font-display text-base text-charcoal mb-2 text-center lg:text-left" style="font-weight:600;">Eigene Kanzlei</h4>
+            <p class="font-body text-xs text-stone leading-[1.8] text-center lg:text-left">
+              Gründung der Kanzlei Mönks in Kassel – mit konsequenter Ausrichtung auf Strafverteidigung und Opfervertretung.
+            </p>
+          </div>
+
+        </div>
       </div>
 
     </div>
