@@ -175,6 +175,11 @@
       scroll-behavior: smooth;
     }
 
+    /* Prevent sticky nav from covering section headings on anchor navigation */
+    section[id] {
+      scroll-margin-top: 72px;
+    }
+
     /* Selection color */
     ::selection {
       background: #B8965A33;
@@ -389,8 +394,8 @@
       border: 1px solid rgba(247, 244, 238, 0.3);
       color: #F7F4EE;
       transition: background 0.35s cubic-bezier(0.22, 1, 0.36, 1),
-                  border-color 0.35s ease,
-                  box-shadow 0.35s ease;
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
     }
 
     .notruf-cta:hover,
@@ -422,8 +427,7 @@
         <!-- Logo -->
         <a href="#top" class="flex items-center gap-3 group focus-visible:outline-none">
           <img id="nav-logo-img" src="Brand Assets/Ria_Mönks_Logo_transparent_HQ.png" alt="Ria Mönks Logo"
-            class="h-14 w-auto transition-opacity duration-300 group-hover:opacity-80"
-            style="filter: none;" />
+            class="h-14 w-auto transition-opacity duration-300 group-hover:opacity-80" style="filter: none;" />
         </a>
 
         <!-- Desktop links -->
@@ -655,9 +659,11 @@
         <div class="reveal lg:col-span-5 flex flex-col items-center" style="transition-delay:0.05s;">
           <div class="relative inline-block w-full max-w-[440px]">
             <!-- Gold corner accents -->
-            <div class="absolute -top-3 -left-3 w-14 h-14 border-t-2 border-l-2 border-gold/40 pointer-events-none"></div>
-            <div class="absolute -bottom-3 -right-3 w-14 h-14 border-b-2 border-r-2 border-gold/40 pointer-events-none"></div>
-            <div class="overflow-hidden group" style="aspect-ratio: 1 / 1;">
+            <div class="absolute -top-3 -left-3 w-14 h-14 border-t-2 border-l-2 border-gold/40 pointer-events-none">
+            </div>
+            <div class="absolute -bottom-3 -right-3 w-14 h-14 border-b-2 border-r-2 border-gold/40 pointer-events-none">
+            </div>
+            <div class="overflow-hidden group relative" style="aspect-ratio: 1 / 1;">
               <img src="Brand Assets/Potrait Ria.jpeg" alt="Rechtsanwältin Ria Mönks – Strafverteidigerin Kassel"
                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                 style="object-position: center 8%; filter: contrast(1.03) brightness(0.97); display:block;" />
@@ -665,206 +671,41 @@
           </div>
           <div class="mt-6 text-center w-full max-w-[440px]">
             <p class="font-display text-charcoal text-lg tracking-tight" style="font-weight:500;">Ria Mönks</p>
-            <p class="font-body text-xs text-stone uppercase tracking-widest mt-1" style="letter-spacing:0.15em;">Rechtsanwältin</p>
+            <p class="font-body text-xs text-stone uppercase tracking-widest mt-1" style="letter-spacing:0.15em;">
+              Rechtsanwältin</p>
           </div>
         </div>
 
         <!-- Rechte Spalte: Text -->
         <div class="reveal lg:col-span-7 pt-0 lg:pt-4" style="transition-delay:0.1s;">
-          <p class="font-body text-xs font-medium uppercase tracking-widest text-gold mb-4" style="letter-spacing:0.18em;">Über mich</p>
-          <span class="gold-rule mb-8" style="background: linear-gradient(90deg, transparent, #B8965A, transparent);"></span>
+          <p class="font-body text-xs font-medium uppercase tracking-widest text-gold mb-4"
+            style="letter-spacing:0.18em;">Strafrecht · Kassel</p>
+          <span class="gold-rule mb-8"
+            style="background: linear-gradient(90deg, transparent, #B8965A, transparent);"></span>
 
-          <div class="space-y-5 font-body text-stone leading-[1.85] text-sm mt-8">
-            <p>
-              Als Rechtsanwältin bin ich vorwiegend im Strafrecht tätig – und das mit voller Überzeugung. Mein Fokus
+          <div class="space-y-5 font-body text-stone leading-[1.85] text-sm mt-8 mb-10">
+            <p>Als Rechtsanwältin bin ich vorwiegend im Strafrecht tätig – und das mit voller Überzeugung. Mein Fokus
               liegt insbesondere auf der Strafverteidigung von Beschuldigten sowie der Vertretung der Opfer von
               Straftaten. Als ehemalige Staatsanwältin kenne ich die internen Abläufe und Strategien der
               Ermittlungsbehörden aus erster Hand und weiß in jedem Verfahrensstadium – vom Ermittlungsverfahren über
-              die Hauptverhandlung bis hin zu Haftsachen und Rechtsmitteln – worauf es ankommt.
-            </p>
-
-            <blockquote class="font-display italic text-charcoal/80 text-xl md:text-2xl leading-snug my-8 pl-5"
-              style="font-weight:400; border-left: 2px solid rgba(184,150,90,0.45);">
-              „Wer beide Seiten der Justiz kennt, kann die beste Verteidigung bieten."
-            </blockquote>
-
-            <p>
-              Ich begleite Sie vom ersten Kontakt mit den Ermittlungsbehörden bis zum Abschluss des Verfahrens – und
-              bei Bedarf auch darüber hinaus in der Strafvollstreckung. Ich vertrete Ihre Interessen mit Nachdruck
-              und sorge dafür, dass Ihre Rechte gewahrt bleiben.
-            </p>
+              die Hauptverhandlung bis hin zu Haftsachen und Rechtsmitteln – worauf es ankommt. Wer beide Seiten der
+              Justiz kennt, kann die beste Verteidigung bieten.</p>
+            <p>Ich begleite Sie vom ersten Kontakt mit den Ermittlungsbehörden bis zum Abschluss des Verfahrens – und
+              bei Bedarf auch darüber hinaus in der Strafvollstreckung. Ich vertrete Ihre Interessen mit Nachdruck und
+              sorge dafür, dass Ihre Rechte gewahrt bleiben.</p>
           </div>
+
+          <button onclick="openBioModal()"
+            class="inline-flex items-center gap-2 font-body text-xs font-medium uppercase tracking-widest text-gold focus-visible:outline-none focus-visible:underline"
+            style="letter-spacing:0.14em; background:none; border:none; cursor:pointer; padding:0;">
+            <span>Mehr über mich erfahren</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </button>
         </div>
-      </div>
-
-      <!-- ── UNTERER TEIL: TIMELINE ── -->
-      <div class="reveal pt-14" style="border-top: 1px solid rgba(184,150,90,0.2); transition-delay:0.15s;">
-        <p class="font-body text-xs font-medium uppercase tracking-widest text-gold text-center mb-3" style="letter-spacing:0.18em;">Expertise &amp; Werdegang</p>
-        <span class="gold-rule mx-auto mb-12" style="background: linear-gradient(90deg, transparent, #B8965A, transparent);"></span>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-6">
-
-          <!-- Station 1: Studium -->
-          <div class="relative">
-            <div class="h-px w-full absolute top-[11px] left-1/2 hidden lg:block"
-              style="background: linear-gradient(90deg, rgba(184,150,90,0.35), rgba(184,150,90,0.15));"></div>
-            <div class="w-5 h-5 rounded-full relative z-10 mb-4 mx-auto lg:mx-0 flex-shrink-0"
-              style="background: #EDE9DF; border: 2px solid rgba(184,150,90,0.55);"></div>
-            <p class="font-body text-[10px] uppercase tracking-widest text-stone mb-2 text-center lg:text-left" style="letter-spacing:0.16em;">Studium</p>
-            <h4 class="font-display text-base text-charcoal mb-2 text-center lg:text-left" style="font-weight:500;">Jurastudium</h4>
-            <p class="font-body text-xs text-stone leading-[1.8] text-center lg:text-left">
-              Konsequente Spezialisierung auf Strafrecht mit Schwerpunkt Kriminalwissenschaften und Medizinstrafrecht.
-            </p>
-          </div>
-
-          <!-- Station 2: Referendariat -->
-          <div class="relative">
-            <div class="h-px w-full absolute top-[11px] left-1/2 hidden lg:block"
-              style="background: linear-gradient(90deg, rgba(184,150,90,0.35), rgba(184,150,90,0.15));"></div>
-            <div class="w-5 h-5 rounded-full relative z-10 mb-4 mx-auto lg:mx-0"
-              style="background: #EDE9DF; border: 2px solid rgba(184,150,90,0.55);"></div>
-            <p class="font-body text-[10px] uppercase tracking-widest text-stone mb-2 text-center lg:text-left" style="letter-spacing:0.16em;">Referendariat</p>
-            <h4 class="font-display text-base text-charcoal mb-2 text-center lg:text-left" style="font-weight:500;">Zweijähriges Referendariat</h4>
-            <p class="font-body text-xs text-stone leading-[1.8] text-center lg:text-left">
-              Fortsetzung der Spezialisierung durch Stationen unter anderem bei der Staatsanwaltschaft.
-            </p>
-          </div>
-
-          <!-- Station 3: Rechtsassessorin -->
-          <div class="relative">
-            <div class="h-px w-full absolute top-[11px] left-1/2 hidden lg:block"
-              style="background: linear-gradient(90deg, rgba(184,150,90,0.35), rgba(184,150,90,0.15));"></div>
-            <div class="w-5 h-5 rounded-full relative z-10 mb-4 mx-auto lg:mx-0"
-              style="background: #EDE9DF; border: 2px solid rgba(184,150,90,0.55);"></div>
-            <p class="font-body text-[10px] uppercase tracking-widest text-stone mb-2 text-center lg:text-left" style="letter-spacing:0.16em;">Zuvor</p>
-            <h4 class="font-display text-base text-charcoal mb-2 text-center lg:text-left" style="font-weight:500;">Rechtsassessorin</h4>
-            <p class="font-body text-xs text-stone leading-[1.8] text-center lg:text-left">
-              Eintritt in den Justizdienst nach dem zweiten juristischen Staatsexamen.
-            </p>
-          </div>
-
-          <!-- Station 4: Staatsanwältin -->
-          <div class="relative">
-            <div class="h-px w-full absolute top-[11px] left-1/2 hidden lg:block"
-              style="background: linear-gradient(90deg, rgba(184,150,90,0.35), rgba(184,150,90,0.15));"></div>
-            <div class="w-5 h-5 rounded-full relative z-10 mb-4 mx-auto lg:mx-0"
-              style="background: #EDE9DF; border: 2px solid rgba(184,150,90,0.55);"></div>
-            <p class="font-body text-[10px] uppercase tracking-widest text-stone mb-2 text-center lg:text-left" style="letter-spacing:0.16em;">Okt. 2023 – Feb. 2026</p>
-            <h4 class="font-display text-base text-charcoal mb-2 text-center lg:text-left" style="font-weight:500;">Staatsanwältin</h4>
-            <p class="font-body text-xs text-stone leading-[1.8] text-center lg:text-left">
-              Staatsanwaltschaft Kassel – neben allgemeinem Strafrecht auch Zuständigkeit für Kapitaldelikte.
-            </p>
-          </div>
-
-          <!-- Station 5: Eigene Kanzlei (aktuelle Station – goldener Punkt) -->
-          <div class="relative">
-            <div class="w-5 h-5 rounded-full relative z-10 mb-4 mx-auto lg:mx-0"
-              style="background: #B8965A; box-shadow: 0 0 0 5px rgba(184,150,90,0.18);"></div>
-            <p class="font-body text-[10px] uppercase tracking-widest mb-2 text-center lg:text-left font-medium"
-              style="letter-spacing:0.16em; color:#B8965A;">Seit März 2026</p>
-            <h4 class="font-display text-base text-charcoal mb-2 text-center lg:text-left" style="font-weight:600;">Eigene Kanzlei</h4>
-            <p class="font-body text-xs text-stone leading-[1.8] text-center lg:text-left">
-              Gründung der Kanzlei Mönks in Kassel – mit konsequenter Ausrichtung auf Strafverteidigung und Opfervertretung.
-            </p>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ═══════════════════ WARUM MICH WÄHLEN + NOTRUF CTA ═══════════════════ -->
-  <section id="warum" class="relative overflow-hidden">
-
-    <!-- Background image -->
-    <div class="absolute inset-0">
-      <img src="Brand Assets/notruf-hintergrund.png" alt="" class="w-full h-full object-cover"
-        style="filter: brightness(0.3) contrast(1.1);" />
-      <div class="absolute inset-0"
-        style="background: linear-gradient(135deg, rgba(26,24,21,0.85) 0%, rgba(26,24,21,0.6) 50%, rgba(26,24,21,0.85) 100%);">
-      </div>
-    </div>
-
-    <div class="relative py-28 max-w-5xl mx-auto px-6 lg:px-8">
-
-      <!-- Section header -->
-      <div class="text-center mb-10">
-        <p class="reveal font-body text-xs font-medium uppercase tracking-widest text-gold mb-4">Im Falle eines
-          Ermittlungsverfahrens</p>
-        <span class="reveal gold-rule mx-auto mb-8"
-          style="background: linear-gradient(90deg, transparent, #B8965A, transparent);"></span>
-
-        <!-- "Die Weichen..." text – before main heading -->
-        <div class="reveal max-w-2xl mx-auto mb-10 text-left space-y-4" style="transition-delay:0.08s;">
-          <p class="font-body text-stone text-sm leading-[1.85]">
-            Die Weichen für eine erfolgreiche Verteidigung werden in Strafverfahren sehr früh gestellt. Daher ist es
-            elementar, möglichst frühzeitig anwaltliche Unterstützung in Anspruch zu nehmen. Nur so lassen sich alle
-            Optionen optimal ausschöpfen, um das Verfahren zu einem für Sie bestmöglichen Ende zu bringen. In vielen
-            Fällen kann bereits im Ermittlungsverfahren eine Einstellung erreicht – und damit eine Anklage und
-            öffentliche Hauptverhandlung verhindert werden.
-          </p>
-          <p class="font-body text-stone text-sm leading-[1.85]">
-            Sollte ein Gerichtsverfahren dennoch unvermeidbar sein, sind eine sorgfältige Vorbereitung und eine klare
-            Verteidigungsstrategie unerlässlich. Nichts sollte dem Zufall überlassen werden. Mit Erfahrung, juristischer
-            Expertise und dem Blick für das Wesentliche entwickle ich für jeden Fall eine individuelle und wirkungsvolle
-            Verteidigungsstrategie. Das Ziel ist stets das beste Ergebnis für den Mandanten, im Idealfall eine
-            Einstellung des Verfahrens oder ein Freispruch.
-          </p>
-          <p class="font-body text-stone text-sm leading-[1.85]">
-            Mir ist dabei bewusst, welche Belastung ein Strafverfahren für Betroffene und ihre Angehörigen bedeutet.
-            Deshalb lege ich größten Wert auf eine vertrauensvolle sowie diskrete Unterstützung bei allen
-            strafrechtlichen Vorwürfen und begegne jedem Mandanten offen und ohne Vorurteile.
-          </p>
-        </div>
-
-        <h2 class="reveal font-display text-3xl md:text-5xl text-cream tracking-tighter leading-tight"
-          style="transition-delay:0.12s; font-weight:400;">
-          Festnahme oder Durchsuchung?
-        </h2>
-        <p class="reveal font-body text-stone text-base max-w-2xl mx-auto mt-5 leading-[1.75]"
-          style="transition-delay:0.17s;">
-          Wenn Freiheit plötzlich entzogen wird oder Ihre Räume durchsucht werden, ist schnelles, strukturiertes Handeln
-          entscheidend. Zögern Sie nicht. In Notfällen bin ich 24/7 erreichbar.
-        </p>
-      </div>
-
-      <!-- Notruf CTA -->
-      <div class="reveal flex flex-col items-center gap-6 mb-16" style="transition-delay:0.2s;">
-        <a href="tel:+491637117439"
-          class="notruf-cta font-body font-semibold text-sm uppercase tracking-widest px-10 py-5 inline-flex items-center justify-center gap-3 focus-visible:outline-none"
-          style="letter-spacing:0.12em;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path
-              d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.13 12 19.79 19.79 0 011.06 3.18 2 2 0 013.05 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
-          </svg>
-          <span>24/7 Notruf: 0163 · 711 7439</span>
-        </a>
-        <p class="font-body text-xs text-stone/70 text-center max-w-md leading-[1.7]" style="font-style:italic;">
-          Der Notruf ist ausschließlich für akute Notfälle reserviert, die keinen Aufschub dulden – aktuelle Festnahmen
-          und/oder Durchsuchungen.
-        </p>
-      </div>
-
-      <!-- USP badges -->
-      <div class="reveal flex flex-wrap justify-center gap-3 mb-14" style="transition-delay:0.25s;">
-        <span
-          class="flex items-center gap-2 font-body text-xs uppercase tracking-widest px-4 py-2.5 border border-gold/20"
-          style="color: rgba(184,150,90,0.9); letter-spacing: 0.12em; background: rgba(255,255,255,0.04);">
-          Strafverteidigung &amp; Opfervertretung
-        </span>
-        <span
-          class="flex items-center gap-2 font-body text-xs uppercase tracking-widest px-4 py-2.5 border border-gold/20"
-          style="color: rgba(184,150,90,0.9); letter-spacing: 0.12em; background: rgba(255,255,255,0.04);">
-          Bundesweit &amp; digital
-        </span>
-        <span
-          class="flex items-center gap-2 font-body text-xs uppercase tracking-widest px-4 py-2.5 border border-gold/20"
-          style="color: rgba(184,150,90,0.9); letter-spacing: 0.12em; background: rgba(255,255,255,0.04);">
-          Schnelle Hilfe bei Vorladung &amp; Festnahme
-        </span>
       </div>
 
     </div>
@@ -1013,9 +854,84 @@
           </span>
         </button>
 
+        <!-- Medizinstrafrecht -->
         <button
           class="rg-tile reveal text-left p-7 border border-charcoal/8 bg-white/60 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
-          style="transition-delay:0.24s;" data-modal="opfer" aria-haspopup="dialog">
+          style="transition-delay:0.24s;" data-modal="medizin" aria-haspopup="dialog">
+          <div class="rg-icon w-11 h-11 rounded-full bg-charcoal/5 flex items-center justify-center mb-5">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7A756E" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" class="rg-svg">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="12" y1="8" x2="12" y2="16" />
+              <line x1="8" y1="12" x2="16" y2="12" />
+            </svg>
+          </div>
+          <h3 class="font-display text-base text-charcoal mb-2 tracking-tight" style="font-weight:500;">
+            Medizinstrafrecht</h3>
+          <p class="font-body text-xs text-stone leading-relaxed mb-4">Abrechnungsbetrug, Behandlungsfehler u.v.m.</p>
+          <span class="rg-arrow inline-flex items-center gap-1 font-body text-xs text-gold uppercase"
+            style="letter-spacing:0.1em; opacity:0;">
+            Mehr erfahren <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </span>
+        </button>
+
+        <!-- Verteidigung in Haft -->
+        <button
+          class="rg-tile reveal text-left p-7 border border-charcoal/8 bg-white/60 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+          style="transition-delay:0.28s;" data-modal="haft" aria-haspopup="dialog">
+          <div class="rg-icon w-11 h-11 rounded-full bg-charcoal/5 flex items-center justify-center mb-5">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7A756E" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" class="rg-svg">
+              <rect x="5" y="11" width="14" height="10" rx="2" ry="2" />
+              <path d="M8 11V7a4 4 0 018 0v4" />
+            </svg>
+          </div>
+          <h3 class="font-display text-base text-charcoal mb-2 tracking-tight" style="font-weight:500;">Verteidigung in
+            Haft</h3>
+          <p class="font-body text-xs text-stone leading-relaxed mb-4">U-Haft, Haftprüfung, 24/7 erreichbar</p>
+          <span class="rg-arrow inline-flex items-center gap-1 font-body text-xs text-gold uppercase"
+            style="letter-spacing:0.1em; opacity:0;">
+            Mehr erfahren <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </span>
+        </button>
+
+        <!-- Vollstreckung -->
+        <button
+          class="rg-tile reveal text-left p-7 border border-charcoal/8 bg-white/60 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+          style="transition-delay:0.32s;" data-modal="vollstreckung" aria-haspopup="dialog">
+          <div class="rg-icon w-11 h-11 rounded-full bg-charcoal/5 flex items-center justify-center mb-5">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7A756E" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" class="rg-svg">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <polyline points="9 15 11 17 15 13" />
+            </svg>
+          </div>
+          <h3 class="font-display text-base text-charcoal mb-2 tracking-tight" style="font-weight:500;">Vollstreckung
+          </h3>
+          <p class="font-body text-xs text-stone leading-relaxed mb-4">Bewährung, Verlegung, Lockerungen</p>
+          <span class="rg-arrow inline-flex items-center gap-1 font-body text-xs text-gold uppercase"
+            style="letter-spacing:0.1em; opacity:0;">
+            Mehr erfahren <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </span>
+        </button>
+
+        <!-- Opferrecht -->
+        <button
+          class="rg-tile reveal text-left p-7 border border-charcoal/8 bg-white/60 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+          style="transition-delay:0.36s;" data-modal="opfer" aria-haspopup="dialog">
           <div class="rg-icon w-11 h-11 rounded-full bg-charcoal/5 flex items-center justify-center mb-5">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7A756E" stroke-width="1.5"
               stroke-linecap="round" stroke-linejoin="round" class="rg-svg">
@@ -1023,9 +939,9 @@
                 d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
             </svg>
           </div>
-          <h3 class="font-display text-base text-charcoal mb-2 tracking-tight" style="font-weight:500;">Opfervertretung
-          </h3>
-          <p class="font-body text-xs text-stone leading-relaxed mb-4">Ihre Rechte als Betroffene wahren</p>
+          <h3 class="font-display text-base text-charcoal mb-2 tracking-tight" style="font-weight:500;">Opferrecht</h3>
+          <p class="font-body text-xs text-stone leading-relaxed mb-4">Als Geschädigte/r aktiv &amp; wirksam vertreten
+          </p>
           <span class="rg-arrow inline-flex items-center gap-1 font-body text-xs text-gold uppercase"
             style="letter-spacing:0.1em; opacity:0;">
             Mehr erfahren <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -1039,6 +955,341 @@
       </div>
     </div>
   </section>
+
+  <!-- ═══════════════════ IMPRESSUM MODAL ═══════════════════ -->
+  <div id="impressum-overlay" style="position:fixed; inset:0; z-index:300; display:flex; align-items:center; justify-content:center; padding:1rem;
+              background:rgba(0,0,0,0.65); opacity:0; pointer-events:none;
+              transition: opacity 0.25s ease;" role="dialog" aria-modal="true" aria-labelledby="impressum-title">
+    <div id="impressum-modal" style="background:#F7F4EE; max-width:700px; width:100%; max-height:88vh; overflow-y:auto;
+                transform:scale(0.95); opacity:0;
+                transition: transform 0.25s cubic-bezier(0.22,1,0.36,1), opacity 0.25s ease;
+                box-shadow: 0 24px 80px -12px rgba(0,0,0,0.35);">
+      <div
+        style="display:flex; align-items:center; justify-content:space-between; padding:1.5rem 2rem; border-bottom:1px solid rgba(184,150,90,0.2); position:sticky; top:0; background:#F7F4EE; z-index:1;">
+        <p id="impressum-title"
+          style="font-family:'Inter',sans-serif; font-size:0.65rem; color:#B8965A; text-transform:uppercase; letter-spacing:0.18em; font-weight:500;">
+          Impressum</p>
+        <button id="impressum-close" aria-label="Schließen"
+          style="width:2rem; height:2rem; display:flex; align-items:center; justify-content:center; color:#7A756E; background:none; border:none; cursor:pointer; border-radius:2px; transition:color 0.2s;"
+          onfocus="this.style.outline='2px solid #B8965A'; this.style.outlineOffset='2px'"
+          onblur="this.style.outline='none'" onmouseenter="this.style.color='#1A1815'"
+          onmouseleave="this.style.color='#7A756E'">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+      <div
+        style="padding:2rem 2rem 2.5rem; font-family:'Inter',sans-serif; font-size:0.875rem; color:#7A756E; line-height:1.8;">
+        <p style="margin-bottom:1.25rem;">Die Angaben auf dieser Website dienen ausschließlich Informationszwecken. Eine
+          rechtliche Beratung ist damit nicht verbunden.</p>
+        <h4
+          style="font-family:'Playfair Display',serif; font-size:1rem; color:#1A1815; margin:1.5rem 0 0.5rem; font-weight:500;">
+          Verantwortlich</h4>
+        <p>Rechtsanwältin Ria Mönks<br>Rechtsanwaltskanzlei Mönks<br>Frankfurter Straße 65<br>34121 Kassel</p>
+        <p style="margin-top:0.5rem;">Steuernummer: 026 454 18056</p>
+        <h4
+          style="font-family:'Playfair Display',serif; font-size:1rem; color:#1A1815; margin:1.5rem 0 0.5rem; font-weight:500;">
+          Kontakt</h4>
+        <p>Telefon: 0561 766 204 21<br>Telefax: 0561 766 204 44<br>E-Mail: <a href="mailto:kanzlei@ra-moenks.de"
+            style="color:#B8965A;">kanzlei@ra-moenks.de</a></p>
+        <h4
+          style="font-family:'Playfair Display',serif; font-size:1rem; color:#1A1815; margin:1.5rem 0 0.5rem; font-weight:500;">
+          Zuständige Aufsichtsbehörde</h4>
+        <p>Rechtsanwaltskammer Kassel<br>Karthäuserstr. 5a<br>34117 Kassel<br>Tel (0561) 788 09 80<br>Fax (0561) 788 09
+          811</p>
+        <h4
+          style="font-family:'Playfair Display',serif; font-size:1rem; color:#1A1815; margin:1.5rem 0 0.5rem; font-weight:500;">
+          Berufsbezeichnung</h4>
+        <p>Rechtsanwältin (Bundesrepublik Deutschland)<br>Verliehen in: Deutschland</p>
+        <h4
+          style="font-family:'Playfair Display',serif; font-size:1rem; color:#1A1815; margin:1.5rem 0 0.5rem; font-weight:500;">
+          Berufsrechtliche Regelungen</h4>
+        <p>Bundesrechtsanwaltsordnung (BRAO), Berufsordnung für Rechtsanwälte (BORA), Fachanwaltsordnung (FAO),
+          Bundesrechtsanwaltsgebührenordnung (BRAGO), Standesregelung der Rechtsanwälte in der Europäischen Gemeinschaft
+        </p>
+        <p style="margin-top:0.4rem;">Einsehbar unter: <a href="https://www.brak.de/fuer-anwaelte/berufsrecht"
+            target="_blank" rel="noopener" style="color:#B8965A;">www.brak.de/fuer-anwaelte/berufsrecht</a></p>
+        <h4
+          style="font-family:'Playfair Display',serif; font-size:1rem; color:#1A1815; margin:1.5rem 0 0.5rem; font-weight:500;">
+          Berufshaftpflichtversicherung</h4>
+        <p>Markel Insurance SE<br>Sophienstr. 26<br>80333 München</p>
+        <p style="margin-top:0.5rem;">Der räumliche Geltungsbereich des Versicherungsschutzes umfasst Tätigkeiten in den
+          Mitgliedsstaaten der Europäischen Union und genügt mindestens den Anforderungen des § 51 BRAO.</p>
+        <h4
+          style="font-family:'Playfair Display',serif; font-size:1rem; color:#1A1815; margin:1.5rem 0 0.5rem; font-weight:500;">
+          Verbraucherstreitbeilegung / Universalschlichtungsstelle</h4>
+        <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
+          teilzunehmen.</p>
+        <h4
+          style="font-family:'Playfair Display',serif; font-size:1rem; color:#1A1815; margin:1.5rem 0 0.5rem; font-weight:500;">
+          Haftungsausschluss</h4>
+        <p><strong style="color:#1A1815;">Haftung für Inhalte</strong><br>Die Inhalte dieser Seiten wurden mit größter
+          Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr
+          übernommen werden.</p>
+        <p style="margin-top:0.75rem;"><strong style="color:#1A1815;">Haftung für Links</strong><br>Unser Angebot
+          enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir
+          für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der
+          jeweilige Anbieter oder Betreiber der Seiten verantwortlich.</p>
+        <h4
+          style="font-family:'Playfair Display',serif; font-size:1rem; color:#1A1815; margin:1.5rem 0 0.5rem; font-weight:500;">
+          Urheberrechte</h4>
+        <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen
+          Urheberrecht. Ohne die Genehmigung der Rechtsanwaltskanzlei Mönks ist eine kommerzielle Verwendung der auf der
+          Website liegenden Dokumente ausdrücklich untersagt.</p>
+        <p style="margin-top:0.5rem;">Beiträge Dritter sind als solche gekennzeichnet. Die Vervielfältigung,
+          Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der
+          schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
+        <p style="margin-top:0.5rem;"><strong style="color:#1A1815;">Fotos:</strong> Stephan Rech Fotografie
+          (www.stephan-rech.de)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ DATENSCHUTZ MODAL ═══════════════════ -->
+  <div id="datenschutz-overlay" style="position:fixed; inset:0; z-index:300; display:flex; align-items:center; justify-content:center; padding:1rem;
+              background:rgba(0,0,0,0.65); opacity:0; pointer-events:none;
+              transition: opacity 0.25s ease;" role="dialog" aria-modal="true" aria-labelledby="datenschutz-title">
+    <div id="datenschutz-modal" style="background:#F7F4EE; max-width:700px; width:100%; max-height:88vh; overflow-y:auto;
+                transform:scale(0.95); opacity:0;
+                transition: transform 0.25s cubic-bezier(0.22,1,0.36,1), opacity 0.25s ease;
+                box-shadow: 0 24px 80px -12px rgba(0,0,0,0.35);">
+      <div
+        style="display:flex; align-items:center; justify-content:space-between; padding:1.5rem 2rem; border-bottom:1px solid rgba(184,150,90,0.2); position:sticky; top:0; background:#F7F4EE; z-index:1;">
+        <p id="datenschutz-title"
+          style="font-family:'Inter',sans-serif; font-size:0.65rem; color:#B8965A; text-transform:uppercase; letter-spacing:0.18em; font-weight:500;">
+          Datenschutzerklärung</p>
+        <button id="datenschutz-close" aria-label="Schließen"
+          style="width:2rem; height:2rem; display:flex; align-items:center; justify-content:center; color:#7A756E; background:none; border:none; cursor:pointer; border-radius:2px; transition:color 0.2s;"
+          onfocus="this.style.outline='2px solid #B8965A'; this.style.outlineOffset='2px'"
+          onblur="this.style.outline='none'" onmouseenter="this.style.color='#1A1815'"
+          onmouseleave="this.style.color='#7A756E'">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+      <div
+        style="padding:2rem 2rem 2.5rem; font-family:'Inter',sans-serif; font-size:0.875rem; color:#7A756E; line-height:1.8;">
+        <p style="margin-bottom:1rem;">Stand: 25.02.2026</p>
+        <h4
+          style="font-family:'Playfair Display',serif; font-size:1rem; color:#1A1815; margin:1.5rem 0 0.5rem; font-weight:500;">
+          Präambel</h4>
+        <p>Mit der folgenden Datenschutzerklärung möchten wir Sie darüber aufklären, welche Arten Ihrer
+          personenbezogenen Daten (nachfolgend auch kurz als „Daten" bezeichnet) wir zu welchen Zwecken und in welchem
+          Umfang verarbeiten. Die Datenschutzerklärung gilt für alle von uns durchgeführten Verarbeitungen
+          personenbezogener Daten, sowohl im Rahmen der Erbringung unserer Leistungen als auch insbesondere auf unseren
+          Webseiten, in mobilen Applikationen sowie innerhalb externer Onlinepräsenzen, wie z.B. unserer
+          Social-Media-Profile (nachfolgend zusammenfassend bezeichnet als „Onlineangebot").</p>
+        <p style="margin-top:0.75rem;">Die verwendeten Begriffe sind nicht geschlechtsspezifisch. Die Betreiber dieser
+          Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten
+          vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.</p>
+        <p style="margin-top:0.75rem;">Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der
+          Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff
+          durch Dritte ist nicht möglich.</p>
+        <h4
+          style="font-family:'Playfair Display',serif; font-size:1rem; color:#1A1815; margin:1.5rem 0 0.5rem; font-weight:500;">
+          Verantwortlicher</h4>
+        <p>Rechtsanwältin Ria Mönks<br>Rechtsanwaltskanzlei Mönks<br>Frankfurter Straße 65<br>34121 Kassel<br>E-Mail: <a
+            href="mailto:kanzlei@ra-moenks.de" style="color:#B8965A;">kanzlei@ra-moenks.de</a></p>
+        <h4
+          style="font-family:'Playfair Display',serif; font-size:1rem; color:#1A1815; margin:1.5rem 0 0.5rem; font-weight:500;">
+          Übersicht der Verarbeitungen</h4>
+        <p>Die nachfolgende Übersicht fasst die Arten der verarbeiteten Daten und die Zwecke ihrer Verarbeitung
+          zusammen.</p>
+        <p style="margin-top:0.5rem;"><strong style="color:#1A1815;">Arten der verarbeiteten Daten:</strong>
+          Inhaltsdaten · Nutzungsdaten · Meta-, Kommunikations- und Verfahrensdaten</p>
+        <p style="margin-top:0.25rem;"><strong style="color:#1A1815;">Kategorien betroffener Personen:</strong> Nutzer
+        </p>
+        <p style="margin-top:0.25rem;"><strong style="color:#1A1815;">Zwecke der Verarbeitung:</strong>
+          Sicherheitsmaßnahmen · Reichweitenmessung · Firewall · Profile mit nutzerbezogenen Informationen ·
+          Bereitstellung des Onlineangebotes und Nutzerfreundlichkeit · Informationstechnische Infrastruktur</p>
+        <h4
+          style="font-family:'Playfair Display',serif; font-size:1rem; color:#1A1815; margin:1.5rem 0 0.5rem; font-weight:500;">
+          Maßgebliche Rechtsgrundlagen</h4>
+        <p>Im Folgenden erhalten Sie eine Übersicht der Rechtsgrundlagen der DSGVO, auf deren Basis wir personenbezogene
+          Daten verarbeiten. Bitte nehmen Sie zur Kenntnis, dass neben den Regelungen der DSGVO nationale
+          Datenschutzvorgaben in Ihrem bzw. unserem Wohn- oder Sitzland gelten können.</p>
+        <p style="margin-top:0.75rem;"><strong style="color:#1A1815;">Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f)
+            DSGVO)</strong> – Die Verarbeitung ist zur Wahrung der berechtigten Interessen des Verantwortlichen oder
+          eines Dritten erforderlich, sofern nicht die Interessen oder Grundrechte und Grundfreiheiten der betroffenen
+          Person, die den Schutz personenbezogener Daten erfordern, überwiegen.</p>
+        <p style="margin-top:0.75rem;">Zusätzlich zu den Datenschutzregelungen der DSGVO gelten nationale Regelungen zum
+          Datenschutz in Deutschland, insbesondere das Bundesdatenschutzgesetz (BDSG).</p>
+        <h4
+          style="font-family:'Playfair Display',serif; font-size:1rem; color:#1A1815; margin:1.5rem 0 0.5rem; font-weight:500;">
+          Sicherheitsmaßnahmen</h4>
+        <p>Wir treffen nach Maßgabe der gesetzlichen Vorgaben unter Berücksichtigung des Stands der Technik, der
+          Implementierungskosten und der Art, des Umfangs, der Umstände und der Zwecke der Verarbeitung sowie der
+          unterschiedlichen Eintrittswahrscheinlichkeiten und des Ausmaßes der Bedrohung der Rechte und Freiheiten
+          natürlicher Personen geeignete technische und organisatorische Maßnahmen, um ein dem Risiko angemessenes
+          Schutzniveau zu gewährleisten.</p>
+        <p style="margin-top:0.75rem;"><strong style="color:#1A1815;">TLS-Verschlüsselung (https):</strong> Um Ihre via
+          unserem Online-Angebot übermittelten Daten zu schützen, nutzen wir eine TLS-Verschlüsselung. Sie erkennen
+          derart verschlüsselte Verbindungen an dem Präfix https:// in der Adresszeile Ihres Browsers.</p>
+        <h4
+          style="font-family:'Playfair Display',serif; font-size:1rem; color:#1A1815; margin:1.5rem 0 0.5rem; font-weight:500;">
+          Übermittlung von personenbezogenen Daten</h4>
+        <p>Im Rahmen unserer Verarbeitung von personenbezogenen Daten kommt es vor, dass die Daten an andere Stellen,
+          Unternehmen, rechtlich selbstständige Organisationseinheiten oder Personen übermittelt oder sie ihnen
+          gegenüber offengelegt werden. Zu den Empfängern dieser Daten können z.B. mit IT-Aufgaben beauftragte
+          Dienstleister oder Anbieter von Diensten und Inhalten, die in eine Webseite eingebunden werden, gehören. In
+          solchen Fällen beachten wir die gesetzlichen Vorgaben und schließen insbesondere entsprechende Verträge bzw.
+          Vereinbarungen, die dem Schutz Ihrer Daten dienen, mit den Empfängern Ihrer Daten ab.</p>
+        <h4
+          style="font-family:'Playfair Display',serif; font-size:1rem; color:#1A1815; margin:1.5rem 0 0.5rem; font-weight:500;">
+          Datenverarbeitung in Drittländern</h4>
+        <p>Sofern wir Daten in einem Drittland (d.h., außerhalb der Europäischen Union (EU), des Europäischen
+          Wirtschaftsraums (EWR)) verarbeiten oder die Verarbeitung im Rahmen der Inanspruchnahme von Diensten Dritter
+          oder der Offenlegung bzw. Übermittlung von Daten an andere Personen, Stellen oder Unternehmen stattfindet,
+          erfolgt dies nur im Einklang mit den gesetzlichen Vorgaben. Vorbehaltlich ausdrücklicher Einwilligung oder
+          vertraglich oder gesetzlich erforderlicher Übermittlung verarbeiten oder lassen wir die Daten nur in
+          Drittländern mit einem anerkannten Datenschutzniveau, vertraglichen Verpflichtung durch sogenannte
+          Standardschutzklauseln der EU-Kommission, beim Vorliegen von Zertifizierungen oder verbindlicher interner
+          Datenschutzvorschriften verarbeiten (Art. 44 bis 49 DSGVO).</p>
+        <h4
+          style="font-family:'Playfair Display',serif; font-size:1rem; color:#1A1815; margin:1.5rem 0 0.5rem; font-weight:500;">
+          Löschung von Daten</h4>
+        <p>Die von uns verarbeiteten Daten werden nach Maßgabe der gesetzlichen Vorgaben gelöscht, sobald deren zur
+          Verarbeitung erlaubten Einwilligungen widerrufen werden oder sonstige Erlaubnisse entfallen (z.B. wenn der
+          Zweck der Verarbeitung dieser Daten entfallen ist oder sie für den Zweck nicht erforderlich sind). Sofern die
+          Daten nicht gelöscht werden, weil sie für andere und gesetzlich zulässige Zwecke erforderlich sind, wird deren
+          Verarbeitung auf diese Zwecke beschränkt.</p>
+        <h4
+          style="font-family:'Playfair Display',serif; font-size:1rem; color:#1A1815; margin:1.5rem 0 0.5rem; font-weight:500;">
+          Bereitstellung des Onlineangebotes und Webhosting</h4>
+        <p>Wir verarbeiten die Daten der Nutzer, um ihnen unsere Online-Dienste zur Verfügung stellen zu können. Zu
+          diesem Zweck verarbeiten wir die IP-Adresse des Nutzers, die notwendig ist, um die Inhalte und Funktionen
+          unserer Online-Dienste an den Browser oder das Endgerät der Nutzer zu übermitteln.</p>
+        <p style="margin-top:0.5rem;"><strong style="color:#1A1815;">Verarbeitete Datenarten:</strong> Nutzungsdaten;
+          Meta-, Kommunikations- und Verfahrensdaten; Inhaltsdaten.</p>
+        <p style="margin-top:0.25rem;"><strong style="color:#1A1815;">Rechtsgrundlagen:</strong> Berechtigte Interessen
+          (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).</p>
+        <p style="margin-top:0.75rem;"><strong style="color:#1A1815;">Kontaktformular:</strong> Wenn Sie uns per
+          Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen
+          dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns
+          gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Die Verarbeitung der in das
+          Kontaktformular eingegebenen Daten erfolgt somit ausschließlich auf Grundlage Ihrer Einwilligung (Art. 6 Abs.
+          1 lit. a DSGVO). Sie können diese Einwilligung jederzeit widerrufen.</p>
+        <p style="margin-top:0.75rem;"><strong style="color:#1A1815;">Einbindung von Google Maps (mit
+            Zwei-Klick-Lösung):</strong> Auf unserer Website verwenden wir zur Darstellung des Standorts eine Karte des
+          Dienstes „Google Maps" (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland). Aus
+          Datenschutzgründen ist Google Maps auf dieser Website zunächst deaktiviert. Eine direkte Verbindung zu den
+          Servern von Google wird erst hergestellt, wenn Sie aktiv auf den Button „Karte anzeigen" klicken.</p>
+        <p style="margin-top:0.75rem;"><strong style="color:#1A1815;">Hostinger:</strong> Leistungen auf dem Gebiet der
+          Bereitstellung von informationstechnischer Infrastruktur; Dienstanbieter: HOSTINGER operations, UAB
+          Svitrigailos str. 34, Vilnius 03230 Litauen; Rechtsgrundlagen: Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit.
+          f) DSGVO).</p>
+        <p style="margin-top:0.75rem;"><strong style="color:#1A1815;">Logfiles:</strong> Der Zugriff auf unser
+          Onlineangebot wird in Form von Server-Logfiles protokolliert (IP-Adresse, Browser, Zugriffszeit etc.).
+          Logfile-Informationen werden für die Dauer von maximal 30 Tagen gespeichert und danach gelöscht oder
+          anonymisiert.</p>
+        <h4
+          style="font-family:'Playfair Display',serif; font-size:1rem; color:#1A1815; margin:1.5rem 0 0.5rem; font-weight:500;">
+          Webanalyse, Monitoring und Optimierung</h4>
+        <p>Die Webanalyse (auch als „Reichweitenmessung" bezeichnet) dient der Auswertung der Besucherströme unseres
+          Onlineangebotes. Mit Hilfe der Reichweitenanalyse können wir z.B. erkennen, zu welcher Zeit unser
+          Onlineangebot oder dessen Funktionen oder Inhalte am häufigsten genutzt werden. Es werden ebenfalls die
+          IP-Adressen der Nutzer gespeichert. Jedoch nutzen wir ein IP-Masking-Verfahren (Pseudonymisierung durch
+          Kürzung der IP-Adresse) zum Schutz der Nutzer.</p>
+        <p style="margin-top:0.5rem;"><strong style="color:#1A1815;">Rechtsgrundlagen:</strong> Berechtigte Interessen
+          (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).</p>
+        <h4
+          style="font-family:'Playfair Display',serif; font-size:1rem; color:#1A1815; margin:1.5rem 0 0.5rem; font-weight:500;">
+          Änderung und Aktualisierung der Datenschutzerklärung</h4>
+        <p>Wir bitten Sie, sich regelmäßig über den Inhalt unserer Datenschutzerklärung zu informieren. Wir passen die
+          Datenschutzerklärung an, sobald die Änderungen der von uns durchgeführten Datenverarbeitungen dies
+          erforderlich machen.</p>
+        <h4
+          style="font-family:'Playfair Display',serif; font-size:1rem; color:#1A1815; margin:1.5rem 0 0.5rem; font-weight:500;">
+          Rechte der betroffenen Personen</h4>
+        <p>Ihnen stehen als Betroffene nach der DSGVO verschiedene Rechte zu, die sich insbesondere aus Art. 15 bis 21
+          DSGVO ergeben:</p>
+        <ul style="padding-left:1.2rem; margin-top:0.5rem; space-y:4px;">
+          <li style="margin-top:0.4rem;"><strong style="color:#1A1815;">Widerspruchsrecht:</strong> Sie haben das Recht,
+            aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit gegen die Verarbeitung der Sie
+            betreffenden personenbezogenen Daten, die aufgrund von Art. 6 Abs. 1 lit. e oder f DSGVO erfolgt,
+            Widerspruch einzulegen.</li>
+          <li style="margin-top:0.4rem;"><strong style="color:#1A1815;">Widerrufsrecht bei Einwilligungen:</strong> Sie
+            haben das Recht, erteilte Einwilligungen jederzeit zu widerrufen.</li>
+          <li style="margin-top:0.4rem;"><strong style="color:#1A1815;">Auskunftsrecht:</strong> Sie haben das Recht,
+            eine Bestätigung darüber zu verlangen, ob betreffende Daten verarbeitet werden und auf Auskunft über diese
+            Daten sowie auf weitere Informationen und Kopie der Daten entsprechend den gesetzlichen Vorgaben.</li>
+          <li style="margin-top:0.4rem;"><strong style="color:#1A1815;">Recht auf Berichtigung:</strong> Sie haben das
+            Recht, die Vervollständigung oder Berichtigung der Sie betreffenden unrichtigen Daten zu verlangen.</li>
+          <li style="margin-top:0.4rem;"><strong style="color:#1A1815;">Recht auf Löschung und Einschränkung der
+              Verarbeitung:</strong> Sie haben nach Maßgabe der gesetzlichen Vorgaben das Recht, zu verlangen, dass Sie
+            betreffende Daten unverzüglich gelöscht werden, bzw. alternativ eine Einschränkung der Verarbeitung der
+            Daten zu verlangen.</li>
+          <li style="margin-top:0.4rem;"><strong style="color:#1A1815;">Recht auf Datenübertragbarkeit:</strong> Sie
+            haben das Recht, Sie betreffende Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu
+            erhalten oder deren Übermittlung an einen anderen Verantwortlichen zu fordern.</li>
+          <li style="margin-top:0.4rem;"><strong style="color:#1A1815;">Beschwerde bei Aufsichtsbehörde:</strong> Sie
+            haben das Recht auf Beschwerde bei einer Aufsichtsbehörde, insbesondere in dem Mitgliedstaat ihres
+            gewöhnlichen Aufenthaltsorts, ihres Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bio Modal overlay -->
+  <div id="bio-overlay" style="position:fixed; inset:0; z-index:200; display:flex; align-items:center; justify-content:center; padding:1rem;
+              background:rgba(0,0,0,0.6); opacity:0; pointer-events:none;
+              transition: opacity 0.25s ease;" role="dialog" aria-modal="true" aria-labelledby="bio-modal-title">
+    <div id="bio-modal" style="background:#F7F4EE; max-width:640px; width:100%; max-height:90vh; overflow-y:auto;
+                transform:scale(0.95); opacity:0;
+                transition: transform 0.25s cubic-bezier(0.22,1,0.36,1), opacity 0.25s ease;
+                box-shadow: 0 24px 80px -12px rgba(0,0,0,0.3);">
+      <!-- Modal header -->
+      <div
+        style="display:flex; align-items:center; justify-content:space-between; padding:1.5rem 2rem; border-bottom:1px solid rgba(184,150,90,0.2);">
+        <p
+          style="font-family:'Inter',sans-serif; font-size:0.65rem; color:#B8965A; text-transform:uppercase; letter-spacing:0.15em; font-weight:500;">
+          Kurzbiografie</p>
+        <button id="bio-modal-close" aria-label="Schließen"
+          style="width:2rem; height:2rem; display:flex; align-items:center; justify-content:center; color:#7A756E; background:none; border:none; cursor:pointer; border-radius:2px; transition:color 0.2s;"
+          onfocus="this.style.outline='2px solid #B8965A'; this.style.outlineOffset='2px'"
+          onblur="this.style.outline='none'" onmouseenter="this.style.color='#1A1815'"
+          onmouseleave="this.style.color='#7A756E'">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+      <!-- Modal body -->
+      <div style="padding:2rem 2rem 1.5rem;">
+        <h3 id="bio-modal-title"
+          style="font-family:'Playfair Display',Georgia,serif; font-size:1.5rem; color:#1A1815; letter-spacing:-0.02em; margin-bottom:1.5rem; font-weight:500;">
+          Ria Mönks
+        </h3>
+        <p style="font-family:'Inter',sans-serif; font-size:0.875rem; color:#7A756E; line-height:1.85;">
+          Vor meiner anwaltlichen Tätigkeit habe ich bereits mehrjährige Erfahrung im Strafrecht gesammelt. Schon im
+          Studium entschied ich mich für eine konsequente Spezialisierung auf dem Gebiet des Strafrechts mit dem
+          Schwerpunkt Kriminalwissenschaften und Medizinstrafrecht. Nach dem ersten juristischen Staatsexamen setzte ich
+          diese Spezialisierung im zweijährigen Rechtsreferendariat durch Stationen u.a. bei der Staatsanwaltschaft
+          fort. Im Anschluss an das zweite Staatsexamen war ich seit Oktober 2023 zunächst als Rechtsassessorin, sodann
+          als Staatsanwältin bei der Staatsanwaltschaft Kassel tätig, wo neben dem allgemeinen Strafrecht auch
+          Kapitaldelikte zu meinen Zuständigkeiten zählten. Mit meiner daraus resultierenden Expertise und meiner
+          praxisnahen Herangehensweise berate ich meine Mandanten und entwickle mit ihnen eine durchdachte Strategie für
+          ihr individuelles Anliegen.
+        </p>
+      </div>
+      <!-- Modal CTA -->
+      <div style="padding:0.5rem 2rem 2rem;">
+        <a href="#kontakt" onclick="closeBioModal()"
+          class="btn-primary bg-gold text-cream font-body font-medium text-xs uppercase tracking-widest px-7 py-3.5 inline-block focus-visible:outline-none"
+          style="letter-spacing:0.12em;">
+          <span>Jetzt Beratung anfragen</span>
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!-- Modal overlay -->
   <div id="rg-overlay" style="position:fixed; inset:0; z-index:200; display:flex; align-items:center; justify-content:center; padding:1rem;
@@ -1071,8 +1322,9 @@
         <h3 id="modal-title"
           style="font-family:'Playfair Display',Georgia,serif; font-size:1.5rem; color:#1A1815; letter-spacing:-0.02em; margin-bottom:1rem; font-weight:500;">
         </h3>
-        <p id="modal-text" style="font-family:'Inter',sans-serif; font-size:0.875rem; color:#7A756E; line-height:1.85;">
-        </p>
+        <div id="modal-text"
+          style="font-family:'Inter',sans-serif; font-size:0.875rem; color:#7A756E; line-height:1.85;">
+        </div>
       </div>
       <!-- Modal CTA -->
       <div style="padding:1rem 2rem 2rem;">
@@ -1088,6 +1340,108 @@
 
 
 
+  <!-- ═══════════════════ WARUM MICH WÄHLEN + NOTRUF CTA ═══════════════════ -->
+  <section id="warum" class="relative overflow-hidden">
+
+    <!-- Background image -->
+    <div class="absolute inset-0">
+      <img src="Brand Assets/notruf-hintergrund.png" alt="" class="w-full h-full object-cover"
+        style="filter: brightness(0.3) contrast(1.1);" />
+      <div class="absolute inset-0"
+        style="background: linear-gradient(135deg, rgba(26,24,21,0.85) 0%, rgba(26,24,21,0.6) 50%, rgba(26,24,21,0.85) 100%);">
+      </div>
+    </div>
+
+    <div class="relative py-28 max-w-5xl mx-auto px-6 lg:px-8">
+
+      <!-- Section header -->
+      <div class="text-center mb-10">
+        <p class="reveal font-body text-xs font-medium uppercase tracking-widest text-gold mb-4">Im Falle eines
+          Ermittlungsverfahrens</p>
+        <span class="reveal gold-rule mx-auto mb-8"
+          style="background: linear-gradient(90deg, transparent, #B8965A, transparent);"></span>
+
+        <!-- "Die Weichen..." text – before main heading -->
+        <div class="reveal max-w-2xl mx-auto mb-10 text-left space-y-4" style="transition-delay:0.08s;">
+          <p class="font-body text-stone text-sm leading-[1.85]">
+            Die Weichen für eine erfolgreiche Verteidigung werden in Strafverfahren sehr früh gestellt. Daher ist es
+            elementar, möglichst frühzeitig anwaltliche Unterstützung in Anspruch zu nehmen. Nur so lassen sich alle
+            Optionen optimal ausschöpfen, um das Verfahren zu einem für Sie bestmöglichen Ende zu bringen. In vielen
+            Fällen kann bereits im Ermittlungsverfahren eine Einstellung erreicht – und damit eine Anklage und
+            öffentliche Hauptverhandlung verhindert werden.
+          </p>
+          <p class="font-body text-stone text-sm leading-[1.85]">
+            Sollte ein Gerichtsverfahren dennoch unvermeidbar sein, sind eine sorgfältige Vorbereitung und eine klare
+            Verteidigungsstrategie unerlässlich. Nichts sollte dem Zufall überlassen werden. Mit Erfahrung, juristischer
+            Expertise und dem Blick für das Wesentliche entwickle ich für jeden Fall eine individuelle und wirkungsvolle
+            Verteidigungsstrategie. Das Ziel ist stets das beste Ergebnis für den Mandanten, im Idealfall eine
+            Einstellung des Verfahrens oder ein Freispruch.
+          </p>
+          <p class="font-body text-stone text-sm leading-[1.85]">
+            Mir ist dabei bewusst, welche Belastung ein Strafverfahren für Betroffene und ihre Angehörigen bedeutet.
+            Deshalb lege ich größten Wert auf eine vertrauensvolle sowie diskrete Unterstützung bei allen
+            strafrechtlichen Vorwürfen und begegne jedem Mandanten offen und ohne Vorurteile.
+          </p>
+          <p class="font-body text-stone text-sm leading-[1.85]">
+            Sollte das Gericht Sie auffordern, einen Pflichtverteidiger zu benennen, bin ich bereit, die Verteidigung
+            auch auf dieser Basis zu führen. Der zentrale Kanzleistandort in Kassel ermöglicht es mir, ausgewählte
+            Verfahren in ganz Deutschland anzunehmen.
+          </p>
+        </div>
+
+        <h2 class="reveal font-display text-3xl md:text-5xl text-cream tracking-tighter leading-tight"
+          style="transition-delay:0.12s; font-weight:400;">
+          Festnahme oder Durchsuchung?
+        </h2>
+        <p class="reveal font-body text-stone text-base max-w-2xl mx-auto mt-5 leading-[1.75]"
+          style="transition-delay:0.17s;">
+          Wenn Freiheit plötzlich entzogen wird oder Ihre Räume durchsucht werden, ist schnelles, strukturiertes Handeln
+          entscheidend. Zögern Sie nicht. In Notfällen bin ich 24/7 erreichbar.
+        </p>
+      </div>
+
+      <!-- Notruf CTA -->
+      <div class="reveal flex flex-col items-center gap-6 mb-16" style="transition-delay:0.2s;">
+        <a href="tel:+491637117439"
+          class="notruf-cta font-body font-semibold text-sm uppercase tracking-widest px-10 py-5 inline-flex items-center justify-center gap-3 focus-visible:outline-none"
+          style="letter-spacing:0.12em;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.13 12 19.79 19.79 0 011.06 3.18 2 2 0 013.05 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+          </svg>
+          <span>24/7 Notruf: 0163 · 711 7439</span>
+        </a>
+        <p class="font-body text-xs text-stone/70 text-center max-w-md leading-[1.7]" style="font-style:italic;">
+          Der Notruf ist ausschließlich für akute Notfälle reserviert, die keinen Aufschub dulden – aktuelle Festnahmen
+          und/oder Durchsuchungen. In allen anderen Fällen berate ich Sie gerne zu meinen normalen Bürozeiten. Hierfür
+          können Sie mich gerne über meine allgemeinen Kontaktmöglichkeiten erreichen.
+        </p>
+      </div>
+
+      <!-- USP badges -->
+      <div class="reveal flex flex-wrap justify-center gap-3 mb-14" style="transition-delay:0.25s;">
+        <span
+          class="flex items-center gap-2 font-body text-xs uppercase tracking-widest px-4 py-2.5 border border-gold/20"
+          style="color: rgba(184,150,90,0.9); letter-spacing: 0.12em; background: rgba(255,255,255,0.04);">
+          Strafverteidigung &amp; Opfervertretung
+        </span>
+        <span
+          class="flex items-center gap-2 font-body text-xs uppercase tracking-widest px-4 py-2.5 border border-gold/20"
+          style="color: rgba(184,150,90,0.9); letter-spacing: 0.12em; background: rgba(255,255,255,0.04);">
+          Bundesweit &amp; digital
+        </span>
+        <span
+          class="flex items-center gap-2 font-body text-xs uppercase tracking-widest px-4 py-2.5 border border-gold/20"
+          style="color: rgba(184,150,90,0.9); letter-spacing: 0.12em; background: rgba(255,255,255,0.04);">
+          Schnelle Hilfe bei Vorladung &amp; Festnahme
+        </span>
+      </div>
+
+    </div>
+  </section>
+
+
   <!-- ═══════════════════ VORGEHEN ═══════════════════ -->
   <section id="vorgehen" class="py-28 bg-charcoal relative overflow-hidden">
 
@@ -1098,82 +1452,40 @@
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] pointer-events-none"
       style="background: radial-gradient(circle, rgba(184,150,90,0.06) 0%, transparent 70%);"></div>
 
-    <div class="relative max-w-6xl mx-auto px-6 lg:px-8">
+    <div class="relative max-w-5xl mx-auto px-6 lg:px-8 text-center">
 
-      <!-- Header -->
-      <div class="text-center mb-16">
-        <p class="reveal font-body text-xs font-medium uppercase tracking-widest text-gold mb-4">
-          Mein Vorgehen
+      <!-- Eyebrow -->
+      <p class="reveal font-body text-xs font-medium uppercase tracking-widest text-gold mb-4">
+        Mein Vorgehen
+      </p>
+      <span class="reveal gold-rule mx-auto mb-14"
+        style="background: linear-gradient(90deg, transparent, #B8965A, transparent);"></span>
+
+      <!-- Schlagworte -->
+      <div class="reveal space-y-2 mb-14" style="transition-delay:0.1s;">
+        <p class="font-display text-3xl md:text-5xl lg:text-6xl tracking-tighter"
+          style="font-weight:400; color: rgba(176,170,162,0.45); line-height:1.15;">
+          Strafverfahren?
         </p>
-        <span class="reveal gold-rule mx-auto mb-6"
-          style="background: linear-gradient(90deg, transparent, #B8965A, transparent);"></span>
-        <h2 class="reveal font-display text-3xl md:text-5xl text-cream tracking-tighter leading-tight"
-          style="transition-delay:0.1s; font-weight:500;">
-          Wie ich arbeite
-        </h2>
+        <p class="font-display text-4xl md:text-6xl lg:text-7xl tracking-tighter text-cream"
+          style="font-weight:500; line-height:1.05;">
+          Schweigen<span style="color:#B8965A;">.</span>
+        </p>
+        <p class="font-display text-4xl md:text-6xl lg:text-7xl tracking-tighter text-cream"
+          style="font-weight:500; line-height:1.05;">
+          Akteneinsicht<span style="color:#B8965A;">.</span>
+        </p>
+        <p class="font-display text-4xl md:text-6xl lg:text-7xl tracking-tighter"
+          style="font-weight:600; color:#B8965A; line-height:1.05;">
+          Strategie<span style="color:#B8965A;">.</span>
+        </p>
       </div>
 
-      <!-- Steps -->
-      <div class="grid md:grid-cols-4 gap-0 relative">
-        <!-- Connecting line -->
-        <div class="hidden md:block absolute top-8 left-[12.5%] right-[12.5%] h-px bg-gold/30"
-          style="background: linear-gradient(90deg, transparent, rgba(184,150,90,0.35) 15%, rgba(184,150,90,0.35) 85%, transparent);">
-        </div>
-
-        <!-- Step 1 -->
-        <div class="reveal text-center px-6 mb-10 md:mb-0" style="transition-delay:0.05s;">
-          <div
-            class="relative w-16 h-16 rounded-full border border-gold/30 flex items-center justify-center mx-auto mb-6 bg-charcoal z-10"
-            style="box-shadow: 0 0 0 6px rgba(184,150,90,0.06);">
-            <span class="font-display text-gold text-lg" style="font-weight:500;">01</span>
-          </div>
-          <h3 class="font-display text-lg text-cream mb-3" style="font-weight:500;">Erstgespräch</h3>
-          <p class="font-body text-xs text-stone leading-[1.8]">
-            Ich höre zu, nehme Ihre Situation ernst und bewerte Ihre Lage ehrlich – vertraulich und ohne Vorurteile.
-          </p>
-        </div>
-
-        <!-- Step 2 -->
-        <div class="reveal text-center px-6 mb-10 md:mb-0" style="transition-delay:0.12s;">
-          <div
-            class="relative w-16 h-16 rounded-full border border-gold/30 flex items-center justify-center mx-auto mb-6 bg-charcoal z-10"
-            style="box-shadow: 0 0 0 6px rgba(184,150,90,0.06);">
-            <span class="font-display text-gold text-lg" style="font-weight:500;">02</span>
-          </div>
-          <h3 class="font-display text-lg text-cream mb-3" style="font-weight:500;">Analyse</h3>
-          <p class="font-body text-xs text-stone leading-[1.8]">
-            Sorgfältige Prüfung der Aktenlage und der Beweisführung der Staatsanwaltschaft – transparent und
-            verständlich erklärt.
-          </p>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="reveal text-center px-6 mb-10 md:mb-0" style="transition-delay:0.19s;">
-          <div
-            class="relative w-16 h-16 rounded-full border border-gold/30 flex items-center justify-center mx-auto mb-6 bg-charcoal z-10"
-            style="box-shadow: 0 0 0 6px rgba(184,150,90,0.06);">
-            <span class="font-display text-gold text-lg" style="font-weight:500;">03</span>
-          </div>
-          <h3 class="font-display text-lg text-cream mb-3" style="font-weight:500;">Strategie</h3>
-          <p class="font-body text-xs text-stone leading-[1.8]">
-            Gemeinsam entwickeln wir eine individuelle und wirkungsvolle Verteidigungsstrategie für Ihren Fall.
-          </p>
-        </div>
-
-        <!-- Step 4 -->
-        <div class="reveal text-center px-6" style="transition-delay:0.26s;">
-          <div
-            class="relative w-16 h-16 rounded-full border border-gold/30 flex items-center justify-center mx-auto mb-6 bg-charcoal z-10"
-            style="box-shadow: 0 0 0 6px rgba(184,150,90,0.06);">
-            <span class="font-display text-gold text-lg" style="font-weight:500;">04</span>
-          </div>
-          <h3 class="font-display text-lg text-cream mb-3" style="font-weight:500;">Durchsetzung</h3>
-          <p class="font-body text-xs text-stone leading-[1.8]">
-            Engagierte Vertretung Ihrer Interessen bis zum bestmöglichen Ergebnis – Einstellung, Freispruch oder
-            mildeste Sanktion.
-          </p>
-        </div>
-      </div>
+      <!-- Subtext -->
+      <p class="reveal font-body text-base md:text-lg text-stone leading-[1.75] max-w-2xl mx-auto"
+        style="transition-delay:0.2s;">
+        Jeder Fall verdient volle Aufmerksamkeit, tiefes Aktenverständnis und eine klare Strategie.
+      </p>
 
     </div>
   </section>
@@ -1359,6 +1671,10 @@
                   <option>Verkehrsstrafrecht</option>
                   <option>Sexualstrafrecht</option>
                   <option>Jugendstrafrecht</option>
+                  <option>Medizinstrafrecht</option>
+                  <option>Verteidigung in Haft</option>
+                  <option>Vollstreckung</option>
+                  <option>Opferrecht</option>
                   <option>Sonstiges</option>
                 </select>
               </div>
@@ -1375,8 +1691,10 @@
                 <input type="checkbox" required id="privacy"
                   class="mt-1 w-4 h-4 accent-gold cursor-pointer flex-shrink-0" />
                 <label for="privacy" class="font-body text-xs text-stone leading-[1.7] cursor-pointer">
-                  Ich habe die <a href="#"
-                    class="text-gold hover:underline focus-visible:underline">Datenschutzerklärung</a> gelesen und
+                  Ich habe die <button onclick="openDatenschutzModal()" type="button"
+                    class="text-gold hover:underline focus-visible:underline"
+                    style="background:none;border:none;cursor:pointer;padding:0;font:inherit;">Datenschutzerklärung</button>
+                  gelesen und
                   stimme der Verarbeitung meiner Daten zu.
                 </label>
               </div>
@@ -1415,6 +1733,17 @@
           <p class="font-body text-xs text-stone leading-[1.75] max-w-[240px]">
             Strafverteidigung und Opfervertretung – mit Erfahrung, Expertise und vollem Engagement für Ihr Recht.
           </p>
+          <!-- DAV Badge -->
+          <div class="flex items-center gap-3 mt-6 pt-5 border-t border-white/8" style="max-width:260px;">
+            <img src="Brand Assets/Deutscher_Anwaltverein_logo.svg" alt="Deutscher Anwaltverein Logo"
+              style="height:28px; width:auto; flex-shrink:0; filter: brightness(0) invert(1) opacity(0.7);" />
+            <div>
+              <p class="font-body"
+                style="font-size:0.6rem; color:#7A756E; text-transform:uppercase; letter-spacing:0.1em;">Mitglied im</p>
+              <p class="font-body" style="font-size:0.72rem; color:#B0AAA2; font-weight:500; line-height:1.3;">Deutschen
+                Anwaltverein</p>
+            </div>
+          </div>
         </div>
 
         <!-- Links -->
@@ -1459,10 +1788,12 @@
       <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
         <p class="font-body text-xs text-stone/60">© 2026 Ria Mönks Rechtsanwältin. Alle Rechte vorbehalten.</p>
         <div class="flex gap-6">
-          <a href="#"
-            class="font-body text-xs text-stone/60 hover:text-stone transition-colors duration-200 focus-visible:outline-none focus-visible:underline">Impressum</a>
-          <a href="#"
-            class="font-body text-xs text-stone/60 hover:text-stone transition-colors duration-200 focus-visible:outline-none focus-visible:underline">Datenschutz</a>
+          <button onclick="openImpressumModal()"
+            class="font-body text-xs text-stone/60 hover:text-stone transition-colors duration-200 focus-visible:outline-none focus-visible:underline"
+            style="background:none;border:none;cursor:pointer;padding:0;">Impressum</button>
+          <button onclick="openDatenschutzModal()"
+            class="font-body text-xs text-stone/60 hover:text-stone transition-colors duration-200 focus-visible:outline-none focus-visible:underline"
+            style="background:none;border:none;cursor:pointer;padding:0;">Datenschutz</button>
         </div>
       </div>
     </div>
@@ -1471,22 +1802,105 @@
 
   <!-- ═══════════════════ SCRIPTS ═══════════════════ -->
   <script>
+    // --- Generic modal helper ---
+    function openModal(overlay, modal, closeBtn) {
+      overlay.style.opacity = '1';
+      overlay.style.pointerEvents = 'auto';
+      modal.style.opacity = '1';
+      modal.style.transform = 'scale(1)';
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => closeBtn && closeBtn.focus(), 60);
+    }
+    function closeModal(overlay, modal, lastFocusRef) {
+      overlay.style.opacity = '0';
+      overlay.style.pointerEvents = 'none';
+      modal.style.opacity = '0';
+      modal.style.transform = 'scale(0.95)';
+      setTimeout(() => {
+        document.body.style.overflow = '';
+        if (lastFocusRef && lastFocusRef.el) lastFocusRef.el.focus();
+      }, 250);
+    }
+
+    // --- Kurzbiografie Modal ---
+    const bioOverlay = document.getElementById('bio-overlay');
+    const bioModal = document.getElementById('bio-modal');
+    const bioClose = document.getElementById('bio-modal-close');
+    let bioLastFocus = null;
+
+    function openBioModal() {
+      bioLastFocus = document.activeElement;
+      openModal(bioOverlay, bioModal, bioClose);
+    }
+    function closeBioModal() {
+      bioOverlay.style.opacity = '0';
+      bioOverlay.style.pointerEvents = 'none';
+      bioModal.style.opacity = '0';
+      bioModal.style.transform = 'scale(0.95)';
+      setTimeout(() => { document.body.style.overflow = ''; if (bioLastFocus) bioLastFocus.focus(); }, 250);
+    }
+    bioClose.addEventListener('click', closeBioModal);
+    bioOverlay.addEventListener('click', e => { if (e.target === bioOverlay) closeBioModal(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && bioOverlay.style.opacity === '1') closeBioModal(); });
+    bioModal.addEventListener('keydown', e => {
+      if (e.key !== 'Tab') return;
+      const els = [...bioModal.querySelectorAll('button, a[href], [tabindex]:not([tabindex="-1"])')];
+      const first = els[0], last = els[els.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    });
+
+    // --- Impressum Modal ---
+    const impressumOverlay = document.getElementById('impressum-overlay');
+    const impressumModal = document.getElementById('impressum-modal');
+    const impressumClose = document.getElementById('impressum-close');
+    let impressumLast = null;
+    function openImpressumModal() {
+      impressumLast = document.activeElement;
+      openModal(impressumOverlay, impressumModal, impressumClose);
+    }
+    function closeImpressumModal() {
+      impressumOverlay.style.opacity = '0';
+      impressumOverlay.style.pointerEvents = 'none';
+      impressumModal.style.opacity = '0';
+      impressumModal.style.transform = 'scale(0.95)';
+      setTimeout(() => { document.body.style.overflow = ''; if (impressumLast) impressumLast.focus(); }, 250);
+    }
+    impressumClose.addEventListener('click', closeImpressumModal);
+    impressumOverlay.addEventListener('click', e => { if (e.target === impressumOverlay) closeImpressumModal(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && impressumOverlay.style.opacity === '1') closeImpressumModal(); });
+
+    // --- Datenschutz Modal ---
+    const datenschutzOverlay = document.getElementById('datenschutz-overlay');
+    const datenschutzModal = document.getElementById('datenschutz-modal');
+    const datenschutzClose = document.getElementById('datenschutz-close');
+    let datenschutzLast = null;
+    function openDatenschutzModal() {
+      datenschutzLast = document.activeElement;
+      openModal(datenschutzOverlay, datenschutzModal, datenschutzClose);
+    }
+    function closeDatenschutzModal() {
+      datenschutzOverlay.style.opacity = '0';
+      datenschutzOverlay.style.pointerEvents = 'none';
+      datenschutzModal.style.opacity = '0';
+      datenschutzModal.style.transform = 'scale(0.95)';
+      setTimeout(() => { document.body.style.overflow = ''; if (datenschutzLast) datenschutzLast.focus(); }, 250);
+    }
+    datenschutzClose.addEventListener('click', closeDatenschutzModal);
+    datenschutzOverlay.addEventListener('click', e => { if (e.target === datenschutzOverlay) closeDatenschutzModal(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && datenschutzOverlay.style.opacity === '1') closeDatenschutzModal(); });
+
     // --- Scroll reveal ---
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          revealObserver.unobserve(e.target);
-        }
+        if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); }
       });
     }, { threshold: 0.08 });
-
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-    // --- Sticky nav: dark hero → cream on scroll ---
+    // --- Sticky nav ---
     const navbar = document.getElementById('navbar');
     const navLogo = document.getElementById('nav-logo-img');
-
     function updateNav() {
       navbar.classList.remove('on-dark');
       navbar.style.background = 'rgba(247,244,238,0.97)';
@@ -1494,9 +1908,8 @@
       navbar.style.borderBottom = '1px solid rgba(26,24,21,0.06)';
       if (navLogo) navLogo.style.filter = 'none';
     }
-
     window.addEventListener('scroll', updateNav, { passive: true });
-    updateNav(); // set initial state
+    updateNav();
 
     // --- Mobile menu ---
     const menuBtn = document.getElementById('menu-btn');
@@ -1508,11 +1921,7 @@
       mobileMenu.classList.toggle('open', menuOpen);
     });
     mobileMenu.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        menuOpen = false;
-        mobileMenu.classList.add('hidden');
-        mobileMenu.classList.remove('open');
-      });
+      a.addEventListener('click', () => { menuOpen = false; mobileMenu.classList.add('hidden'); mobileMenu.classList.remove('open'); });
     });
 
     // --- Form submit ---
@@ -1526,27 +1935,85 @@
     const rgData = {
       allg: {
         title: 'Allgemeines Strafrecht',
-        text: 'Ich verteidige Sie bei allen Straftaten des allgemeinen Strafrechts – von Eigentums- und Vermögensdelikten über Körperverletzung bis hin zu Kapitaldelikten wie Totschlag und Mord. Bei schwerwiegenden Vorwürfen ist die unverzügliche Hinzuziehung einer Anwältin entscheidend. Als ehemalige Staatsanwältin kenne ich die Ermittlungsstrategien und weiß, worauf es in jedem Verfahrensstadium ankommt – vom Ermittlungsverfahren über die Hauptverhandlung bis hin zu Rechtsmitteln und Strafvollstreckung.'
+        html: `<p>Ich verteidige Sie bei allen Straftaten des allgemeinen Strafrechts. Von Diebstahl (§§ 242, 243, 244 StGB) oder Betrug (§ 263 StGB) über Raub (§§ 249, 250 StGB) bzw. räuberischer Erpressung (§§ 253, 255 StGB) bis hin zu Urkundenfälschung (§ 267 StGB), vorsätzlicher oder fahrlässiger Körperverletzung (§§ 223, 224, 229 StGB), Nachstellung (§ 238 StGB) sowie bei allen weiteren Straftaten können Sie sich vertrauensvoll an mich wenden.</p>
+<p style="margin-top:1rem;">Vor allem bei Kapitaldelikten (Totschlag, § 212 StGB, Mord, § 211 StGB, Körperverletzung mit Todesfolge, § 227 StGB etc.) ist immer die unverzügliche Hinzuziehung eines Anwalts geboten. In der Regel wird bei einem solchen Vorwurf unmittelbar ein Pflichtverteidiger bestellt. Das bedeutet aber nicht, dass Sie keinen anderen Anwalt wählen können. Innerhalb von drei Wochen kann der Pflichtverteidiger ausgetauscht werden. Auch danach können Sie stets einen Wahlverteidiger beauftragen.</p>`
       },
       btm: {
         title: 'Betäubungsmittelstrafrecht',
-        text: 'Ich verteidige bei allen Verstößen gegen das BtMG und das KCanG – ob Besitz, Handel, Einfuhr, Weitergabe oder bandenmäßiger Handel. Jedes Ermittlungsverfahren verläuft unterschiedlich und verlangt eine individuelle Strategie. Mit meiner Erfahrung aus der Staatsanwaltschaft kenne ich die Ermittlungsansätze und kann Ihre Verteidigung gezielt und wirkungsvoll ausrichten.'
+        html: `<p>Im Betäubungsmittelstrafrecht verteidige ich Sie bei allen Verstößen gegen das BtMG und das KCanG. Ob Besitz, Handel, Einfuhr, Weitergabe, bandenmäßiger Handel oder Vorwürfe im Zusammenhang mit medizinischer Nutzung – jedes BtMG-Ermittlungsverfahren verläuft unterschiedlich und verlangt eine individuelle Verteidigungsstrategie. Denn die rechtlichen Konsequenzen eines solchen Verfahrens sind so unterschiedlich wie die persönlichen Lebenssituationen der Betroffenen.</p>
+<p style="margin-top:1rem;">Für manche bedeutet das Verfahren einen Wendepunkt: Eine bislang verdrängte Suchtproblematik wird erstmals ernsthaft thematisiert, und es eröffnet sich die Chance auf einen nachhaltigen Neuanfang.</p>
+<p style="margin-top:1rem;">In anderen Fällen bleibt der Kontakt mit den Strafverfolgungsbehörden einmalig – das Verfahren wird eingestellt, ohne dass es zu einer gerichtlichen Auseinandersetzung kommt.</p>
+<p style="margin-top:1rem;">Wiederum andere erleben eine monatelange Phase verdeckter Ermittlungen, die schließlich in einer Durchsuchung der Wohnräume münden – nicht selten verbunden mit der Anordnung von Untersuchungshaft.</p>`
       },
       verkehr: {
         title: 'Verkehrsstrafrecht',
-        text: 'Ich verteidige umfassend bei Trunkenheitsfahrten, Unfallflucht und fahrlässiger Körperverletzung im Straßenverkehr. Neben der eigentlichen Strafe sind führerscheinrechtliche Konsequenzen oft besonders einschneidend. Durch eine überlegte Verteidigung lassen sich mildere Sanktionen erreichen. Ich setze mich gezielt für den Erhalt Ihrer Fahrerlaubnis ein und prüfe jeden Aspekt des Ermittlungsverfahrens kritisch.'
+        html: `<p>Ein Strafverfahren wegen eines Verkehrsdelikts kann jeden treffen. Sei es die Kollision mit einem Fahrradfahrer aufgrund eines vergessenen Schulterblicks (fahrlässige Körperverletzung), der vermeintlich folgenlose Parkrempler (Unerlaubtes Entfernen vom Unfallort) oder das eine Bier zu viel (Trunkenheit im Straßenverkehr).</p>
+<p style="margin-top:1rem;">Ich verteidige Sie umfassend und prüfe die Beweisführung der Staatsanwaltschaft kritisch – von der ordnungsgemäßen Blutentnahme bis zur korrekten Unfallrekonstruktion. Neben der eigentlichen Strafe (Geld- oder sogar Freiheitsstrafe) sind dabei auch die führerscheinrechtlichen Konsequenzen, wie Fahrverbote oder die Entziehung der Fahrerlaubnis, besonders durchgreifend. Oft lassen sich durch eine überlegte Verteidigungsführung mildere Sanktionen erreichen oder die Sperrfrist verkürzen, damit Sie schnell wieder mobil sind.</p>`
       },
       sexual: {
         title: 'Sexualstrafrecht',
-        text: 'Sexualstrafverfahren erfordern besondere Sensibilität und Expertise. Ich verteidige diskret und entschlossen – mit dem Fokus auf die kritische Prüfung der Beweislage und der Zeugenaussagen unter aussagepsychologischen Gesichtspunkten. Ein respektvoller Umgang mit allen Beteiligten ist für mich selbstverständlich. Die Schwere dieser Vorwürfe erfordert eine durchdachte und erfahrene Verteidigung.'
+        html: `<p>Sexualstrafverfahren erfordern besondere Sensibilität und Fingerspitzengefühl. Der Vorwurf eines Sexualdelikts bringt schwere Folgen mit sich. Es drohen hohe Freiheitsstrafen und zudem gesellschaftliche Ächtung sowie private und berufliche Konsequenzen. Ich lege größten Wert auf eine vertrauensvolle sowie diskrete Unterstützung bei allen Vorwürfen einer Sexualstraftat und begegne jedem Mandanten offen und ohne Vorurteile. Im Fokus steht dabei die kritische Prüfung der Aussagen auf ihre Glaubwürdigkeit unter aussagepsychologischen Gesichtspunkten. Widersprüche in den Aussagen, fehlende Detailkenntnisse oder suggestive Befragungen können entscheidend für den Verfahrensausgang sein. Ein respektvoller Umgang mit allen Verfahrensbeteiligten ist dabei für mich selbstverständlich.</p>`
       },
       jugend: {
         title: 'Jugendstrafrecht',
-        text: 'Jugendliche (14–17 Jahre) und Heranwachsende (18–20 Jahre) benötigen in Strafverfahren besonderen Schutz. Das Jugendgerichtsgesetz bietet viele Chancen für die Verteidigung – im Vordergrund stehen die erzieherische Einwirkung und die Wahrung der Zukunftsperspektive. Ich arbeite eng mit Jugendämtern und Bewährungshilfe zusammen, um das bestmögliche Ergebnis zu erzielen.'
+        html: `<p>Jugendliche und Heranwachsende benötigen in Strafverfahren besonderen Schutz. Für Jugendliche (14 – 17 Jahre) und unter bestimmten Umständen auch für Heranwachsende (18 – 20 Jahre) kommt daher das Jugendstrafrecht zur Anwendung. Dieses ist im Jugendgerichtsgesetz (JGG) geregelt und enthält ein völlig eigenständiges Sanktionssystem und viele prozessuale Besonderheiten. Im Vordergrund steht dabei die erzieherische Einwirkung auf den Täter. Die Strafen im Jugendstrafrecht sind daher deutlich flexibler als bei Erwachsenen. Dies bietet viele Chancen für die Verteidigung. Die Zusammenarbeit mit Jugendgerichtshilfe, Eltern und Schulen ist dabei ebenso wichtig, wie die Wahrung der Rechte des jungen Beschuldigten, um negative Auswirkungen auf dessen weitere Entwicklung zu minimieren.</p>`
+      },
+      medizin: {
+        title: 'Medizinstrafrecht',
+        html: `<p>Das Medizinstrafrecht umfasst sämtliche strafrechtliche Vorwürfe im Zusammenhang mit der beruflichen Tätigkeit im medizinischen Bereich.</p>
+<p style="margin-top:1rem;">Eine besondere Bedeutung kommt dabei vor allem dem sog. Abrechnungsbetrug gem. § 263 StGB zu. Hier nimmt die Zahl der Ermittlungsverfahren und Verurteilungen stetig zu. Auch die Vorwürfe von Behandlungsfehlern einschließlich strafrechtlicher Verfolgung als fahrlässige Körperverletzung, unterlassene Hilfeleistung sowie Strafverfahren bei (angeblich) fehlerhafter Aufklärung stellen keine Seltenheit mehr dar. Der zunehmende Fokus der gesellschaftlichen Diskussion führt zudem dazu, dass die bisher kaum beachtete Vorschrift des § 174c StGB (Sexueller Missbrauch unter Ausnutzung eines Beratungs-, Behandlungs- oder Betreuungsverhältnisses) immer mehr Bedeutung erlangt. Im Medizinstrafrecht gibt es regelmäßig neue Urteile und Gesetzesänderungen. Eine umfassende Kenntnis der aktuellen Rechtsprechung ist somit für eine strategische Verteidigung unerlässlich.</p>
+<p style="margin-top:1rem;">Sollten Sie die Einleitung eines Strafverfahrens befürchten oder bereits eine Vorladung erhalten haben, zögern Sie nicht, mich zu kontaktieren.</p>`
+      },
+      haft: {
+        title: 'Verteidigung in Haft',
+        html: `<p><strong>Die Festnahme stellt einen Notfall dar: Sie erreichen mich rund um die Uhr mobil!</strong></p>
+<p style="margin-top:1rem;">Untersuchungshaft ist der schärfste staatliche Eingriff in die Freiheitsrechte eines Menschen – obwohl die Unschuldsvermutung gilt. Wenn gegen Sie Untersuchungshaft angeordnet wurde oder droht, stehe ich Ihnen sofort zur Seite. Ich beantrage umgehend Akteneinsicht, prüfe alle Haftentscheidungen kritisch und bereite ggf. Haftprüfung oder Haftbeschwerde vor. Dabei arbeite ich gezielt Umstände heraus, die gegen die Verhängung oder Aufrechterhaltung der Haft sprechen – seien es mildere Mittel, fehlende Fluchtgefahr oder unverhältnismäßige Haftdauer. Ich kann zudem Sprechscheine für die JVA beantragen, sodass Sie Ihren Angehörigen besuchen können.</p>`
+      },
+      vollstreckung: {
+        title: 'Vollstreckung',
+        html: `<p>Auch nach einer Verurteilung bestehen juristische Möglichkeiten. Eine Freiheitsstrafe ist die einschneidendste Sanktion, die der Staat zur Ahndung von Straftaten verhängen darf. Dennoch verdeutlicht bereits der Vergleich verschiedener Justizvollzugsanstalten – und insbesondere der Unterschied zwischen geschlossenem und offenem Vollzug –, dass Strafvollzug nicht gleich Strafvollzug ist.</p>
+<p style="margin-top:1rem;">Ich stehe Ihnen daher im Strafvollstreckungsverfahren zur Seite – etwa bei:</p>
+<ul style="padding-left:1.2rem; margin-top:0.5rem; line-height:1.9;">
+  <li>Bewährungswiderruf</li>
+  <li>Vorzeitiger Entlassung, Anträgen gemäß § 56 StGB / § 88 JGG</li>
+  <li>Verlegung in eine andere Justizvollzugsanstalt</li>
+  <li>Haftaufschub gemäß § 456 StGB</li>
+  <li>Therapie statt Strafe gemäß § 35 BtMG</li>
+  <li>Vollzugslockerungen: Hafturlaub, Ausgänge, Freigänge, Arbeit außerhalb der Anstalt</li>
+  <li>Führungsaufsicht</li>
+</ul>`
       },
       opfer: {
-        title: 'Opfervertretung',
-        text: 'Opfer einer Straftat haben Rechte – und ich helfe Ihnen, diese durchzusetzen. Als Nebenklägervertreterin stehe ich Ihnen in Strafverfahren zur Seite und vertrete Ihre Interessen gegenüber Gericht und Staatsanwaltschaft. Ich begleite Sie einfühlsam durch ein oft belastendes Verfahren und setze mich für eine angemessene Würdigung Ihres Leids und gerechte Entschädigung ein.'
+        title: 'Opferrecht',
+        html: `<p>Für Opfer von Straftaten bedeutet ein Strafverfahren weit mehr als einen juristischen Vorgang – es ist häufig eine persönliche Ausnahmesituation, die Unsicherheit, Druck und emotionale Belastung mit sich bringt.</p>
+<p style="margin-top:0.75rem;">Betroffene haben inzwischen weitreichende Rechte im Strafprozess. Um diese durchzusetzen und das Verfahren gegen den Täter bei Bedarf auch beeinflussen zu können, ist anwaltlicher Beistand zweckmäßig und notwendig. Aber auch außerhalb des Strafprozessrechts stehen eine ganze Reihe von Unterstützungsmaßnahmen zur Verfügung.</p>
+<p style="margin-top:0.75rem;">Als Rechtsanwältin berate ich Sie umfassend zu Ihren Rechten als Geschädigte/r einer Straftat, begleite Sie durch alle Phasen des Strafverfahrens, setze mich dafür ein, dass Ihre Interessen bestmöglich vertreten werden und Sie die notwendige Unterstützung in dieser schwierigen Zeit erhalten.</p>
+
+<h4 style="font-family:'Playfair Display',serif;font-size:0.95rem;color:#1A1815;margin:1.25rem 0 0.4rem;font-weight:500;">Einstellungsbeschwerde und Klageerzwingungsverfahren</h4>
+<p>Wenn die Staatsanwaltschaft ein Verfahren einstellt, ist das für Betroffene häufig enttäuschend. Einstellungen wegen fehlenden hinreichenden Tatverdachts (§ 170 Abs. 2 StPO) bedeuten oft, dass die Beweislage aus Sicht der Behörde nicht ausreicht – das kann an tatsächlichen Lücken liegen oder an einer unvollständigen Ermittlung. Hier kann eine anwaltliche Prüfung ansetzen: Abhängig von der jeweiligen Verfahrenslage können gegen eine Einstellung Rechtsmittel oder besondere Überprüfungsverfahren in Betracht kommen. Hierzu zählt etwa die Beschwerde gegen eine Einstellungsentscheidung oder – unter engen gesetzlichen Voraussetzungen – das sogenannte Klageerzwingungsverfahren (§§ 172 ff. StPO).</p>
+<p style="margin-top:0.75rem;">Diese Möglichkeiten sind rechtlich anspruchsvoll, an strikte Fristen gebunden und nur bei bestimmten Delikten zulässig. Gleichwohl verdeutlichen sie: Eine Verfahrenseinstellung bedeutet nicht zwingend das endgültige Ende aller rechtlichen Optionen. Entscheidend ist, ob belastbare rechtliche Argumente und konkrete Ermittlungsansätze bestehen.</p>
+
+<h4 style="font-family:'Playfair Display',serif;font-size:0.95rem;color:#1A1815;margin:1.25rem 0 0.4rem;font-weight:500;">Nebenklage</h4>
+<p>Ein zentrales Instrument im Opferschutz ist die sogenannte Nebenklage. Sie eröffnet verletzten Personen bei bestimmten Straftaten die Möglichkeit, sich dem Strafverfahren auf Seiten der Staatsanwaltschaft anzuschließen (§§ 395 ff. StPO). Aus der reinen Zeugenstellung wird eine aktive Beteiligung am Verfahren mit eigenen Rechten.</p>
+<p style="margin-top:0.75rem;">Gemäß § 395 StPO sind insbesondere zur Nebenklage anschlussberechtigt Verletzte folgender Straftaten (Auswahl): §§ 174 ff. (Sexueller Missbrauch), §§ 176 ff. (Sexueller Missbrauch von Kindern), § 177 (Vergewaltigung), §§ 211, 212 (versuchter Mord/Totschlag), § 221 (Aussetzung), §§ 223, 340 (Körperverletzung), § 232 (Menschenhandel), § 234 (Menschenraub), § 238 (Nachstellung), §§ 239a, 239b (Erpresserischer Menschenraub, Geiselnahme), § 184i (Sexuelle Belästigung), § 184k (Verletzung des Intimbereichs durch Bildaufnahmen) u.v.m.</p>
+<p style="margin-top:0.75rem;">Die gleiche Befugnis steht auch Angehörigen zu, deren Familienmitglieder durch eine rechtswidrige Tat getötet wurden. Aus anwaltlicher Sicht empfiehlt es sich, den Anschluss möglichst frühzeitig zu erklären.</p>
+<p style="margin-top:0.75rem;">§ 397 StPO regelt die Verfahrensrechte der Nebenklage: Anwesenheit in der Hauptverhandlung, Stellen von Beweisanträgen, Einlegen von Rechtsmitteln, Abgabe eigener Erklärungen, eigenes Fragerecht sowie die Möglichkeit, Richter oder Sachverständige wegen Befangenheit abzulehnen.</p>
+
+<h4 style="font-family:'Playfair Display',serif;font-size:0.95rem;color:#1A1815;margin:1.25rem 0 0.4rem;font-weight:500;">Weitere Verletztenrechte</h4>
+<p>Neben der Nebenklage gibt es Verletztenrechte unabhängig davon: Benachrichtigungen über den Fortgang des Verfahrens, wesentliche Entscheidungen und ggf. den Ausgang (§§ 406d ff. StPO). Ein besonders wichtiges Instrument ist die Akteneinsicht für Verletzte über anwaltliche Vertretung (§ 406e StPO).</p>
+
+<h4 style="font-family:'Playfair Display',serif;font-size:0.95rem;color:#1A1815;margin:1.25rem 0 0.4rem;font-weight:500;">Prozessuale Schutzmaßnahmen</h4>
+<p>Der Opferschutz kennt darüber hinaus prozessuale Schutzmaßnahmen: Ausschluss der Öffentlichkeit, Schutzvorkehrungen zur Vermeidung einer unmittelbaren Begegnung mit der beschuldigten Person, Videovernehmungen oder speziell angepasste Befragungsmodalitäten. In geeigneten Fällen besteht zudem Anspruch auf psychosoziale Prozessbegleitung (§ 406g StPO).</p>
+
+<h4 style="font-family:'Playfair Display',serif;font-size:0.95rem;color:#1A1815;margin:1.25rem 0 0.4rem;font-weight:500;">Das Adhäsionsverfahren</h4>
+<p>Das Adhäsionsverfahren (§§ 403 ff. StPO) ermöglicht es, zivilrechtliche Ansprüche wie Schadensersatz oder Schmerzensgeld direkt im Strafverfahren geltend zu machen. Typische Adhäsionsansprüche sind Schmerzensgeld nach Körperverletzung oder Sexualdelikten, Ersatz von Behandlungs- und Therapiekosten, Verdienstausfall sowie Feststellungsanträge für zukünftige Schäden.</p>
+
+<h4 style="font-family:'Playfair Display',serif;font-size:0.95rem;color:#1A1815;margin:1.25rem 0 0.4rem;font-weight:500;">Kosten und Beiordnung</h4>
+<p>Die Strafprozessordnung sieht in bestimmten Konstellationen die Beiordnung eines anwaltlichen Beistands vor (§ 397a StPO) – insbesondere bei schweren Straftaten oder besonderem Schutzbedürfnis. In solchen Fällen werden die Kosten der anwaltlichen Vertretung in der Regel von der Staatskasse übernommen. Durch eine sorgfältige und transparente Beratung kläre ich diese Fragen frühzeitig.</p>
+
+<h4 style="font-family:'Playfair Display',serif;font-size:0.95rem;color:#1A1815;margin:1.25rem 0 0.4rem;font-weight:500;">Einordnung</h4>
+<p>Zur Wahrheit gehört auch: Kein prozessuales Instrument führt automatisch zu einer Verurteilung. Das Strafverfahren ist ein Beweisverfahren, und die Unschuldsvermutung bildet einen tragenden Grundsatz unseres Rechtsstaats. Betroffene dürfen jedoch erwarten, dass ihre Rechte konsequent gewahrt werden, Ermittlungen sorgfältig und vollständig geführt werden und sie im Verfahren nicht auf die Rolle eines bloßen Beweismittels reduziert werden.</p>
+<p style="margin-top:0.75rem;">Sind Sie Betroffene/r einer Straftat, zögern Sie nicht, ein Beratungsgespräch zu vereinbaren.</p>`
       }
     };
 
@@ -1561,11 +2028,12 @@
       const d = rgData[key];
       if (!d) return;
       rgTitle.textContent = d.title;
-      rgText.textContent = d.text;
+      rgText.innerHTML = d.html || '';
       rgOverlay.style.opacity = '1';
       rgOverlay.style.pointerEvents = 'auto';
       rgModal.style.opacity = '1';
       rgModal.style.transform = 'scale(1)';
+      rgModal.scrollTop = 0;
       document.body.style.overflow = 'hidden';
       setTimeout(() => rgClose.focus(), 60);
     }
@@ -1575,26 +2043,16 @@
       rgOverlay.style.pointerEvents = 'none';
       rgModal.style.opacity = '0';
       rgModal.style.transform = 'scale(0.95)';
-      setTimeout(() => {
-        document.body.style.overflow = '';
-        if (rgLastFocus) rgLastFocus.focus();
-      }, 250);
+      setTimeout(() => { document.body.style.overflow = ''; if (rgLastFocus) rgLastFocus.focus(); }, 250);
     }
 
     document.querySelectorAll('.rg-tile').forEach(tile => {
-      tile.addEventListener('click', () => {
-        rgLastFocus = tile;
-        openRgModal(tile.dataset.modal);
-      });
+      tile.addEventListener('click', () => { rgLastFocus = tile; openRgModal(tile.dataset.modal); });
     });
 
     rgClose.addEventListener('click', closeRgModal);
     rgOverlay.addEventListener('click', e => { if (e.target === rgOverlay) closeRgModal(); });
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape' && rgOverlay.style.opacity === '1') closeRgModal();
-    });
-
-    // Focus trap
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && rgOverlay.style.opacity === '1') closeRgModal(); });
     rgModal.addEventListener('keydown', e => {
       if (e.key !== 'Tab') return;
       const els = [...rgModal.querySelectorAll('button, a[href], [tabindex]:not([tabindex="-1"])')];
