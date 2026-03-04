@@ -617,7 +617,7 @@
       <!-- CTAs -->
       <div class="reveal flex flex-col sm:flex-row gap-4 justify-center items-center" style="transition-delay:0.32s;">
         <a href="tel:+4956176620427"
-          class="btn-primary bg-gold text-cream font-body font-medium text-sm uppercase tracking-widest px-8 py-4 inline-flex items-center justify-center gap-2.5 focus-visible:outline-none w-64 sm:w-auto">
+          class="btn-primary bg-gold text-cream font-body font-medium text-sm uppercase tracking-widest px-8 py-4 inline-flex items-center justify-center gap-2.5 focus-visible:outline-none w-full sm:w-auto">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
             stroke-linecap="round" stroke-linejoin="round">
             <path
@@ -626,7 +626,7 @@
           <span>Jetzt anrufen</span>
         </a>
         <a href="#kontakt"
-          class="btn-light font-body font-medium text-sm uppercase tracking-widest px-8 py-4 border inline-block focus-visible:outline-none w-64 sm:w-auto text-center">
+          class="btn-light font-body font-medium text-sm uppercase tracking-widest px-8 py-4 border inline-flex items-center justify-center focus-visible:outline-none w-full sm:w-auto text-center">
           Online Erstberatung
         </a>
       </div>
@@ -653,7 +653,7 @@
     <div class="relative max-w-6xl mx-auto px-6 lg:px-8">
 
       <!-- ── OBERER TEIL: FOTO & TEXT ── -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start mb-20">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
 
         <!-- Linke Spalte: Foto -->
         <div class="reveal lg:col-span-5 flex flex-col items-center" style="transition-delay:0.05s;">
@@ -1373,7 +1373,7 @@
       <!-- Notruf CTA -->
       <div class="reveal flex flex-col items-center gap-6 mb-16" style="transition-delay:0.2s;">
         <a href="tel:+491637117439"
-          class="notruf-cta font-body font-semibold text-sm uppercase tracking-widest px-10 py-5 inline-flex items-center justify-center gap-3 focus-visible:outline-none"
+          class="notruf-cta font-body font-semibold text-sm uppercase tracking-widest px-10 py-5 inline-flex items-center justify-center gap-3 focus-visible:outline-none w-full sm:w-auto"
           style="letter-spacing:0.12em;">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round">
@@ -1390,19 +1390,19 @@
       </div>
 
       <!-- USP badges -->
-      <div class="reveal flex flex-wrap justify-center gap-3 mb-14" style="transition-delay:0.25s;">
+      <div class="reveal flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3 mb-14" style="transition-delay:0.25s;">
         <span
-          class="flex items-center gap-2 font-body text-xs uppercase tracking-widest px-4 py-2.5 border border-gold/20"
+          class="flex items-center justify-center gap-2 font-body text-xs uppercase tracking-widest px-4 py-2.5 border border-gold/20 w-full sm:w-auto text-center"
           style="color: rgba(184,150,90,0.9); letter-spacing: 0.12em; background: rgba(255,255,255,0.04);">
           Strafverteidigung &amp; Opfervertretung
         </span>
         <span
-          class="flex items-center gap-2 font-body text-xs uppercase tracking-widest px-4 py-2.5 border border-gold/20"
+          class="flex items-center justify-center gap-2 font-body text-xs uppercase tracking-widest px-4 py-2.5 border border-gold/20 w-full sm:w-auto text-center"
           style="color: rgba(184,150,90,0.9); letter-spacing: 0.12em; background: rgba(255,255,255,0.04);">
           Bundesweit &amp; digital
         </span>
         <span
-          class="flex items-center gap-2 font-body text-xs uppercase tracking-widest px-4 py-2.5 border border-gold/20"
+          class="flex items-center justify-center gap-2 font-body text-xs uppercase tracking-widest px-4 py-2.5 border border-gold/20 w-full sm:w-auto text-center"
           style="color: rgba(184,150,90,0.9); letter-spacing: 0.12em; background: rgba(255,255,255,0.04);">
           Schnelle Hilfe bei Vorladung &amp; Festnahme
         </span>
@@ -1647,22 +1647,29 @@
 
         <!-- Right: Contact Form -->
         <div class="reveal" style="transition-delay:0.12s;">
-          <form class="bg-parchment border border-charcoal/6 p-8 lg:p-10"
+          <form id="contact-form" class="bg-parchment border border-charcoal/6 p-8 lg:p-10"
             style="box-shadow: 0 4px 24px -8px rgba(26,24,21,0.08);" onsubmit="handleSubmit(event)">
+
+            <!-- Web3Forms hidden fields -->
+            <input type="hidden" name="access_key" value="HIER_WEB3FORMS_KEY_EINFUEGEN" />
+            <input type="hidden" name="subject" value="Neue Mandantenanfrage – kanzlei-moenks.de" />
+            <input type="hidden" name="from_name" value="Website Kanzlei Mönks" />
+            <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off" />
+
             <h3 class="font-display text-2xl text-charcoal tracking-tight mb-8" style="font-weight:500;">Erstanfrage
               stellen</h3>
 
             <div class="space-y-5">
               <!-- Name -->
-              <div class="grid grid-cols-2 gap-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label class="font-body text-xs text-stone uppercase tracking-wider mb-2 block">Vorname</label>
-                  <input type="text" required placeholder="Maria"
+                  <input type="text" name="Vorname" required placeholder="Maria"
                     class="form-input w-full bg-cream border border-charcoal/15 px-4 py-3 font-body text-sm text-charcoal placeholder-stone/50 focus:bg-cream" />
                 </div>
                 <div>
                   <label class="font-body text-xs text-stone uppercase tracking-wider mb-2 block">Nachname</label>
-                  <input type="text" required placeholder="Mustermann"
+                  <input type="text" name="Nachname" required placeholder="Mustermann"
                     class="form-input w-full bg-cream border border-charcoal/15 px-4 py-3 font-body text-sm text-charcoal placeholder-stone/50 focus:bg-cream" />
                 </div>
               </div>
@@ -1670,7 +1677,7 @@
               <!-- Email -->
               <div>
                 <label class="font-body text-xs text-stone uppercase tracking-wider mb-2 block">E-Mail-Adresse</label>
-                <input type="email" required placeholder="maria@beispiel.de"
+                <input type="email" name="email" required placeholder="maria@beispiel.de"
                   class="form-input w-full bg-cream border border-charcoal/15 px-4 py-3 font-body text-sm text-charcoal placeholder-stone/50" />
               </div>
 
@@ -1678,14 +1685,14 @@
               <div>
                 <label class="font-body text-xs text-stone uppercase tracking-wider mb-2 block">Telefonnummer <span
                     class="text-stone/50 normal-case tracking-normal">(optional)</span></label>
-                <input type="tel" placeholder="0561 …"
+                <input type="tel" name="Telefonnummer" placeholder="0561 …"
                   class="form-input w-full bg-cream border border-charcoal/15 px-4 py-3 font-body text-sm text-charcoal placeholder-stone/50" />
               </div>
 
               <!-- Rechtsgebiet -->
               <div>
                 <label class="font-body text-xs text-stone uppercase tracking-wider mb-2 block">Rechtsgebiet</label>
-                <select
+                <select name="Rechtsgebiet"
                   class="form-input w-full bg-cream border border-charcoal/15 px-4 py-3 font-body text-sm text-charcoal appearance-none">
                   <option value="" disabled selected>Bitte wählen …</option>
                   <option>Allgemeines Strafrecht</option>
